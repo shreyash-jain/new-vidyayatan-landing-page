@@ -1,4 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import { ScrollProvider } from "./components/ScrollContext";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -23,3 +24,10 @@ export const PLASMIC = initPlasmicLoader({
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
 // PLASMIC.registerComponent(...);
+
+
+PLASMIC.registerGlobalContext(ScrollProvider, {
+  name: "ScrollProvider",
+  providesData: true,
+  props: {},
+});
