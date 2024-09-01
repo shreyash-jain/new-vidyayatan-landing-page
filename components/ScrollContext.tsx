@@ -7,6 +7,7 @@ export function ScrollProvider({ children }: { children: React.ReactNode }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
