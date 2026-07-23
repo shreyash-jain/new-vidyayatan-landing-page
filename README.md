@@ -13,7 +13,7 @@ scratch and owned in this repo.
 
 ## Getting started
 
-Use Node 20 (see `.nvmrc`).
+Use Node 22 (see `.nvmrc` / `engines`).
 
 ```bash
 pnpm install

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Lato, Sora } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -48,6 +49,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? "G-T2YCC3CXNT"} />
     </html>
   );
 }
