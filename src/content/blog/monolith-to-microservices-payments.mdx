@@ -1,0 +1,55 @@
+---
+title: "Monolith to Microservices: Lessons from Scaling Payments"
+description: "What we learned rebuilding a payments and chargebacks system to handle billions of transactions a year — and when microservices are actually worth it."
+date: "2025-11-18"
+author: "Vidyayatan Engineering"
+tag: "Engineering"
+---
+
+When a payments platform grows from a few thousand merchants to millions, the
+architecture that got you there is usually the thing holding you back. We saw
+this first-hand while building a Swipe Chargebacks System for a leading Indian
+fintech processing over 10 billion transactions a year.
+
+Here's what we learned moving from a tightly coupled monolith to a modular
+microservices architecture.
+
+## The symptoms of an outgrown monolith
+
+A monolith isn't inherently bad — plenty of successful products run on one. The
+trouble starts when different parts of the system need to scale, deploy and fail
+independently, but can't. The tell-tale signs we saw:
+
+- **Scaling was all-or-nothing.** A spike in one workflow forced us to scale the
+  entire application.
+- **Reconciliation needed constant manual intervention.** Failed transactions
+  piled up and delayed settlement.
+- **Upgrades were risky.** Tightly coupled components meant a small change could
+  ripple everywhere.
+
+## What we changed
+
+We decomposed the system into independent, loosely coupled services — a
+dedicated chargeback service, a notification service, and more — each owning its
+data and deployable on its own. Around them we built:
+
+1. **Automated reconciliation** to remove the manual error-handling bottleneck.
+2. **Real-time analytics dashboards** so operations teams had live visibility.
+3. **A CI/CD pipeline** for fast, reliable deployments.
+4. **Scalable AWS infrastructure** designed to absorb growth.
+
+## When microservices are (and aren't) worth it
+
+> Microservices trade simplicity for independence. Only make that trade when the
+> independence actually buys you something.
+
+If your team is small and your product is still finding its shape, a well-built
+monolith will serve you better. Reach for microservices when you have distinct
+workloads that genuinely need to scale and deploy separately — and when you have
+the DevOps maturity to operate them.
+
+For a payments platform at this scale, the trade was clearly worth it: faster
+payments, far less manual work, and a platform that's now easy to extend.
+
+If you're weighing a similar move, [talk to us](/contact) — we're happy to share
+what we'd do in your situation.

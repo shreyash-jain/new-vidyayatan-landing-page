@@ -1,25 +1,54 @@
-This is a Next.js project bootstrapped with [`create-plasmic-app`](https://www.npmjs.com/package/create-plasmic-app).
+# Vidyayatan Technologies — Website
 
-## Getting Started
+Marketing site for [vidyayatan.com](https://www.vidyayatan.com), hand-built on
+Next.js (App Router). Previously a headless Plasmic site; fully rebuilt from
+scratch and owned in this repo.
 
-First, run the development server:
+## Stack
+
+- **Next.js 15** (App Router) + **React 19** + **TypeScript**
+- **Tailwind CSS** + **shadcn/ui**-style primitives (Radix under the hood)
+- **Framer Motion** for subtle scroll reveals
+- Content lives in typed data files under `src/content/` (CMS seam for later)
+
+## Getting started
+
+Use Node 20 (see `.nvmrc`).
 
 ```bash
-npm run dev
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # production build
+pnpm lint       # eslint
+pnpm typecheck  # tsc --noEmit
 ```
 
-Open your browser to see the result.
+## Project structure
 
-You can start editing your project in Plasmic Studio. The page auto-updates as you edit the project.
+```
+src/
+  app/          # routes (App Router) + api/contact
+  components/
+    ui/         # design-system primitives
+    layout/     # header, footer, logo
+    sections/   # page sections (hero, testimonials, faq, …)
+    common/     # container, section-heading, reveal, cta
+  content/      # site config, nav, and page data (services/products/industries/…)
+  lib/          # utils, metadata + structured-data helpers
+```
 
-## Learn More
+### Editing content
 
-With Plasmic, you can enable non-developers on your team to publish pages and content into your website or app.
+- **Navigation / footer:** `src/content/nav.ts` (single source of truth).
+- **Services / Products / Industries:** typed arrays in `src/content/*.ts`. Add an
+  entry and its detail page is generated automatically.
+- **Blog / Guides:** MDX under `src/content/blog` and `src/content/guides`.
 
-To learn more about Plasmic, take a look at the following resources:
+### Contact form → CRM leads
 
-- [Plasmic Website](https://www.plasmic.app/)
-- [Plasmic Documentation](https://docs.plasmic.app/learn/)
-- [Plasmic Slack Community](https://www.plasmic.app/slack)
-
-You can check out [the Plasmic GitHub repository](https://github.com/plasmicapp/plasmic) - your feedback and contributions are welcome!
+`src/app/api/contact/route.ts` submits every enquiry to the Vacademy CRM open
+lead endpoint (`admin-core-service/open/v1/audience/lead/submit`). Form fields
+map to the audience's custom fields (Full Name, Email, Phone, Details — with
+Company folded into Details — and a fixed "Website Contact Form" intent). The
+target audience/source and endpoint are overridable via env (see `.env.example`);
+sensible defaults are baked in.
