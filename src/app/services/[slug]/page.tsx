@@ -78,7 +78,7 @@ export default async function ServiceDetailPage({
             <Reveal delay={0.1}>
               <div className="flex items-center justify-center rounded-3xl bg-gradient-to-br from-accent/60 to-muted p-8">
                 <Image
-                  src={serviceIllustration[service.slug] ?? "/illustrations/collaboration.png"}
+                  src={serviceIllustration[service.slug] ?? "/illustrations/collaboration.jpg"}
                   alt={`${service.title} illustration`}
                   width={900}
                   height={600}

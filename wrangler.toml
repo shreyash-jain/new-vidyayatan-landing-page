@@ -1,0 +1,15 @@
+name = "vidyayatan-landing"
+compatibility_date = "2024-11-12"
+compatibility_flags = ["nodejs_compat"]
+
+# Static export output (next build with output: "export"). Pages also picks up
+# the /functions directory automatically for the contact API.
+pages_build_output_dir = "out"
+
+# Contact-form → CRM overrides can be set as Pages environment variables in the
+# Cloudflare dashboard (all optional; sensible defaults are baked into the
+# function):
+#   VACADEMY_LEAD_ENDPOINT, VACADEMY_AUDIENCE_ID,
+#   VACADEMY_SOURCE_TYPE, VACADEMY_SOURCE_ID
+# And the analytics id (baked default G-T2YCC3CXNT):
+#   NEXT_PUBLIC_GA_ID   (build-time variable)

@@ -456,16 +456,16 @@ export const services: Service[] = [
 
 /** On-brand illustration per service (shared set, mapped thematically). */
 export const serviceIllustration: Record<string, string> = {
-  "custom-software": "/illustrations/collaboration.png",
-  "mobile-app-development": "/illustrations/team.png",
-  "web-app-development": "/illustrations/team.png",
-  "hire-developers": "/illustrations/collaboration.png",
-  "ui-ux-design": "/illustrations/meeting.png",
-  "artificial-intelligence": "/illustrations/growth.png",
-  "qa-testing": "/illustrations/meeting.png",
-  "development-analytics": "/illustrations/growth.png",
-  "software-maintenance": "/illustrations/collaboration.png",
-  "devops": "/illustrations/growth.png",
+  "custom-software": "/illustrations/collaboration.jpg",
+  "mobile-app-development": "/illustrations/team.jpg",
+  "web-app-development": "/illustrations/team.jpg",
+  "hire-developers": "/illustrations/collaboration.jpg",
+  "ui-ux-design": "/illustrations/meeting.jpg",
+  "artificial-intelligence": "/illustrations/growth.jpg",
+  "qa-testing": "/illustrations/meeting.jpg",
+  "development-analytics": "/illustrations/growth.jpg",
+  "software-maintenance": "/illustrations/collaboration.jpg",
+  "devops": "/illustrations/growth.jpg",
 };
 
 export function getService(slug: string) {

@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects — preserve SEO from the old Plasmic URLs.
+/product-page              /products              301
+/bharatpe-case-study       /products/bharatpe     301

@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
     role: "CEO",
     company: "Maroi Boerdery BK",
     location: "Limpopo, South Africa",
-    avatar: "/testimonials/hannes-nel.png",
+    avatar: "/testimonials/hannes-nel.jpg",
   },
   {
     quote:
@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
     role: "Digital Head",
     company: "DCM Shriram",
     location: "New Delhi, India",
-    avatar: "/testimonials/mahesh-kumar.png",
+    avatar: "/testimonials/mahesh-kumar.jpg",
   },
   {
     quote:
@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
     role: "CEO",
     company: "Labour Link",
     location: "Limpopo, South Africa",
-    avatar: "/testimonials/anneli-nel.png",
+    avatar: "/testimonials/anneli-nel.jpg",
   },
   {
     quote:
@@ -43,6 +43,6 @@ export const testimonials: Testimonial[] = [
     role: "Regional Director",
     company: "Innowell",
     location: "Chennai, India",
-    avatar: "/testimonials/gunasekaran-raju.png",
+    avatar: "/testimonials/gunasekaran-raju.jpg",
   },
 ];

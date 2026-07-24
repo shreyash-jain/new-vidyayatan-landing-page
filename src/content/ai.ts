@@ -25,35 +25,35 @@ export const aiCapabilities: AiCapability[] = [
     description:
       "Custom assistants, copilots and content generation built on top of leading LLMs, tuned to your domain and data.",
     icon: MessagesSquare,
-    image: "/ai/build.png",
+    image: "/ai/build.jpg",
   },
   {
     title: "Predictive Analytics",
     description:
       "Forecasting, scoring and anomaly detection models that turn your historical data into forward-looking decisions.",
     icon: LineChart,
-    image: "/ai/analytics.png",
+    image: "/ai/analytics.jpg",
   },
   {
     title: "Document Intelligence",
     description:
       "Extract structured data from PDFs, forms and scanned documents automatically — no more manual data entry.",
     icon: FileSearch,
-    image: "/ai/document.png",
+    image: "/ai/document.jpg",
   },
   {
     title: "MLOps & Data Pipelines",
     description:
       "Production-grade pipelines for training, evaluating and monitoring models — reliable AI, not just a demo.",
     icon: Workflow,
-    image: "/ai/pipeline.png",
+    image: "/ai/pipeline.jpg",
   },
   {
     title: "Recommendation & Personalisation",
     description:
       "Smarter product, content and pricing recommendations that adapt to each user in real time.",
     icon: Sparkles,
-    image: "/ai/recommend.png",
+    image: "/ai/recommend.jpg",
   },
 ];
 

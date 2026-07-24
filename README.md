@@ -18,10 +18,30 @@ Use Node 22 (see `.nvmrc` / `engines`).
 ```bash
 pnpm install
 pnpm dev        # http://localhost:3000
-pnpm build      # production build
+pnpm build      # static export → out/
 pnpm lint       # eslint
 pnpm typecheck  # tsc --noEmit
 ```
+
+## Deployment (Cloudflare Pages)
+
+The site is a **static export** (`output: "export"` → `out/`). The only dynamic
+piece is the contact form, served by a **Cloudflare Pages Function** at
+`functions/api/contact.ts`.
+
+- **Build command:** `pnpm build`
+- **Build output directory:** `out`
+- **Node version:** 22 (`.node-version`)
+- Optional env vars (Pages dashboard): `NEXT_PUBLIC_GA_ID` (build-time),
+  and `VACADEMY_LEAD_ENDPOINT` / `VACADEMY_AUDIENCE_ID` / `VACADEMY_SOURCE_TYPE`
+  / `VACADEMY_SOURCE_ID` for the lead function. All have sensible defaults.
+
+```bash
+pnpm cf:preview   # build + serve locally via wrangler (pages + functions)
+pnpm cf:deploy    # build + deploy to Cloudflare Pages
+```
+
+Redirects live in `public/_redirects`.
 
 ## Project structure
 

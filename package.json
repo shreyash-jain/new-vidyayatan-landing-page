@@ -11,7 +11,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "cf:preview": "next build && wrangler pages dev out",
+    "cf:deploy": "next build && wrangler pages deploy out",
+    "cf:deploy:production": "next build && wrangler pages deploy out --branch main"
   },
   "dependencies": {
     "@next/third-parties": "15.1.6",
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260724.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -48,6 +52,7 @@
     "eslint-config-next": "15.1.6",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^3.114.17"
   }
 }

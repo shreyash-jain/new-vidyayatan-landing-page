@@ -106,7 +106,7 @@ function StandardBody({ product }: { product: Product }) {
               </p>
               <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted to-accent p-6 shadow-soft">
                 <Image
-                  src={`/products/${product.slug}.png`}
+                  src={`/products/${product.slug}.jpg`}
                   alt={`${product.name} product screenshot`}
                   width={640}
                   height={400}
@@ -237,7 +237,7 @@ function CaseStudyBody({ product }: { product: Product }) {
             <div className="mt-12 grid gap-6 md:grid-cols-2">
               <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted to-accent p-6 shadow-soft">
                 <Image
-                  src={`/products/${product.slug}.png`}
+                  src={`/products/${product.slug}.jpg`}
                   alt={`${product.name} platform`}
                   width={640}
                   height={400}
@@ -246,7 +246,7 @@ function CaseStudyBody({ product }: { product: Product }) {
               </div>
               <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-soft">
                 <Image
-                  src="/products/bharatpe-chargeback.png"
+                  src="/products/bharatpe-chargeback.jpg"
                   alt="Chargeback lifecycle"
                   width={1030}
                   height={590}

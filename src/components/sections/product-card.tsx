@@ -12,7 +12,7 @@ export function ProductCard({ product }: { product: Product }) {
     >
       <div className="relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br from-muted to-accent p-5">
         <Image
-          src={`/products/${product.slug}.png`}
+          src={`/products/${product.slug}.jpg`}
           alt={`${product.name} — ${product.category}`}
           width={640}
           height={400}

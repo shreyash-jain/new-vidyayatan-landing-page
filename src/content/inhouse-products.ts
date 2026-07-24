@@ -23,7 +23,7 @@ export const inhouseProducts: InhouseProduct[] = [
       "Auto-scoring with HOT / WARM / COLD tiers",
       "Counsellor routing, call recording & SLA tracking",
     ],
-    image: "/inhouse/vacademy-crm.png",
+    image: "/inhouse/vacademy-crm.jpg",
   },
   {
     name: "Vacademy LMS",
@@ -38,7 +38,7 @@ export const inhouseProducts: InhouseProduct[] = [
       "White-labelled iOS & Android apps",
       "Payments, workflows & analytics built in",
     ],
-    image: "/inhouse/vacademy-lms.png",
+    image: "/inhouse/vacademy-lms.jpg",
   },
   {
     name: "Vimotion AI",
@@ -53,6 +53,6 @@ export const inhouseProducts: InhouseProduct[] = [
       "Voiceovers, music & subtitles",
       "Full timeline editor with overlays",
     ],
-    image: "/inhouse/vimotion.png",
+    image: "/inhouse/vimotion.jpg",
   },
 ];

@@ -5,6 +5,9 @@ import { industries } from "@/content/industries";
 import { products } from "@/content/products";
 import { getSlugs } from "@/lib/mdx";
 
+// Emit a static sitemap.xml for output: "export".
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
