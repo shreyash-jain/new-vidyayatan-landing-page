@@ -48,6 +48,17 @@ const components = {
   td: (props: ComponentPropsWithoutRef<"td">) => (
     <td className="border-b border-border px-4 py-2.5 text-navy/80" {...props} />
   ),
+  img: ({ alt = "", ...props }: ComponentPropsWithoutRef<"img">) => (
+    <img
+      alt={alt}
+      className="my-8 w-full rounded-2xl border border-border/80 object-cover shadow-soft"
+      loading="lazy"
+      {...props}
+    />
+  ),
+  hr: (props: ComponentPropsWithoutRef<"hr">) => (
+    <hr className="my-10 border-t border-border/60" {...props} />
+  ),
 };
 
 export function MdxContent({ source }: { source: string }) {

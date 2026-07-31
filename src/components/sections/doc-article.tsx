@@ -36,6 +36,15 @@ export function DocArticle({ doc, collection }: { doc: Doc; collection: Collecti
       <Section>
         <Container className="max-w-3xl">
           <article>
+            {frontmatter.image ? (
+              <div className="mb-10 overflow-hidden rounded-2xl border border-border shadow-soft">
+                <img
+                  src={frontmatter.image}
+                  alt={frontmatter.title}
+                  className="max-h-[420px] w-full object-cover"
+                />
+              </div>
+            ) : null}
             <MdxContent source={doc.content} />
           </article>
           <div className="mt-14 border-t border-border pt-8">

@@ -10,6 +10,7 @@ export type DocFrontmatter = {
   date: string; // ISO
   author?: string;
   tag?: string;
+  image?: string;
 };
 
 export type Doc = {

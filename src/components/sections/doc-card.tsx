@@ -18,6 +18,15 @@ export function DocCard({ doc, collection }: { doc: Doc; collection: Collection 
           {doc.readingMinutes} min read
         </span>
       </div>
+      {doc.frontmatter.image ? (
+        <div className="mt-4 overflow-hidden rounded-xl border border-border/60">
+          <img
+            src={doc.frontmatter.image}
+            alt={doc.frontmatter.title}
+            className="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      ) : null}
       <h2 className="mt-4 font-display text-xl font-bold leading-snug text-navy">
         {doc.frontmatter.title}
       </h2>
