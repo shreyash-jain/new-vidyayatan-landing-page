@@ -1,0 +1,138 @@
+---
+title: "How to Ensure Your Vibe Coded App is Actually Production Grade"
+description: "Before launching your AI vibe-coded application to paying users or enterprise clients, run through our 7-point production readiness checklist covering security, data integrity, error handling, and performance."
+date: "2026-07-29"
+author: "Vidyayatan Engineering"
+tag: "Production Readiness"
+image: "/images/blog/vibe-coded-production.svg"
+---
+
+Building a working prototype with AI vibe coding tools like Cursor, Replit Agent, or Lovable is thrilling. In a matter of hours, you have clickable buttons, working API calls, and a live deployment on Vercel or Netlify.
+
+However, there is a vast gulf between **"It works on my browser"** and **"Production-Grade Enterprise Software"**.
+
+When real users begin using your app, they will attempt unexpected user flows, upload malformed files, lose network connectivity mid-request, and test your system against malicious inputs. If your app isn't hardened for production, you risk data corruption, security breaches, user churn, and embarrassing downtime.
+
+Here is the definitive **7-Point Production Readiness Checklist** every founder must run before launching their vibe-coded app.
+
+---
+
+## The 7-Point Production Readiness Checklist
+
+### 1. Security & Authentication Hygiene
+
+AI assistants frequently write code that exposes environment variables or omits essential authorization checks. Verify the following:
+
+- **Row Level Security (RLS) & Authorization:** Ensure users can only read and write their own database rows. Never rely solely on frontend hidden buttons to protect sensitive admin actions.
+- **Environment Secrets Management:** Verify `NEXT_PUBLIC_` or public frontend variables do not leak secret API keys (e.g. OpenAI API keys, Stripe Secret Keys, AWS credentials).
+- **CORS & CSRF Policies:** Restrict API routes to allow requests only from your explicit production domain.
+
+```typescript
+// BAD: Insecure route created by quick AI prompting
+export async function DELETE(req: Request) {
+  const { userId } = await req.json();
+  await db.user.delete({ where: { id: userId } }); // Anyone can delete any user!
+  return Response.json({ success: true });
+}
+
+// GOOD: Production-grade authenticated route
+import { getSession } from "@/lib/auth";
+
+export async function DELETE(req: Request) {
+  const session = await getSession();
+  if (!session || session.user.role !== "admin") {
+    return new Response("Unauthorized", { status: 401 });
+  }
+  
+  const { userId } = await req.json();
+  await db.user.delete({ where: { id: userId } });
+  return Response.json({ success: true });
+}
+```
+
+### 2. Global Error Boundaries & Graceful Degradation
+
+In vibe-coded apps, an unhandled API error often causes the entire React application to crash into a white screen of death.
+
+- Add top-level **React Error Boundaries** with user-friendly fallback UIs and reload options.
+- Wrap all async API fetch calls in `try...catch` blocks with explicit user toast notifications rather than silent failures.
+
+### 3. Rate Limiting & DDoS Protection
+
+Prevent malicious bots or unintended infinite loops from blowing up your cloud hosting bill:
+
+- Implement rate limiting (e.g. via **Upstash Redis** or **Cloudflare WAF**) on authentication endpoints (`/api/login`), password resets, and expensive AI generation routes.
+- Enforce strict request body size limits on file upload routes.
+
+### 4. Database Transactions & Data Integrity
+
+When performing multi-step operations (e.g. processing a payment AND updating user subscription status AND generating an invoice), ensure they are wrapped inside an **ACID Database Transaction**.
+
+Without transactions, a failure midway through the operation leaves your database in a corrupt, half-updated state.
+
+```typescript
+// Ensuring atomic transaction for payment processing
+await db.$transaction(async (tx) => {
+  const invoice = await tx.invoice.create({ data: invoiceData });
+  await tx.subscription.update({
+    where: { id: subscriptionId },
+    data: { status: "ACTIVE", currentPeriodEnd: nextBillingDate },
+  });
+  await tx.auditLog.create({ data: { event: "PAYMENT_SUCCESS", invoiceId: invoice.id } });
+});
+```
+
+### 5. Performance Budgets & Bundle Optimization
+
+AI coding tools tend to import heavy JavaScript libraries for simple tasks (e.g., importing all of `lodash` for a single array filter, or using unoptimized 5MB PNG images).
+
+- Audit your client JavaScript bundle using `@next/bundle-analyzer`.
+- Serve images in modern **WebP / AVIF** formats with explicit `width` and `height` attributes to eliminate Layout Shift (CLS).
+- Aim for a **Lighthouse Performance Score of 90+** on mobile and desktop.
+
+### 6. Automated Database Backups & Point-in-Time Recovery
+
+If your database becomes corrupted or corrupted by a faulty migration, how quickly can you recover?
+
+- Enable **Point-in-Time Recovery (PITR)** on your database host (AWS RDS, Supabase, Neon, or Railway).
+- Perform a dry-run restoration test once every month to verify backup integrity.
+
+### 7. Observability, Logging & Alerting
+
+Production-grade software notifies *you* when something breaks, before your customers complain on Twitter or LinkedIn.
+
+- Configure real-time alerts in **Sentry**, **Datadog**, or **Better Stack** for HTTP 500 errors.
+- Implement structured JSON logging on serverless handlers for easy searching and debugging.
+
+---
+
+## Production Readiness Summary Matrix
+
+| Pillar | Vibe Prototype State | Production-Grade Standard |
+| --- | --- | --- |
+| **Security** | Hardcoded secrets, missing RLS | JWT expiry, RLS enabled, KMS secret storage |
+| **Resilience** | White screen on component error | React Error Boundaries with graceful fallbacks |
+| **API Protection** | Unprotected endpoints | Rate limited via Redis / Cloudflare WAF |
+| **Data Integrity** | Isolated non-atomic queries | ACID transactions & foreign key constraints |
+| **Backups** | No automated backups | Daily automated PITR with restoration verification |
+
+---
+
+## Get a 48-Hour Production Hardening Audit by Vidyayatan
+
+Preparing to launch your vibe-coded app to paying customers, launch on Product Hunt, or pitch enterprise clients? Don't leave your launch to chance.
+
+**Vidyayatan provides a comprehensive 48-Hour Production Audit & Hardening Service:**
+
+1. **Security Vulnerability Scan:** Penetration testing on API endpoints, authentication flows, and secret exposures.
+2. **Database & Query Hardening:** Index optimization, connection pool tuning, and transaction verification.
+3. **Performance Optimization:** Bundle size reduction, Core Web Vitals optimization, and edge caching implementation.
+4. **Production Certification:** Detailed report with patched security flaws and certification of production readiness.
+
+---
+
+## Ensure Your Launch is Flawless
+
+Turn your AI vibe prototype into a hardened, secure enterprise product that customers trust and investors back.
+
+[Book Your 48-Hour Production Readiness Audit](/contact)
