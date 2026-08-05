@@ -44,17 +44,17 @@
       <!-- 1 -->
       <circle cx="15" cy="15" r="12" fill="#10b981" />
       <path d="M10 15 L14 19 L20 11" stroke="#ffffff" stroke-width="2" fill="none" />
-      <text x="38" y="20" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">1. Security & Authorization (RLS + JWT Hygiene)</text>
+      <text x="38" y="20" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">1. Security &amp; Authorization (RLS + JWT Hygiene)</text>
       
       <!-- 2 -->
       <circle cx="15" cy="55" r="12" fill="#10b981" />
       <path d="M10 55 L14 59 L20 51" stroke="#ffffff" stroke-width="2" fill="none" />
-      <text x="38" y="60" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">2. Global Error Boundaries & Fallback UIs</text>
+      <text x="38" y="60" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">2. Global Error Boundaries &amp; Fallback UIs</text>
 
       <!-- 3 -->
       <circle cx="15" cy="95" r="12" fill="#10b981" />
       <path d="M10 95 L14 99 L20 91" stroke="#ffffff" stroke-width="2" fill="none" />
-      <text x="38" y="100" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">3. Rate Limiting & DDoS Prevention (Redis/WAF)</text>
+      <text x="38" y="100" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">3. Rate Limiting &amp; DDoS Prevention (Redis/WAF)</text>
 
       <!-- 4 -->
       <circle cx="15" cy="135" r="12" fill="#10b981" />
@@ -64,17 +64,17 @@
       <!-- 5 -->
       <circle cx="15" cy="175" r="12" fill="#10b981" />
       <path d="M10 175 L14 179 L20 171" stroke="#ffffff" stroke-width="2" fill="none" />
-      <text x="38" y="180" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">5. Performance & Bundle Size Optimization (90+ score)</text>
+      <text x="38" y="180" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">5. Performance &amp; Bundle Size Optimization (90+ score)</text>
 
       <!-- 6 -->
       <circle cx="15" cy="215" r="12" fill="#10b981" />
       <path d="M10 215 L14 219 L20 211" stroke="#ffffff" stroke-width="2" fill="none" />
-      <text x="38" y="220" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">6. Automated Database Backups & PITR</text>
+      <text x="38" y="220" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">6. Automated Database Backups &amp; PITR</text>
 
       <!-- 7 -->
       <circle cx="15" cy="255" r="12" fill="#10b981" />
       <path d="M10 255 L14 259 L20 251" stroke="#ffffff" stroke-width="2" fill="none" />
-      <text x="38" y="260" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">7. Real-Time Observability & Sentry Alerting</text>
+      <text x="38" y="260" fill="#f1f5f9" font-family="sans-serif" font-size="13" font-weight="600">7. Real-Time Observability &amp; Sentry Alerting</text>
     </g>
   </g>
 

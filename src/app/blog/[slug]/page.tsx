@@ -20,6 +20,12 @@ export async function generateMetadata({
     title: doc.frontmatter.title,
     description: doc.frontmatter.description,
     path: `/blog/${slug}`,
+    image: doc.frontmatter.image,
+    article: {
+      publishedTime: doc.frontmatter.date,
+      author: doc.frontmatter.author,
+      tag: doc.frontmatter.tag,
+    },
   });
 }
 

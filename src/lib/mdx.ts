@@ -1,8 +1,42 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { slugify } from "./slug";
 
 export type Collection = "blog" | "guides";
+
+export type Heading = {
+  level: 2 | 3;
+  text: string;
+  id: string;
+};
+
+/**
+ * Pull h2/h3 headings out of the raw MDX for the article table of contents.
+ * Fenced code blocks are skipped so a `# comment` inside a snippet never
+ * becomes a phantom entry.
+ */
+function extractHeadings(content: string): Heading[] {
+  const headings: Heading[] = [];
+  let inFence = false;
+
+  for (const line of content.split(/\r?\n/)) {
+    if (/^\s*(```|~~~)/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+
+    const match = /^(#{2,3})\s+(.+?)\s*$/.exec(line);
+    if (!match) continue;
+
+    // Strip inline markdown emphasis/code so the ToC label reads as plain text.
+    const text = match[2].replace(/[*_`]/g, "").trim();
+    headings.push({ level: match[1].length as 2 | 3, text, id: slugify(text) });
+  }
+
+  return headings;
+}
 
 export type DocFrontmatter = {
   title: string;
@@ -18,6 +52,7 @@ export type Doc = {
   frontmatter: DocFrontmatter;
   content: string;
   readingMinutes: number;
+  headings: Heading[];
 };
 
 const CONTENT_DIR = path.join(process.cwd(), "src", "content");
@@ -46,6 +81,7 @@ export function getDoc(collection: Collection, slug: string): Doc | null {
     frontmatter: data as DocFrontmatter,
     content,
     readingMinutes: Math.max(1, Math.round(words / 200)),
+    headings: extractHeadings(content),
   };
 }
 
