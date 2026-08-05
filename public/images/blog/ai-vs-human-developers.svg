@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: a machine grid and an organic node cluster meeting at a seam">
+  <defs>
+    <linearGradient id="v-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#151b3a" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <radialGradient id="v-a" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.42" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="v-b" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.42" />
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#v-bg)" />
+  <circle cx="300" cy="315" r="300" fill="url(#v-a)" />
+  <circle cx="900" cy="315" r="300" fill="url(#v-b)" />
+
+  <!-- Left: rigid machine lattice -->
+  <g transform="translate(120, 145)">
+    <g stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.5" fill="none">
+      <rect x="0" y="0" width="340" height="340" rx="6" />
+      <path d="M85 0 V340 M170 0 V340 M255 0 V340" />
+      <path d="M0 85 H340 M0 170 H340 M0 255 H340" />
+    </g>
+    <g fill="#7dd3fc">
+      <rect x="70" y="70" width="30" height="30" rx="4" />
+      <rect x="155" y="155" width="30" height="30" rx="4" />
+      <rect x="240" y="70" width="30" height="30" rx="4" />
+      <rect x="70" y="240" width="30" height="30" rx="4" />
+      <rect x="240" y="240" width="30" height="30" rx="4" />
+    </g>
+    <rect x="140" y="140" width="60" height="60" rx="6" fill="#38bdf8" fill-opacity="0.25" stroke="#bae6fd" stroke-width="2" />
+  </g>
+
+  <!-- Right: organic, irregular node cluster -->
+  <g transform="translate(740, 145)">
+    <g stroke="#c4b5fd" stroke-opacity="0.4" stroke-width="1.5">
+      <path d="M170 170 L60 70 M170 170 L290 50 M170 170 L40 250 M170 170 L300 200 M170 170 L120 310 M170 170 L280 300" />
+      <path d="M60 70 L290 50 M40 250 L120 310 M300 200 L280 300" />
+    </g>
+    <g fill="#c4b5fd">
+      <circle cx="60" cy="70" r="16" />
+      <circle cx="290" cy="50" r="12" />
+      <circle cx="40" cy="250" r="13" />
+      <circle cx="300" cy="200" r="17" />
+      <circle cx="120" cy="310" r="11" />
+      <circle cx="280" cy="300" r="14" />
+    </g>
+    <circle cx="170" cy="170" r="34" fill="#a78bfa" fill-opacity="0.3" stroke="#ddd6fe" stroke-width="2" />
+  </g>
+
+  <!-- The seam where the two meet -->
+  <line x1="600" y1="120" x2="600" y2="510" stroke="#475569" stroke-width="2" stroke-dasharray="4 10" />
+  <circle cx="600" cy="315" r="26" fill="#0a0f1d" stroke="#64748b" stroke-width="2" />
+  <circle cx="600" cy="315" r="7" fill="#94a3b8" />
+</svg>

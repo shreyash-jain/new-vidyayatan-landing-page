@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: four stacked isometric layers rising from a base plane">
+  <defs>
+    <linearGradient id="s-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="55%" stop-color="#171d3c" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <linearGradient id="s-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#1677ff" stop-opacity="0.3" />
+    </linearGradient>
+    <radialGradient id="s-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#s-bg)" />
+  <circle cx="600" cy="300" r="340" fill="url(#s-glow)" />
+
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 158 H1200 M0 315 H1200 M0 472 H1200" />
+    <path d="M240 0 V630 M480 0 V630 M720 0 V630 M960 0 V630" />
+  </g>
+
+  <!-- Isometric stack, base to top. Each plate is the same rhombus lifted. -->
+  <g transform="translate(600, 460)">
+    <g opacity="0.95">
+      <path d="M0 0 L260 -130 L520 0 L260 130 Z" transform="translate(-260,0)" fill="#1677ff" fill-opacity="0.5" stroke="#7dd3fc" stroke-opacity="0.5" stroke-width="2" />
+    </g>
+    <g transform="translate(0,-88)">
+      <path d="M0 0 L225 -112 L450 0 L225 112 Z" transform="translate(-225,0)" fill="#1677ff" fill-opacity="0.32" stroke="#7dd3fc" stroke-opacity="0.42" stroke-width="2" />
+    </g>
+    <g transform="translate(0,-176)">
+      <path d="M0 0 L190 -95 L380 0 L190 95 Z" transform="translate(-190,0)" fill="#38bdf8" fill-opacity="0.22" stroke="#7dd3fc" stroke-opacity="0.38" stroke-width="2" />
+    </g>
+    <g transform="translate(0,-264)">
+      <path d="M0 0 L155 -77 L310 0 L155 77 Z" transform="translate(-155,0)" fill="url(#s-top)" stroke="#bae6fd" stroke-opacity="0.55" stroke-width="2" />
+    </g>
+    <circle cx="0" cy="-264" r="13" fill="#e0f2fe" />
+    <g stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="5 7">
+      <path d="M0 -251 V-10" />
+    </g>
+  </g>
+</svg>
