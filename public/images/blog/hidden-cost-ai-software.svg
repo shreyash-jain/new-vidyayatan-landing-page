@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: a small visible peak above a waterline with a far larger mass submerged beneath">
+  <defs>
+    <linearGradient id="h-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="45%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <linearGradient id="h-deep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1677ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#1677ff" stop-opacity="0.02" />
+    </linearGradient>
+    <linearGradient id="h-peak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <radialGradient id="h-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.24" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#h-bg)" />
+  <circle cx="600" cy="190" r="250" fill="url(#h-glow)" />
+
+  <!-- Water body -->
+  <rect x="0" y="235" width="1200" height="395" fill="url(#h-deep)" />
+  <line x1="0" y1="235" x2="1200" y2="235" stroke="#38bdf8" stroke-opacity="0.55" stroke-width="2.5" />
+  <g stroke="#38bdf8" stroke-opacity="0.12" stroke-width="1.5">
+    <path d="M0 300 H1200 M0 375 H1200 M0 450 H1200 M0 525 H1200" />
+  </g>
+
+  <!-- Small visible peak -->
+  <path d="M600 88 L688 235 L512 235 Z" fill="url(#h-peak)" />
+
+  <!-- Large submerged mass -->
+  <path d="M512 235 L688 235 L830 400 L742 560 L470 572 L360 392 Z" fill="#38bdf8" fill-opacity="0.14" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2.5" />
+  <path d="M512 235 L600 372 L688 235" fill="none" stroke="#38bdf8" stroke-opacity="0.22" stroke-width="1.5" />
+  <path d="M600 372 L360 392 M600 372 L830 400 M600 372 L470 572 M600 372 L742 560" fill="none" stroke="#38bdf8" stroke-opacity="0.18" stroke-width="1.5" />
+
+  <g fill="#7dd3fc" fill-opacity="0.55">
+    <circle cx="360" cy="392" r="7" />
+    <circle cx="830" cy="400" r="7" />
+    <circle cx="470" cy="572" r="7" />
+    <circle cx="742" cy="560" r="7" />
+    <circle cx="600" cy="372" r="9" fill-opacity="0.8" />
+  </g>
+</svg>

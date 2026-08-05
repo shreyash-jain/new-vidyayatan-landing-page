@@ -27,13 +27,24 @@ export default function GuidesPage() {
       <Section>
         <Container>
           {guides.length ? (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {guides.map((doc, i) => (
-                <Reveal key={doc.slug} delay={(i % 3) * 0.06}>
-                  <DocCard doc={doc} collection="guides" />
-                </Reveal>
-              ))}
-            </div>
+            <>
+              <div className="mb-8 flex items-baseline justify-between gap-4 border-b border-border pb-4">
+                <h2 className="font-display text-xl font-bold tracking-tight text-navy">
+                  All guides
+                </h2>
+                <span className="text-sm text-muted-foreground">
+                  {guides.length} {guides.length === 1 ? "guide" : "guides"}
+                </span>
+              </div>
+
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {guides.map((doc, i) => (
+                  <Reveal key={doc.slug} delay={(i % 3) * 0.06}>
+                    <DocCard doc={doc} collection="guides" />
+                  </Reveal>
+                ))}
+              </div>
+            </>
           ) : (
             <p className="text-center text-muted-foreground">
               New guides are on the way.

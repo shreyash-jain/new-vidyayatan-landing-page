@@ -20,6 +20,96 @@ export function organizationJsonLd() {
   };
 }
 
+/**
+ * BlogPosting JSON-LD for a blog/guide article. Google uses this for article
+ * rich results, so every field it reads must be an absolute URL.
+ */
+export function articleJsonLd({
+  title,
+  description,
+  path,
+  datePublished,
+  author,
+  image,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  datePublished: string;
+  author?: string;
+  image?: string;
+}) {
+  const url = `${site.url}${path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished,
+    dateModified: datePublished,
+    image: image ? `${site.url}${image}` : `${site.url}/og/default.png`,
+    // Posts are bylined to the team, not to individuals, so Organization is the
+    // accurate author type here.
+    author: {
+      "@type": "Organization",
+      name: author ?? site.name,
+      url: site.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${site.url}/brand/logo-wordmark.png`,
+      },
+    },
+  };
+}
+
+/** Service JSON-LD for a service landing page. */
+export function serviceJsonLd({
+  name,
+  description,
+  path,
+  serviceTypes,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  serviceTypes?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url: `${site.url}${path}`,
+    serviceType: serviceTypes,
+    areaServed: site.hq.country,
+    provider: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+  };
+}
+
+/** FAQPage JSON-LD — drives the expandable FAQ rich result in search. */
+export function faqJsonLd(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+}
+
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",

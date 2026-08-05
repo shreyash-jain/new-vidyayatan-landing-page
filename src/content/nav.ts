@@ -16,6 +16,7 @@ export const primaryNav: (NavGroup | NavLink)[] = [
     label: "Services",
     href: "/services",
     items: [
+      { label: "Marketing", href: "/marketing", description: "AI video & blogs for online visibility" },
       { label: "Custom Software", href: "/services/custom-software", description: "Tailor-made software solutions" },
       { label: "Mobile App Development", href: "/services/mobile-app-development", description: "iOS & Android apps" },
       { label: "Web App Development", href: "/services/web-app-development", description: "Scalable web platforms" },

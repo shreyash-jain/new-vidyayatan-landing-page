@@ -1,0 +1,89 @@
+---
+title: "The Hidden Cost of AI-Generated Software"
+description: "AI-generated code is cheap to write and expensive to own. A breakdown of where the real costs land — review load, duplication, security gaps, and maintenance debt — and how to capture the speed without the bill."
+date: "2026-08-01"
+author: "Vidyayatan Engineering"
+tag: "Technical Debt"
+image: "/images/blog/hidden-cost-ai-software.svg"
+---
+
+The pitch is straightforward: AI writes the code, you ship in a fraction of the time, and your engineering costs fall. The first two are frequently true. The third is where teams get surprised.
+
+Software cost was never concentrated in writing it. Industry estimates consistently put **60–80% of total lifecycle cost in maintenance** — reading, changing, debugging, and operating code after it ships. AI compresses the cheap part dramatically and leaves the expensive part largely untouched. In several ways, it makes it worse.
+
+## Cost 1 — Review Load Scales With Generation
+
+If your team's code output triples but your review capacity does not, one of three things happens:
+
+- Review becomes a bottleneck and the speed gain evaporates
+- Review quality degrades and defects reach production
+- Review is skipped and you find out later
+
+This is the most immediate hidden cost and the easiest to miss, because it shows up as a *people* problem — senior engineers complaining about review burden — rather than as a line item.
+
+**Rule of thumb:** if generation capacity increases, verification capacity must increase proportionally. That is either more senior review time, or substantially better automated verification. It is never free.
+
+## Cost 2 — Duplication and Codebase Growth
+
+Models generate; they do not naturally search for and reuse what already exists. The predictable result is three date-formatting helpers, four slightly different API error handlers, and two parallel validation approaches — all in the same repository.
+
+Duplication is expensive in a specific way: **the next change costs more than it should, forever.** Fix a bug in one copy and you have fixed it in one of four places. The other three become divergent behaviour that surfaces as an unreproducible customer report.
+
+A useful signal to track: lines of code per shipped feature, over time. If it is climbing, duplication is accumulating.
+
+## Cost 3 — The Security Gap
+
+This is the most expensive category and the least visible in a demo. The pattern is consistent: generated code implements what was asked and omits what was assumed.
+
+The most common gaps we find in AI-heavy codebases during engineering review:
+
+- **Missing authorisation checks.** Authentication is present (the user is logged in); authorisation is absent (this user may not read *this* record). This is the single most common finding.
+- **Over-permissive data access.** Endpoints returning full objects when the client needs three fields, leaking internal state and PII.
+- **Unvalidated input at trust boundaries.** Validated in the UI, trusted on the server.
+- **Secrets and keys handled inconsistently.** Correct in some modules, hardcoded in others.
+- **No rate limiting** on anything that costs money or writes to a database.
+
+None of these are hard for a model to write. They are simply not written unless requested, and the person prompting often does not know to ask. That knowledge gap *is* the cost.
+
+## Cost 4 — Understanding Debt
+
+Traditional technical debt is code you know is bad. **Understanding debt** is code that works but that nobody on the team can explain.
+
+It is worse than ordinary debt, because with ordinary debt you at least know what the shortcut was. With understanding debt, every change is exploratory, every estimate is a guess, and the on-call engineer is reading the code for the first time during an incident.
+
+The test is simple and worth applying honestly: **pick a random module and ask the team who owns it to explain why it works that way.** If the answer is "the AI wrote it and the tests pass," you have measurable understanding debt.
+
+## What It Actually Costs
+
+For a mid-sized product, the pattern we see when teams bring us a fast-built codebase to harden:
+
+| Cost area | Typical remediation effort |
+| --- | --- |
+| Security review and authorisation fixes | 2–4 weeks |
+| Deduplication and consolidation | 2–6 weeks |
+| Adding meaningful test coverage | 3–6 weeks |
+| Observability and error handling | 1–3 weeks |
+| Documentation and knowledge transfer | 1–2 weeks |
+
+That is frequently comparable to the time the AI-first approach saved — arriving later, under pressure, and often after an incident forced the issue. The speed was real. It was also a loan.
+
+## How to Get the Speed Without the Bill
+
+None of this argues against AI-assisted development. We use these tools daily. It argues for a specific discipline around them.
+
+1. **Never merge code you cannot explain.** The single highest-value rule. If the reviewer cannot debug it at 3am, it is not ready regardless of whether tests pass.
+2. **Make security explicit in every prompt and every review.** "Who is allowed to do this, and where is that enforced?" asked on every PR.
+3. **Enforce structure mechanically.** Linting, type checking, and architectural boundaries in CI. Models follow constraints well when the constraints are enforced rather than requested.
+4. **Deduplicate deliberately.** Schedule consolidation as real work, not as cleanup that happens when there is time. There is never time.
+5. **Test the negative paths.** Generated tests cover the happy path. Unauthorised, malformed, concurrent, and partial-failure cases are where production breaks.
+6. **Track understanding, not just coverage.** Every significant module needs a named owner who can explain it.
+
+## The Real Framing
+
+AI-generated software is not cheap software. It is **software with its costs redistributed** — less up front, more later, and concentrated in review, security, and maintenance rather than in initial authorship.
+
+That is a genuinely good trade *if* you plan for it. It is a bad trade if you budget for the up-front saving and assume the rest is free. The teams in trouble in 2026 are not the ones that used AI. They are the ones that mistook a redistribution for a discount.
+
+Related reading: [AI vs Human Developers: Who Builds Better Products?](/blog/ai-vs-human-developers-who-builds-better-products) and [Why AI Cannot Replace Software Engineers](/blog/why-ai-cannot-replace-software-engineers).
+
+If you have built fast and need an honest assessment of what it will take to make it production-grade, [our engineering team does exactly this](/contact).
