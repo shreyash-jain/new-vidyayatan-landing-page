@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, Check, Clock, PlayCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, Clock, PlayCircle, X } from "lucide-react";
 import { Container, Section } from "@/components/common/container";
 import { Reveal } from "@/components/common/reveal";
 import { CtaButtons } from "@/components/common/cta-buttons";
@@ -9,6 +9,7 @@ import { CtaBand } from "@/components/common/cta-band";
 import { SectionHeading } from "@/components/common/section-heading";
 import { HeroReel } from "@/components/sections/hero-reel";
 import { VideoCard } from "@/components/sections/video-card";
+import { PricingTables } from "@/components/sections/pricing-tables";
 import { Card } from "@/components/ui/card";
 import {
   Accordion,
@@ -30,11 +31,9 @@ import {
   videoSamples,
   videoFormats,
   marketingCredentials,
-  contentPricing,
-  examplePlans,
-  planTotal,
-  planAssetCount,
   monthlyRetainer,
+  pricingDeliverables,
+  pricingNotClaimed,
   industryFits,
   journeyMilestones,
   researchInputs,
@@ -738,139 +737,57 @@ export default function MarketingPage() {
             description="Per-asset rates, published. No packages you have to decode, no minimum you have to hit before you learn the number."
           />
 
-          <Reveal className="mt-14">
-            <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-soft">
-              <table className="w-full border-collapse text-left text-sm">
-                <thead>
-                  <tr className="border-b border-border bg-muted/50">
-                    <th className="px-5 py-4 font-display font-semibold text-navy">
-                      Service
-                    </th>
-                    <th className="px-5 py-4 font-display font-semibold text-navy">
-                      Duration / qty
-                    </th>
-                    <th className="whitespace-nowrap px-5 py-4 text-right font-display font-semibold text-navy">
-                      Price
-                    </th>
-                    <th className="hidden px-5 py-4 font-display font-semibold text-navy md:table-cell">
-                      Includes
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {contentPricing.map((row) => (
-                    <tr key={row.id} className="border-b border-border last:border-0">
-                      <td className="px-5 py-4">
-                        <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-                          {row.category}
-                        </span>
-                        <span className="mt-1 block font-medium text-navy">
-                          {row.service}
-                        </span>
-                      </td>
-                      <td className="whitespace-nowrap px-5 py-4 text-muted-foreground">
-                        {row.qty}
-                      </td>
-                      <td className="whitespace-nowrap px-5 py-4 text-right">
-                        <span className="font-display text-lg font-bold text-navy">
-                          ${row.price}
-                        </span>
-                      </td>
-                      <td className="hidden px-5 py-4 text-muted-foreground md:table-cell">
-                        {row.includes}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </Reveal>
+          <PricingTables />
 
-          {/* Example plans — totals computed from the table above */}
-          <h3 className="mt-20 text-center font-display text-2xl font-bold tracking-tight text-navy">
-            What a month actually costs
-          </h3>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
-            Three worked examples. Every total below is calculated from the rates in
-            the table — nothing rounded, nothing hidden.
-          </p>
-
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {examplePlans.map((plan, i) => {
-              const total = planTotal(plan);
-              const assets = planAssetCount(plan);
-              return (
-                <Reveal key={plan.name} delay={(i % 3) * 0.06}>
-                  <div
-                    className={cn(
-                      "relative flex h-full flex-col rounded-2xl border bg-card p-7 shadow-soft",
-                      plan.highlighted
-                        ? "border-primary shadow-card ring-1 ring-primary/20"
-                        : "border-border",
-                    )}
-                  >
-                    {plan.highlighted ? (
-                      <span className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-                        Most popular
-                      </span>
-                    ) : null}
-
-                    <h4 className="font-display text-xl font-bold text-navy">
-                      {plan.name}
-                    </h4>
-                    <p className="mt-1.5 text-sm text-muted-foreground">
-                      {plan.tagline}
-                    </p>
-
-                    <div className="mt-6 border-b border-border pb-6">
-                      <div className="flex items-baseline gap-1.5">
-                        <span className="font-display text-4xl font-extrabold text-navy">
-                          ${total}
-                        </span>
-                        <span className="text-sm text-muted-foreground">/ month</span>
-                      </div>
-                      <p className="mt-2 text-sm font-medium text-primary">
-                        {assets} assets · ${(total / assets).toFixed(2)} per asset
+          {/* Scope — what is delivered, and what is deliberately not promised */}
+          <div className="mt-20 grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-start">
+            <Reveal>
+              <h3 className="font-display text-2xl font-bold tracking-tight text-navy">
+                What you get for that
+              </h3>
+              <p className="mt-3 text-muted-foreground">
+                Every engagement, whatever the volume, includes all of this.
+              </p>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                {pricingDeliverables.map((d) => (
+                  <div key={d.title} className="flex gap-3">
+                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
+                      <Check className="size-4" />
+                    </span>
+                    <div>
+                      <h4 className="font-display text-sm font-bold text-navy">
+                        {d.title}
+                      </h4>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                        {d.detail}
                       </p>
                     </div>
-
-                    <ul className="mt-6 flex-1 space-y-3">
-                      {plan.lines.map((line) => (
-                        <li
-                          key={line.id}
-                          className="flex items-start justify-between gap-3 text-sm"
-                        >
-                          <span className="flex items-start gap-3">
-                            <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
-                              <Check className="size-3.5" />
-                            </span>
-                            <span className="leading-relaxed text-navy/80">
-                              {line.label}
-                            </span>
-                          </span>
-                          <span className="shrink-0 font-semibold text-navy">
-                            {line.id.startsWith("blog") ? "" : `×${line.qty}`}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Link
-                      href="/contact"
-                      className={cn(
-                        "mt-8 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors",
-                        plan.highlighted
-                          ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                          : "border border-border text-navy hover:bg-muted",
-                      )}
-                    >
-                      Start with this
-                      <ArrowRight className="size-4" />
-                    </Link>
                   </div>
-                </Reveal>
-              );
-            })}
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <Card className="border-navy/15 bg-navy/[0.03] p-7 md:p-8">
+                <h3 className="font-display text-lg font-bold text-navy">
+                  {pricingNotClaimed.title}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {pricingNotClaimed.intro}
+                </p>
+                <ul className="mt-5 space-y-3">
+                  {pricingNotClaimed.points.map((p) => (
+                    <li key={p} className="flex items-start gap-3">
+                      <X className="mt-0.5 size-4 shrink-0 text-navy/40" />
+                      <span className="text-sm leading-relaxed text-navy/80">{p}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 border-t border-border pt-5 text-sm leading-relaxed text-muted-foreground">
+                  {pricingNotClaimed.closing}
+                </p>
+              </Card>
+            </Reveal>
           </div>
 
           {/* Monthly retainer */}

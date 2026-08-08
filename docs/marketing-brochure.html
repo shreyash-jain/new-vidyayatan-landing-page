@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Vidyayatan Technologies — Marketing: AI Video &amp; Content</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#2b2e7c; --primary:#1677ff; --ink:#101828; --muted:#5b6478;
+    --line:#e4e7ec; --bg-soft:#f6f8fc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:'Lato',system-ui,sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.55}
+  h1,h2,h3,h4,.display{font-family:'Sora','Lato',sans-serif;letter-spacing:-.01em}
+
+  @page{size:A4;margin:0}
+  .page{width:210mm;min-height:297mm;padding:16mm 15mm;page-break-after:always;position:relative;display:flex;flex-direction:column}
+  .page:last-child{page-break-after:auto}
+
+  .eyebrow{font-size:8pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--primary)}
+  h2.title{font-size:22pt;font-weight:800;color:var(--navy);margin-top:7mm;line-height:1.15}
+  .lead{font-size:11pt;color:var(--muted);margin-top:4mm;max-width:150mm}
+  .rule{height:3px;width:22mm;background:var(--primary);border-radius:2px;margin-top:5mm}
+
+  /* Cover */
+  .cover{background:linear-gradient(135deg,#0a0f1d 0%,#1b2050 55%,#2b2e7c 100%);color:#fff}
+  .cover .brandbar{display:flex;align-items:center;justify-content:space-between}
+  .cover .logo{height:13mm;filter:brightness(0) invert(1)}
+  .cover h1{font-size:34pt;font-weight:800;line-height:1.08;margin-top:10mm}
+  .cover .sub{font-size:12pt;color:rgba(255,255,255,.72);margin-top:6mm;max-width:140mm}
+  .cover .chips{display:flex;gap:5mm;flex-wrap:wrap;margin-top:9mm}
+  .cover .chip{border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:2mm 5mm;font-size:9pt;color:rgba(255,255,255,.9)}
+  .cover .foot{margin-top:auto;font-size:9pt;color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.18);padding-top:5mm;display:flex;justify-content:space-between;gap:6mm;flex-wrap:wrap}
+  .cover .foot b{color:#fff;font-weight:700}
+  .cover .kicker{font-family:'Sora',sans-serif;font-size:9.5pt;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#7dd3fc;margin-top:14mm}
+  .cover .reel{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;margin-top:10mm}
+  .cover .reel img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:2.5mm;border:1px solid rgba(255,255,255,.22);display:block}
+  .cover .contents{margin-top:9mm;border-top:1px solid rgba(255,255,255,.18);padding-top:6mm}
+  .cover .ct-title{font-size:8pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .cover .contents ol{list-style:none;margin-top:4mm;columns:2;column-gap:12mm}
+  .cover .contents li{font-size:9.5pt;color:rgba(255,255,255,.85);margin-bottom:2.2mm;break-inside:avoid}
+  .cover .contents li span{display:inline-block;width:8mm;color:#7dd3fc;font-weight:700}
+
+  /* generic blocks */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8mm}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+  .card{border:1px solid var(--line);border-radius:4mm;padding:6mm;background:#fff}
+  .card.soft{background:var(--bg-soft)}
+  .card h3{font-size:12pt;font-weight:700;color:var(--navy)}
+  .card p{font-size:9.5pt;color:var(--muted);margin-top:2.5mm}
+  ul.ticks{list-style:none;margin-top:4mm}
+  ul.ticks li{position:relative;padding-left:6mm;margin-top:2.6mm;font-size:9.5pt}
+  ul.ticks li::before{content:"";position:absolute;left:0;top:1.6mm;width:3mm;height:3mm;border-radius:50%;background:var(--primary)}
+  ul.crosses{list-style:none;margin-top:4mm}
+  ul.crosses li{position:relative;padding-left:6mm;margin-top:2.6mm;font-size:9.5pt}
+  ul.crosses li::before{content:"×";position:absolute;left:0;top:-.4mm;color:#98a2b3;font-weight:700}
+
+  table{width:100%;border-collapse:collapse;margin-top:6mm;font-size:9.5pt}
+  th{background:var(--bg-soft);color:var(--navy);font-family:'Sora',sans-serif;font-weight:600;text-align:left;padding:2.8mm 4mm;border-bottom:1px solid var(--line);font-size:9pt}
+  td{padding:2.6mm 4mm;border-bottom:1px solid var(--line);vertical-align:top}
+  td.num{text-align:right;white-space:nowrap;font-weight:700;color:var(--navy)}
+  .cat{font-size:7.5pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);display:block}
+
+  .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:6mm}
+  /* 4:5 crop, not the source 9:16 — six full-height verticals overflow A4. */
+  .shot img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:3mm;border:1px solid var(--line);display:block}
+  .shot .meta{margin-top:2.5mm}
+  .shot .fmt{font-size:7.5pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
+  .shot .nm{font-family:'Sora',sans-serif;font-size:9.5pt;font-weight:700;color:var(--navy);margin-top:1mm}
+
+  .stat{border:1px solid var(--line);border-radius:4mm;padding:5mm;text-align:center}
+  .stat .v{font-family:'Sora',sans-serif;font-size:19pt;font-weight:800;color:var(--primary)}
+  .stat .l{font-size:8.5pt;color:var(--ink);font-weight:700;margin-top:1.5mm}
+  .stat .n{font-size:8pt;color:var(--muted);margin-top:1mm}
+
+  .plan{border:1px solid var(--line);border-radius:4mm;padding:6mm;display:flex;flex-direction:column}
+  .plan.hi{border-color:var(--primary);background:#f5f9ff}
+  .plan .nm{font-family:'Sora',sans-serif;font-size:12pt;font-weight:700;color:var(--navy)}
+  .plan .tg{font-size:8.5pt;color:var(--muted);margin-top:1.5mm;min-height:9mm}
+  .plan .amt{font-family:'Sora',sans-serif;font-size:17pt;font-weight:800;color:var(--navy);margin-top:3mm}
+  .plan .alt{font-size:9pt;color:var(--muted)}
+  .plan .per{font-size:8.5pt;color:var(--primary);font-weight:700;margin-top:2mm;border-top:1px solid var(--line);padding-top:3mm}
+  .plan ul{list-style:none;margin-top:3mm}
+  .plan li{font-size:8.5pt;margin-top:2mm;color:var(--ink)}
+
+  .foot-note{margin-top:auto;padding-top:6mm;border-top:1px solid var(--line);font-size:8pt;color:var(--muted);display:flex;justify-content:space-between}
+
+  .cta{background:linear-gradient(135deg,#0a0f1d 0%,#1b2050 55%,#2b2e7c 100%);color:#fff;border-radius:5mm;padding:10mm;margin-top:7mm}
+  .cta h3{font-family:'Sora',sans-serif;font-size:16pt;font-weight:800}
+  .cta p{color:rgba(255,255,255,.72);font-size:10pt;margin-top:3mm;max-width:135mm}
+  .cta .row{display:flex;gap:8mm;flex-wrap:wrap;margin-top:6mm;font-size:9.5pt}
+  .cta .row div b{display:block;color:rgba(255,255,255,.55);font-size:8pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1mm}
+  .badges{display:flex;gap:6mm;align-items:center;margin-top:6mm}
+  .badges img{height:14mm}
+  .badges span{font-size:8.5pt;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- ─────────── 1. COVER ─────────── -->
+<section class="page cover">
+  <div>
+    <div class="brandbar">
+      <img class="logo" src="../public/brand/logo-wordmark.png" alt="Vidyayatan Technologies" />
+      <div style="font-size:8.5pt;color:rgba(255,255,255,.6);text-align:right">2026</div>
+    </div>
+
+    <div class="kicker">Vidyayatan · Marketing Portfolio</div>
+
+    <h1>AI video that gets you seen —<br />and content that keeps you found</h1>
+    <p class="sub">
+      We script, produce and ship video at a pace no studio schedule allows, then back
+      it with search-ready articles so the attention you earn keeps working long after
+      the post scrolls past.
+    </p>
+    <div class="chips">
+      <span class="chip">No studio, no crew</span>
+      <span class="chip">Human-reviewed, always</span>
+      <span class="chip">You own every asset</span>
+    </div>
+  </div>
+
+  <!-- Work strip: the cover should show the product, not just describe it -->
+  <div class="reel">
+    <img src="../public/videos/posters/kks-red-flags.jpg" alt="" />
+    <img src="../public/videos/posters/kks-sold-out.jpg" alt="" />
+    <img src="../public/videos/posters/edzumo-crack-recruitment.jpg" alt="" />
+    <img src="../public/videos/posters/kks-costume-institute.jpg" alt="" />
+    <img src="../public/videos/posters/edzumo-omr-scan.jpg" alt="" />
+  </div>
+
+  <div class="contents">
+    <div class="ct-title">Inside this document</div>
+    <ol>
+      <li><span>02</span> What we do — video and search</li>
+      <li><span>03</span> Selected work</li>
+      <li><span>04</span> Research method and reporting</li>
+      <li><span>05</span> Rate card</li>
+      <li><span>06</span> Worked monthly plans</li>
+      <li><span>07</span> Scope and industries</li>
+      <li><span>08</span> Who we are</li>
+    </ol>
+  </div>
+
+  <div class="foot">
+    <div><b>Vidyayatan Technologies LLP</b><br />1st floor, M-15 Shastri Nagar Depot Square, Bhopal 462003</div>
+    <div><b>+91 94256 77707</b><br />hello@vidyayatan.com</div>
+    <div><b>LLP ID</b> ACI-6379<br /><b>GSTIN</b> 23AAYFV8247N1Z3</div>
+  </div>
+</section>
+
+<!-- ─────────── 2. WHAT WE DO ─────────── -->
+<section class="page">
+  <span class="eyebrow">What we do</span>
+  <h2 class="title">Video first, search underneath</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    AI video earns you attention now. Search content compounds it into a long tail.
+    Video is where we start, and where most of the work happens.
+  </p>
+
+  <div class="grid2" style="margin-top:9mm">
+    <div class="card">
+      <h3>AI video studio</h3>
+      <p style="color:var(--primary);font-weight:700">Our core offering</p>
+      <p>
+        AI production removes the parts of video that make it slow — the studio, the
+        crew, the reshoots. When a message changes we regenerate rather than re-shoot,
+        which is why a week is a realistic turnaround instead of a quarter.
+      </p>
+      <ul class="ticks">
+        <li>Scripting from your positioning and real customer questions</li>
+        <li>AI-generated presenters, voiceover and B-roll</li>
+        <li>Subtitles, captions and platform-specific aspect ratios</li>
+        <li>Product explainers, feature walkthroughs and social cuts</li>
+        <li>Source files delivered — edits are never blocked on us</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>SEO blog engine</h3>
+      <p style="color:var(--primary);font-weight:700">The compounding layer</p>
+      <p>
+        Video earns attention; search keeps it. We research what your buyers look for
+        and publish articles on your own domain that keep pulling in readers months
+        after a video has scrolled past.
+      </p>
+      <ul class="ticks">
+        <li>Keyword and intent research mapped to your buying cycle</li>
+        <li>Content calendar planned a quarter ahead</li>
+        <li>Long-form articles AI-drafted, then edited and fact-checked by people</li>
+        <li>On-page SEO: titles, meta, headings, internal linking</li>
+        <li>Technical SEO — structured data, sitemaps, crawlability</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card soft" style="margin-top:8mm">
+    <h3 style="font-size:11pt">On AI and human review</h3>
+    <p>
+      Video production is AI: presenters, voiceover, B-roll and edits. Articles are
+      AI-drafted. In both cases scripting and final review are human — nothing ships
+      without a person signing it off. We are an AI production company; pretending
+      otherwise would be odd.
+    </p>
+  </div>
+
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>2</span></div>
+</section>
+
+<!-- ─────────── 3. SELECTED WORK ─────────── -->
+<section class="page">
+  <span class="eyebrow">Selected work</span>
+  <h2 class="title">Video we have produced</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    Every clip was scripted, produced and cut by us — no studio, no crew, no reshoots.
+  </p>
+
+  <div class="shots">
+    <div class="shot">
+      <img src="../public/videos/posters/kks-red-flags.jpg" alt="Red Flags — Episode 2" />
+      <div class="meta"><div class="fmt">Episodic series · 0:34</div><div class="nm">Red Flags — Episode 2</div></div>
+    </div>
+    <div class="shot">
+      <img src="../public/videos/posters/edzumo-crack-recruitment.jpg" alt="Crack Recruitment" />
+      <div class="meta"><div class="fmt">Product explainer · 0:34</div><div class="nm">Crack Recruitment</div></div>
+    </div>
+    <div class="shot">
+      <img src="../public/videos/posters/edzumo-omr-scan.jpg" alt="Scored in seconds" />
+      <div class="meta"><div class="fmt">Feature walkthrough · 0:31</div><div class="nm">Scored in seconds</div></div>
+    </div>
+    <div class="shot">
+      <img src="../public/videos/posters/kks-sold-out.jpg" alt="Sold out by morning" />
+      <div class="meta"><div class="fmt">Brand story · 0:55</div><div class="nm">Sold out by morning</div></div>
+    </div>
+    <div class="shot">
+      <img src="../public/videos/posters/kks-costume-institute.jpg" alt="Fashion as cultural capital" />
+      <div class="meta"><div class="fmt">Editorial piece · 1:00</div><div class="nm">Fashion as cultural capital</div></div>
+    </div>
+    <div class="shot">
+      <img src="../public/videos/posters/ai-presenter-studio.jpg" alt="AI presenter" />
+      <div class="meta"><div class="fmt">Synthetic presenter · 0:07</div><div class="nm">AI presenter</div></div>
+    </div>
+  </div>
+
+  <div class="card soft" style="margin-top:8mm">
+    <h3 style="font-size:11pt">And the writing that backs it up</h3>
+    <p>
+      18 long-form articles published across 9 topic areas, live on our own site — the
+      same research, writing and editing standard we apply to client work. Read any of
+      them in full at <b style="color:var(--navy)">vidyayatan.com/blog</b>.
+    </p>
+  </div>
+
+  <div class="foot-note"><span>Full reel and article archive at vidyayatan.com/marketing</span><span>3</span></div>
+</section>
+
+<!-- ─────────── 4. METHOD + REPORTING ─────────── -->
+<section class="page">
+  <span class="eyebrow">Data-backed research</span>
+  <h2 class="title">How we decide what to make</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    Nothing gets scripted on a hunch. Five inputs feed the calendar, and every one is a
+    data source you can see for yourself.
+  </p>
+
+  <table>
+    <thead><tr><th style="width:32%">Input</th><th style="width:36%">Source</th><th>What it produces</th></tr></thead>
+    <tbody>
+      <tr><td><b>Search demand</b></td><td>Keyword volume, difficulty, SERP analysis</td><td>A ranked topic list scored by volume against difficulty</td></tr>
+      <tr><td><b>Your own analytics</b></td><td>Google Search Console, GA4, your CRM</td><td>A baseline snapshot, captured before we publish anything</td></tr>
+      <tr><td><b>Competitor gap</b></td><td>Ranking pages of three named competitors</td><td>Topics with proven demand and no strong incumbent</td></tr>
+      <tr><td><b>Voice of customer</b></td><td>Sales calls, support tickets, review sites</td><td>Scripts and article angles built on real objections</td></tr>
+      <tr><td><b>Channel performance</b></td><td>Your existing social and video analytics</td><td>Format mix for month one, revised monthly on results</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="display" style="font-size:14pt;color:var(--navy);margin-top:10mm">What lands in your inbox each month</h3>
+  <div class="grid3" style="margin-top:5mm">
+    <div class="card">
+      <h3 style="font-size:11pt">Video</h3>
+      <ul class="ticks">
+        <li>Views and reach</li><li>3-second and 50% watch-through</li>
+        <li>Saves and shares</li><li>Follower growth</li><li>Click-through to site</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-size:11pt">Search</h3>
+      <ul class="ticks">
+        <li>Impressions</li><li>Clicks and CTR</li><li>Average position</li>
+        <li>Ranking keyword count</li><li>Pages entering top 10</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-size:11pt">Business</h3>
+      <ul class="ticks">
+        <li>Assets delivered</li><li>Cost per asset</li>
+        <li>Enquiries attributed</li><li>Cost per enquiry</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:9pt;color:var(--muted);margin-top:5mm">
+    Measured against a baseline captured before publishing, so the change is
+    attributable rather than asserted. Reports are sent whether the numbers are good
+    or bad, and the calendar changes on the data.
+  </p>
+
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>4</span></div>
+</section>
+
+<!-- ─────────── 5. PRICING ─────────── -->
+<section class="page">
+  <span class="eyebrow">Pricing</span>
+  <h2 class="title">What each asset costs</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    Per-asset rates, published. No packages to decode, no minimum before you learn the
+    number.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th style="width:40%">Service</th><th style="width:18%">Duration / qty</th>
+      <th style="width:13%;text-align:right">USD</th><th style="width:15%;text-align:right">INR</th><th>Includes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="cat">Video</span>Instagram Reel (product reveal / marketing)</td><td>1 min</td><td class="num">$20</td><td class="num">₹1,903</td><td>Hook-based script, trendy edits</td></tr>
+      <tr><td><span class="cat">Video</span>Storytelling / documentary</td><td>3 mins</td><td class="num">$38</td><td class="num">₹3,615</td><td>Narrative storytelling, pro editing</td></tr>
+      <tr><td><span class="cat">Video</span>SaaS demo / explainer</td><td>3–5 mins</td><td class="num">$40</td><td class="num">₹3,806</td><td>Walkthrough, voiceover, UI explanation</td></tr>
+      <tr><td><span class="cat">Social</span>Instagram / Facebook post</td><td>Per post</td><td class="num">$3</td><td class="num">₹285</td><td>Creative design, captions, visuals</td></tr>
+      <tr><td><span class="cat">Blog</span>Blog package</td><td>5 blogs</td><td class="num">$100</td><td class="num">₹9,514</td><td>SEO optimised, ready to publish</td></tr>
+      <tr><td><span class="cat">Blog</span>Blog package</td><td>10 blogs</td><td class="num">$160</td><td class="num">₹15,222</td><td>SEO optimised, ready to publish</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:8pt;color:var(--muted);margin-top:3mm">
+    Indicative INR pricing converted at $1 = ₹95.14 (5 August 2026). Final quotes confirmed in writing.
+  </p>
+
+  <div class="card soft" style="margin-top:9mm">
+    <h3 style="font-size:11pt">Monthly retainer</h3>
+    <p>
+      Mix the formats above into one plan. You tell us the volume; we handle planning,
+      production and delivery on a fixed monthly cadence — including a content calendar,
+      2–3 revisions per piece, priority delivery and a monthly performance report.
+    </p>
+  </div>
+
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>5</span></div>
+</section>
+
+<!-- ─────────── 5b. WORKED PLANS ─────────── -->
+<section class="page">
+  <span class="eyebrow">Pricing</span>
+  <h2 class="title">What a month actually costs</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    Three worked examples. Every total is calculated from the per-asset rates on the
+    previous page — nothing rounded, nothing hidden.
+  </p>
+
+  <div class="grid3" style="margin-top:8mm">
+    <div class="plan">
+      <div class="nm">Starter</div>
+      <div class="tg">Prove the channel works before scaling it</div>
+      <div class="amt">$204 <span class="alt">/ ₹19,406</span></div>
+      <div class="per">17 assets · $12.00 per asset</div>
+      <ul><li>4 × Instagram reels</li><li>5 × blog articles</li><li>8 × social posts</li></ul>
+    </div>
+    <div class="plan hi">
+      <div class="nm">Growth <span style="font-size:8pt;color:var(--primary)">— most popular</span></div>
+      <div class="tg">A real cadence across video, social and search</div>
+      <div class="amt">$392 <span class="alt">/ ₹37,290</span></div>
+      <div class="per">30 assets · $13.07 per asset</div>
+      <ul><li>6 × Instagram reels</li><li>2 × storytelling videos</li><li>10 × blog articles</li><li>12 × social posts</li></ul>
+    </div>
+    <div class="plan">
+      <div class="nm">Full Funnel</div>
+      <div class="tg">Top-of-funnel reach plus product-led conversion</div>
+      <div class="amt">$576 <span class="alt">/ ₹54,794</span></div>
+      <div class="per">44 assets · $13.09 per asset</div>
+      <ul><li>10 × Instagram reels</li><li>2 × storytelling videos</li><li>2 × SaaS demos</li><li>10 × blog articles</li><li>20 × social posts</li></ul>
+    </div>
+  </div>
+
+  <p style="font-size:9pt;color:var(--muted);margin-top:7mm;max-width:150mm">
+    Volumes are illustrative starting points, not fixed tiers — tell us the mix you
+    need and we will scope it. Blog packages are priced per bundle; everything else is
+    per unit.
+  </p>
+
+  <div class="foot-note"><span>Monthly retainers available — tell us your volume and we will scope it</span><span>6</span></div>
+</section>
+
+<!-- ─────────── 6. SCOPE ─────────── -->
+<section class="page">
+  <span class="eyebrow">Scope</span>
+  <h2 class="title">What you get — and what we don't promise</h2>
+  <div class="rule"></div>
+
+  <div class="grid2" style="margin-top:8mm">
+    <div>
+      <h3 class="display" style="font-size:13pt;color:var(--navy)">Every engagement includes</h3>
+      <ul class="ticks" style="margin-top:5mm">
+        <li><b>The content itself, ready to post</b> — finished assets in the formats and aspect ratios each channel needs</li>
+        <li><b>Source files and full ownership</b> — published to your domain and channels, under your accounts</li>
+        <li><b>A monthly content calendar</b> — what is produced, for which channel, on which date</li>
+        <li><b>A monthly analytics report</b> — reach, watch-through, impressions, clicks, rankings, enquiries</li>
+        <li><b>Two to three revisions per piece</b> — if a cut or draft misses, we redo it</li>
+        <li><b>A named point of contact</b> — plus a monthly review call</li>
+      </ul>
+    </div>
+    <div class="card soft">
+      <h3>What we do not promise</h3>
+      <p>We are deliberate about this, because most content proposals are not.</p>
+      <ul class="crosses">
+        <li>We do not guarantee revenue, sales or business growth.</li>
+        <li>We do not guarantee rankings, follower counts or view targets.</li>
+        <li>We do not claim credit for outcomes we cannot attribute to a specific asset.</li>
+      </ul>
+      <p style="margin-top:5mm;border-top:1px solid var(--line);padding-top:4mm">
+        What we control is the work and the measurement: content delivered on schedule,
+        to a standard, with honest reporting on how it performed. Whether that turns
+        into growth also depends on your product, your offer and your market — and
+        anyone who tells you otherwise is selling you something.
+      </p>
+    </div>
+  </div>
+
+  <h3 class="display" style="font-size:13pt;color:var(--navy);margin-top:10mm">Industries this works best for</h3>
+  <div class="grid3" style="margin-top:5mm">
+    <div class="card"><h3 style="font-size:10.5pt">SaaS &amp; Fintech</h3><p>Products that need explaining before anyone buys.</p></div>
+    <div class="card"><h3 style="font-size:10.5pt">EdTech</h3><p>Long consideration cycles; search answers early questions.</p></div>
+    <div class="card"><h3 style="font-size:10.5pt">D2C &amp; Fashion</h3><p>Volume and freshness win the feed.</p></div>
+    <div class="card"><h3 style="font-size:10.5pt">Agritech &amp; Manufacturing</h3><p>Technical operations that are hard to photograph.</p></div>
+    <div class="card"><h3 style="font-size:10.5pt">Health &amp; Wellness</h3><p>Trust is the conversion barrier.</p></div>
+    <div class="card"><h3 style="font-size:10.5pt">Real Estate &amp; Services</h3><p>High-value purchases where credibility decides the shortlist.</p></div>
+  </div>
+
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>7</span></div>
+</section>
+
+<!-- ─────────── 7. WHO WE ARE + CTA ─────────── -->
+<section class="page">
+  <span class="eyebrow">Our journey</span>
+  <h2 class="title">We built the products before we marketed them</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    Vidyayatan is an IIT-alumni-led software company in Bhopal. For years we have
+    shipped the systems our clients run their businesses on — payments infrastructure,
+    crop monitoring at national scale, labour platforms, learning products.
+  </p>
+
+  <div class="grid2" style="grid-template-columns:repeat(4,1fr);gap:5mm;margin-top:8mm">
+    <div class="stat"><div class="v">10B+</div><div class="l">Transactions / year</div><div class="n">BharatPe</div></div>
+    <div class="stat"><div class="v">300K</div><div class="l">Farms managed</div><div class="n">DCM Shriram</div></div>
+    <div class="stat"><div class="v">6M+</div><div class="l">Merchants served</div><div class="n">Across products</div></div>
+    <div class="stat"><div class="v">14+</div><div class="l">Companies partnered</div><div class="n">Six industries</div></div>
+  </div>
+
+  <p style="font-size:9.5pt;color:var(--muted);margin-top:6mm;max-width:150mm">
+    Those are engineering milestones, not marketing metrics. Marketing is a newer
+    service line for us — we would rather show you a real track record in the wrong
+    column than invent one in the right column. The work in this document is video and
+    writing we have actually produced.
+  </p>
+
+  <div class="badges">
+    <img src="../public/badges/iso-9001.png" alt="ISO 9001" />
+    <img src="../public/badges/iso-27001.png" alt="ISO 27001" />
+    <span>ISO 9001 — Quality management<br />ISO 27001 — Information security</span>
+  </div>
+
+  <div class="cta">
+    <h3>Let's make you easier to find</h3>
+    <p>
+      Tell us who you sell to and what you want to be known for. We will come back with
+      a video and content plan for the first quarter.
+    </p>
+    <div class="row">
+      <div><b>Call</b>+91 94256 77707</div>
+      <div><b>Email</b>hello@vidyayatan.com</div>
+      <div><b>Web</b>vidyayatan.com/marketing</div>
+    </div>
+  </div>
+
+  <div class="foot-note">
+    <span>Vidyayatan Technologies LLP · LLP ID ACI-6379 · GSTIN 23AAYFV8247N1Z3</span><span>8</span>
+  </div>
+</section>
+
+</body>
+</html>

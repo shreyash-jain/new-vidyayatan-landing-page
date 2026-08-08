@@ -311,6 +311,29 @@ export const marketingProcess = [
  * true per-unit cost (blog bundles divide out below).
  */
 
+export type Currency = "USD" | "INR";
+
+/**
+ * Fallback conversion, used ONLY for rows without an explicit `priceInr`.
+ * Static figure, not a live rate — set 2026-08-05 and it will drift. Review it
+ * before quoting, and prefer setting real INR prices per row, since Indian
+ * pricing is rarely a straight conversion of a USD rate.
+ */
+export const USD_TO_INR = 95.14;
+
+export function convert(usd: number, currency: Currency, inrOverride?: number) {
+  if (currency === "USD") return usd;
+  return inrOverride ?? Math.round(usd * USD_TO_INR);
+}
+
+export function formatMoney(amount: number, currency: Currency) {
+  return new Intl.NumberFormat(currency === "INR" ? "en-IN" : "en-US", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
 export type PriceRow = {
   id: string;
   category: "Video" | "Social" | "Blog";
@@ -319,6 +342,8 @@ export type PriceRow = {
   price: number;
   /** Per-unit cost used by the plan calculator. */
   unitPrice: number;
+  /** Real INR price. Set this to stop relying on USD_TO_INR for this row. */
+  priceInr?: number;
   includes: string;
 };
 
@@ -429,12 +454,16 @@ export const examplePlans: ExamplePlan[] = [
   },
 ];
 
-/** Blog bundles are priced per package; everything else is per unit. */
-export function planTotal(plan: ExamplePlan): number {
+/**
+ * Blog bundles are priced per package; everything else is per unit. Totals are
+ * summed in the target currency so the plan arithmetic always matches the rate
+ * card a visitor is looking at — including rows with a bespoke INR price.
+ */
+export function planTotal(plan: ExamplePlan, currency: Currency = "USD"): number {
   return plan.lines.reduce((sum, line) => {
     const row = contentPricing.find((r) => r.id === line.id);
     if (!row) return sum;
-    return sum + row.price * line.qty;
+    return sum + convert(row.price, currency, row.priceInr) * line.qty;
   }, 0);
 }
 
@@ -446,6 +475,58 @@ export function planAssetCount(plan: ExamplePlan): number {
     return sum + line.qty;
   }, 0);
 }
+
+/**
+ * Scope of the engagement, stated in both directions. Deliverables are things
+ * we control and hand over; the second list exists because promising business
+ * growth would be promising something that depends on the client's product,
+ * offer and market — not on us.
+ */
+export const pricingDeliverables = [
+  {
+    title: "The content itself, ready to post",
+    detail:
+      "Finished reels, videos, posts and articles in the formats and aspect ratios each channel needs. Nothing left for you to assemble.",
+  },
+  {
+    title: "Source files and full ownership",
+    detail:
+      "Project files, scripts and originals handed over. Everything publishes to your domain and your channels, under your accounts.",
+  },
+  {
+    title: "A monthly content calendar",
+    detail:
+      "What is being produced, for which channel, on which date — planned ahead so nothing is decided at the last minute.",
+  },
+  {
+    title: "A monthly analytics report",
+    detail:
+      "Reach, watch-through, impressions, clicks, rankings and enquiries — measured against the baseline we capture before publishing.",
+  },
+  {
+    title: "Two to three revisions per piece",
+    detail:
+      "Built into every engagement. If a cut or a draft misses, we redo it rather than shipping something you are unhappy with.",
+  },
+  {
+    title: "A named point of contact",
+    detail:
+      "One person who knows your account, plus a monthly review call to agree what changes for the next cycle.",
+  },
+];
+
+export const pricingNotClaimed = {
+  title: "What we do not promise",
+  intro:
+    "We are deliberate about this, because most content proposals are not.",
+  points: [
+    "We do not guarantee revenue, sales or business growth.",
+    "We do not guarantee rankings, follower counts or view targets.",
+    "We do not claim credit for outcomes we cannot attribute to a specific asset.",
+  ],
+  closing:
+    "What we control is the work and the measurement: content delivered on schedule, to a standard, with honest reporting on how it performed. Whether that turns into growth also depends on your product, your offer and your market — and anyone who tells you otherwise is selling you something.",
+};
 
 export const monthlyRetainer = {
   title: "Monthly retainer",
