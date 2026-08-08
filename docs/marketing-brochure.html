@@ -70,6 +70,17 @@
   .shot .meta{margin-top:2.5mm}
   .shot .fmt{font-size:7.5pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--primary)}
   .shot .nm{font-family:'Sora',sans-serif;font-size:9.5pt;font-weight:700;color:var(--navy);margin-top:1mm}
+  /* Links must survive printing, so the URL is visible as well as clickable. */
+  a.shot{text-decoration:none;color:inherit;display:block}
+  .shot .url{font-size:6.8pt;color:var(--primary);margin-top:.8mm;word-break:break-all;line-height:1.3}
+  .linknote{font-size:9pt;color:var(--muted);margin-top:6mm;max-width:155mm}
+  .linknote a,.linknote b{color:var(--primary);font-weight:700;text-decoration:none}
+
+  .reads{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:8mm}
+  a.read{display:block;text-decoration:none;border:1px solid var(--line);border-left:3px solid var(--primary);border-radius:3mm;padding:5mm;background:#fff}
+  .read .tag{font-size:7.5pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary)}
+  .read .ttl{font-family:'Sora',sans-serif;font-size:11pt;font-weight:700;color:var(--navy);margin-top:2mm;line-height:1.25}
+  .read .url{font-size:7.2pt;color:var(--muted);margin-top:2.5mm;word-break:break-all}
 
   .stat{border:1px solid var(--line);border-radius:4mm;padding:5mm;text-align:center}
   .stat .v{font-family:'Sora',sans-serif;font-size:19pt;font-weight:800;color:var(--primary)}
@@ -136,12 +147,13 @@
     <div class="ct-title">Inside this document</div>
     <ol>
       <li><span>02</span> What we do — video and search</li>
-      <li><span>03</span> Selected work</li>
-      <li><span>04</span> Research method and reporting</li>
-      <li><span>05</span> Rate card</li>
-      <li><span>06</span> Worked monthly plans</li>
-      <li><span>07</span> Scope and industries</li>
-      <li><span>08</span> Who we are</li>
+      <li><span>03</span> Selected work — video</li>
+      <li><span>04</span> Selected work — writing</li>
+      <li><span>05</span> Research method and reporting</li>
+      <li><span>06</span> Rate card</li>
+      <li><span>07</span> Worked monthly plans</li>
+      <li><span>08</span> Scope and industries</li>
+      <li><span>09</span> Who we are</li>
     </ol>
   </div>
 
@@ -220,42 +232,97 @@
   </p>
 
   <div class="shots">
-    <div class="shot">
+    <a class="shot" href="https://www.vidyayatan.com/videos/kks-red-flags.mp4">
       <img src="../public/videos/posters/kks-red-flags.jpg" alt="Red Flags — Episode 2" />
-      <div class="meta"><div class="fmt">Episodic series · 0:34</div><div class="nm">Red Flags — Episode 2</div></div>
-    </div>
-    <div class="shot">
+      <div class="meta"><div class="fmt">Episodic series · 0:34</div><div class="nm">Red Flags — Episode 2</div>
+      <div class="url">/videos/kks-red-flags.mp4</div></div>
+    </a>
+    <a class="shot" href="https://www.vidyayatan.com/videos/edzumo-crack-recruitment.mp4">
       <img src="../public/videos/posters/edzumo-crack-recruitment.jpg" alt="Crack Recruitment" />
-      <div class="meta"><div class="fmt">Product explainer · 0:34</div><div class="nm">Crack Recruitment</div></div>
-    </div>
-    <div class="shot">
+      <div class="meta"><div class="fmt">Product explainer · 0:34</div><div class="nm">Crack Recruitment</div>
+      <div class="url">/videos/edzumo-crack-recruitment.mp4</div></div>
+    </a>
+    <a class="shot" href="https://www.vidyayatan.com/videos/edzumo-omr-scan.mp4">
       <img src="../public/videos/posters/edzumo-omr-scan.jpg" alt="Scored in seconds" />
-      <div class="meta"><div class="fmt">Feature walkthrough · 0:31</div><div class="nm">Scored in seconds</div></div>
-    </div>
-    <div class="shot">
+      <div class="meta"><div class="fmt">Feature walkthrough · 0:31</div><div class="nm">Scored in seconds</div>
+      <div class="url">/videos/edzumo-omr-scan.mp4</div></div>
+    </a>
+    <a class="shot" href="https://www.vidyayatan.com/videos/kks-sold-out.mp4">
       <img src="../public/videos/posters/kks-sold-out.jpg" alt="Sold out by morning" />
-      <div class="meta"><div class="fmt">Brand story · 0:55</div><div class="nm">Sold out by morning</div></div>
-    </div>
-    <div class="shot">
+      <div class="meta"><div class="fmt">Brand story · 0:55</div><div class="nm">Sold out by morning</div>
+      <div class="url">/videos/kks-sold-out.mp4</div></div>
+    </a>
+    <a class="shot" href="https://www.vidyayatan.com/videos/kks-costume-institute.mp4">
       <img src="../public/videos/posters/kks-costume-institute.jpg" alt="Fashion as cultural capital" />
-      <div class="meta"><div class="fmt">Editorial piece · 1:00</div><div class="nm">Fashion as cultural capital</div></div>
-    </div>
-    <div class="shot">
+      <div class="meta"><div class="fmt">Editorial piece · 1:00</div><div class="nm">Fashion as cultural capital</div>
+      <div class="url">/videos/kks-costume-institute.mp4</div></div>
+    </a>
+    <a class="shot" href="https://www.vidyayatan.com/videos/ai-presenter-studio.mp4">
       <img src="../public/videos/posters/ai-presenter-studio.jpg" alt="AI presenter" />
-      <div class="meta"><div class="fmt">Synthetic presenter · 0:07</div><div class="nm">AI presenter</div></div>
-    </div>
+      <div class="meta"><div class="fmt">Synthetic presenter · 0:07</div><div class="nm">AI presenter</div>
+      <div class="url">/videos/ai-presenter-studio.mp4</div></div>
+    </a>
   </div>
 
-  <div class="card soft" style="margin-top:8mm">
-    <h3 style="font-size:11pt">And the writing that backs it up</h3>
-    <p>
-      18 long-form articles published across 9 topic areas, live on our own site — the
-      same research, writing and editing standard we apply to client work. Read any of
-      them in full at <b style="color:var(--navy)">vidyayatan.com/blog</b>.
-    </p>
+  <p class="linknote">
+    Each still above links to the video. Prefix any path with
+    <b>vidyayatan.com</b> — or watch all six together at
+    <a href="https://www.vidyayatan.com/marketing">vidyayatan.com/marketing</a>.
+  </p>
+
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>3</span></div>
+</section>
+
+<!-- ─────────── 3b. SELECTED WRITING ─────────── -->
+<section class="page">
+  <span class="eyebrow">Selected work</span>
+  <h2 class="title">And the writing that backs it up</h2>
+  <div class="rule"></div>
+  <p class="lead">
+    Eighteen long-form articles across nine topic areas, live on our own site — the
+    same research, writing and editing standard we apply to client work. Every title
+    below links to the full article.
+  </p>
+
+  <div class="reads">
+    <a class="read" href="https://www.vidyayatan.com/blog/how-ai-is-transforming-businesses-in-2026">
+      <div class="tag">AI &amp; Business</div>
+      <div class="ttl">How AI is Transforming Businesses in 2026</div>
+      <div class="url">vidyayatan.com/blog/how-ai-is-transforming-businesses-in-2026</div>
+    </a>
+    <a class="read" href="https://www.vidyayatan.com/blog/why-every-business-needs-an-ai-strategy">
+      <div class="tag">AI Strategy</div>
+      <div class="ttl">Why Every Business Needs an AI Strategy</div>
+      <div class="url">vidyayatan.com/blog/why-every-business-needs-an-ai-strategy</div>
+    </a>
+    <a class="read" href="https://www.vidyayatan.com/blog/ai-vs-human-developers-who-builds-better-products">
+      <div class="tag">Engineering</div>
+      <div class="ttl">AI vs Human Developers: Who Builds Better Products?</div>
+      <div class="url">vidyayatan.com/blog/ai-vs-human-developers-who-builds-better-products</div>
+    </a>
+    <a class="read" href="https://www.vidyayatan.com/blog/why-ai-cannot-replace-software-engineers">
+      <div class="tag">Engineering</div>
+      <div class="ttl">Why AI Cannot Replace Software Engineers</div>
+      <div class="url">vidyayatan.com/blog/why-ai-cannot-replace-software-engineers</div>
+    </a>
+    <a class="read" href="https://www.vidyayatan.com/blog/the-hidden-cost-of-ai-generated-software">
+      <div class="tag">Technical Debt</div>
+      <div class="ttl">The Hidden Cost of AI-Generated Software</div>
+      <div class="url">vidyayatan.com/blog/the-hidden-cost-of-ai-generated-software</div>
+    </a>
+    <a class="read" href="https://www.vidyayatan.com/blog/how-to-scale-your-vibe-coded-software">
+      <div class="tag">Vibe Coding &amp; Scale</div>
+      <div class="ttl">How to Scale Your Vibe Coded Software</div>
+      <div class="url">vidyayatan.com/blog/how-to-scale-your-vibe-coded-software</div>
+    </a>
   </div>
 
-  <div class="foot-note"><span>Full reel and article archive at vidyayatan.com/marketing</span><span>3</span></div>
+  <p class="linknote">
+    Full archive — all eighteen articles — at
+    <a href="https://www.vidyayatan.com/blog">vidyayatan.com/blog</a>.
+  </p>
+
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>4</span></div>
 </section>
 
 <!-- ─────────── 4. METHOD + REPORTING ─────────── -->
@@ -309,7 +376,7 @@
     or bad, and the calendar changes on the data.
   </p>
 
-  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>4</span></div>
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>5</span></div>
 </section>
 
 <!-- ─────────── 5. PRICING ─────────── -->
@@ -349,7 +416,7 @@
     </p>
   </div>
 
-  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>5</span></div>
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>6</span></div>
 </section>
 
 <!-- ─────────── 5b. WORKED PLANS ─────────── -->
@@ -392,7 +459,7 @@
     per unit.
   </p>
 
-  <div class="foot-note"><span>Monthly retainers available — tell us your volume and we will scope it</span><span>6</span></div>
+  <div class="foot-note"><span>Monthly retainers available — tell us your volume and we will scope it</span><span>7</span></div>
 </section>
 
 <!-- ─────────── 6. SCOPE ─────────── -->
@@ -440,7 +507,7 @@
     <div class="card"><h3 style="font-size:10.5pt">Real Estate &amp; Services</h3><p>High-value purchases where credibility decides the shortlist.</p></div>
   </div>
 
-  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>7</span></div>
+  <div class="foot-note"><span>Vidyayatan Technologies LLP — Marketing</span><span>8</span></div>
 </section>
 
 <!-- ─────────── 7. WHO WE ARE + CTA ─────────── -->
@@ -488,7 +555,7 @@
   </div>
 
   <div class="foot-note">
-    <span>Vidyayatan Technologies LLP · LLP ID ACI-6379 · GSTIN 23AAYFV8247N1Z3</span><span>8</span>
+    <span>Vidyayatan Technologies LLP · LLP ID ACI-6379 · GSTIN 23AAYFV8247N1Z3</span><span>9</span>
   </div>
 </section>
 
