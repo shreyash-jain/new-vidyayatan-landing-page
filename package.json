@@ -7,14 +7,16 @@
   },
   "packageManager": "pnpm@10.11.1",
   "scripts": {
+    "guard": "node scripts/guard-postcss.mjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/guard-postcss.mjs && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "cf:preview": "next build && wrangler pages dev out",
-    "cf:deploy": "next build && wrangler pages deploy out",
-    "cf:deploy:production": "next build && wrangler pages deploy out --branch main"
+    "cf:preview": "node scripts/guard-postcss.mjs && next build && wrangler pages dev out",
+    "cf:deploy": "node scripts/guard-postcss.mjs && next build && wrangler pages deploy out",
+    "cf:deploy:production": "node scripts/guard-postcss.mjs && next build && wrangler pages deploy out --branch main",
+    "prebuild": "node scripts/guard-postcss.mjs"
   },
   "dependencies": {
     "@next/third-parties": "15.1.6",
