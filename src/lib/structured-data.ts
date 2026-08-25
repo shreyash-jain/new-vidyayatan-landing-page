@@ -122,3 +122,67 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
     })),
   };
 }
+
+/**
+ * Article JSON-LD for a case study. Case studies carry a year rather than a
+ * publish date, so the date is normalised to the start of that year — enough
+ * for crawlers, and never claims a precision the data does not have.
+ */
+export function caseStudyJsonLd({
+  title,
+  description,
+  path,
+  year,
+  image,
+}: {
+  title: string;
+  description: string;
+  path: string;
+  year: string;
+  image?: string;
+}) {
+  const url = `${site.url}${path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    datePublished: `${year}-01-01`,
+    image: image ? `${site.url}${image}` : `${site.url}/og/default.png`,
+    author: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+    },
+  };
+}
+
+/**
+ * Review JSON-LD for a client testimonial. Deliberately carries no
+ * `reviewRating` — clients give us quotes, not star ratings, and inventing one
+ * would be fabricated markup.
+ */
+export function reviewJsonLd({
+  quote,
+  authorName,
+  itemName,
+}: {
+  quote: string;
+  authorName: string;
+  itemName: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    reviewBody: quote,
+    author: { "@type": "Person", name: authorName },
+    itemReviewed: {
+      "@type": "Service",
+      name: itemName,
+      provider: { "@type": "Organization", name: site.name, url: site.url },
+    },
+  };
+}

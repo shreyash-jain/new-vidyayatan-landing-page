@@ -21,13 +21,16 @@ type PageMetaInput = {
 const DEFAULT_OG_IMAGE = "/og/default.png";
 
 /**
- * Facebook, LinkedIn and X all reject SVG for og:image. Article hero art is
- * authored as SVG (it scales and stays crisp in-page), so fall back to the
- * raster default rather than emitting a card image that silently fails to
- * render on every social platform.
+ * Facebook, LinkedIn and X all reject SVG for og:image, and Facebook/LinkedIn
+ * still do not render WebP cards reliably. Article hero art is authored as SVG
+ * and case-study screenshots are WebP, so both fall back to the raster default
+ * rather than emitting a card image that silently fails on social platforms.
+ * Pass an explicit JPEG/PNG (see `public/og/`) when the card matters.
  */
 function ogImage(image?: string): string {
-  if (!image || image.endsWith(".svg")) return DEFAULT_OG_IMAGE;
+  if (!image || image.endsWith(".svg") || image.endsWith(".webp")) {
+    return DEFAULT_OG_IMAGE;
+  }
   return image;
 }
 

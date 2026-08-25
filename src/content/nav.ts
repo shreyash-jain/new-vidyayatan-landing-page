@@ -1,3 +1,5 @@
+import { caseStudies } from "@/content/case-studies";
+
 export type NavLink = {
   label: string;
   href: string;
@@ -54,6 +56,17 @@ export const primaryNav: (NavGroup | NavLink)[] = [
     ],
   },
   {
+    // Generated from the case-study data: the tab itself opens the index, and
+    // each item deep-links to one study.
+    label: "Case Studies",
+    href: "/case-studies",
+    items: caseStudies.map((c) => ({
+      label: c.clientName,
+      href: `/case-studies/${c.slug}`,
+      description: `${c.industry} · ${c.region}`,
+    })),
+  },
+  {
     label: "Company",
     items: [
       { label: "About Us", href: "/about", description: "India's premier software company" },
@@ -98,6 +111,7 @@ export const footerNav: NavGroup[] = [
   {
     label: "Resources",
     items: [
+      { label: "Case Studies", href: "/case-studies" },
       { label: "Blog", href: "/blog" },
       { label: "Guides", href: "/guides" },
       { label: "Pricing", href: "/pricing" },

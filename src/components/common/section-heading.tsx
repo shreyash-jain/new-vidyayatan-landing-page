@@ -26,7 +26,14 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <span className={cn("eyebrow", align === "center" && "mx-auto")}>
+        // The wrapper is a flex column, so the pill stretches to full width
+        // unless it aligns itself. `.eyebrow` is inline-flex, not block.
+        <span
+          className={cn(
+            "eyebrow",
+            align === "center" ? "mx-auto self-center" : "self-start",
+          )}
+        >
           {eyebrow}
         </span>
       ) : null}

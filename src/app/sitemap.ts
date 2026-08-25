@@ -3,6 +3,7 @@ import { site } from "@/content/site";
 import { services } from "@/content/services";
 import { industries } from "@/content/industries";
 import { products } from "@/content/products";
+import { caseStudies } from "@/content/case-studies";
 import { getAllDocs } from "@/lib/mdx";
 
 // Emit a static sitemap.xml for output: "export".
@@ -22,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/marketing",
     "/industries",
     "/products",
+    "/case-studies",
     "/blog",
     "/guides",
   ];
@@ -30,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...services.map((s) => `/services/${s.slug}`),
     ...industries.map((i) => `/industries/${i.slug}`),
     ...products.map((p) => `/products/${p.slug}`),
+    ...caseStudies.map((c) => `/case-studies/${c.slug}`),
   ];
 
   // Articles carry their real publish date rather than the build time, so

@@ -34,11 +34,11 @@ export function Header() {
           : "border-b border-transparent bg-background/0",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
+      <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-4 px-6">
         <Logo />
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 xl:flex">
           {primaryNav.map((item) =>
             isGroup(item) ? (
               <div
@@ -46,21 +46,44 @@ export function Header() {
                 className="group relative"
                 onMouseEnter={() => setOpenGroup(item.label)}
                 onMouseLeave={() => setOpenGroup(null)}
+                onFocus={() => setOpenGroup(item.label)}
+                onBlur={(e) => {
+                  // Only close once focus has actually left the group, not
+                  // while tabbing between the items inside it.
+                  if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                    setOpenGroup(null);
+                  }
+                }}
               >
-                <button
-                  className="flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-                  aria-expanded={openGroup === item.label}
-                >
-                  {item.label}
-                  <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
-                </button>
+                {/* A group with an `href` has a landing page of its own, so the
+                    tab is a link: clicking goes there, hovering opens the menu. */}
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                    aria-haspopup="true"
+                    aria-expanded={openGroup === item.label}
+                  >
+                    {item.label}
+                    <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
+                  </Link>
+                ) : (
+                  <button
+                    className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                    aria-haspopup="true"
+                    aria-expanded={openGroup === item.label}
+                  >
+                    {item.label}
+                    <ChevronDown className="size-3.5 transition-transform group-hover:rotate-180" />
+                  </button>
+                )}
                 <MegaMenu group={item} open={openGroup === item.label} />
               </div>
             ) : (
               <Link
                 key={item.label}
                 href={item.href}
-                className="rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+                className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
               >
                 {item.label}
               </Link>
@@ -68,7 +91,7 @@ export function Header() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden shrink-0 items-center gap-2 xl:flex">
           <Button asChild variant="ghost" size="sm">
             <Link href="/contact">Contact</Link>
           </Button>
@@ -80,7 +103,7 @@ export function Header() {
 
         {/* Mobile trigger */}
         <button
-          className="inline-flex size-10 items-center justify-center rounded-xl border border-border text-navy lg:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-xl border border-border text-navy xl:hidden"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -136,7 +159,7 @@ function MegaMenu({ group, open }: { group: NavGroup; open: boolean }) {
 
 function MobileNav({ onNavigate }: { onNavigate: () => void }) {
   return (
-    <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-border bg-background lg:hidden">
+    <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
       <div className="space-y-1 px-6 py-5">
         {primaryNav.map((item) =>
           isGroup(item) ? (
@@ -146,6 +169,15 @@ function MobileNav({ onNavigate }: { onNavigate: () => void }) {
                 <ChevronDown className="size-4 transition-transform group-open:rotate-180" />
               </summary>
               <div className="ml-2 border-l border-border pl-4">
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    onClick={onNavigate}
+                    className="block py-2 text-sm font-semibold text-primary"
+                  >
+                    All {item.label}
+                  </Link>
+                ) : null}
                 {item.items.map((sub) => (
                   <Link
                     key={sub.href}
