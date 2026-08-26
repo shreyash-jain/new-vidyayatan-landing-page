@@ -119,7 +119,7 @@ export default async function CaseStudyDetailPage({
           { label: study.clientName },
         ]}
       >
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           {study.clientLogo ? (
             <Image
               src={study.clientLogo}
@@ -187,7 +187,7 @@ export default async function CaseStudyDetailPage({
         </Container>
       </Section>
 
-      <Section id="challenge" className="scroll-mt-32">
+      <Section id="challenge" className="scroll-mt-32 py-14 md:py-20">
         <Container>
           {/* Narrative sections all use the same centred measure; only the
               visual blocks (cards, feature rows, panels) run full width. */}
@@ -196,7 +196,7 @@ export default async function CaseStudyDetailPage({
               eyebrow="The challenge"
               title="What the business was up against"
             />
-            <div className="mt-10 flex flex-col gap-6">
+            <div className="mt-6 flex flex-col gap-5">
             {study.challenge.map((paragraph, i) => (
               <Reveal key={i} delay={i * 0.05}>
                 <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -217,14 +217,14 @@ export default async function CaseStudyDetailPage({
         </Container>
       </Section>
 
-      <Section id="approach" className="scroll-mt-32 bg-muted/30 py-20 md:py-28">
+      <Section id="approach" className="scroll-mt-32 bg-muted/30 py-14 md:py-20">
         <Container>
           <div className="mx-auto max-w-[72ch]">
             <SectionHeading
               eyebrow="Our approach"
               title="How we scoped and ran it"
             />
-            <div className="mt-10 flex flex-col gap-6">
+            <div className="mt-6 flex flex-col gap-5">
             {study.approach.map((paragraph, i) => (
               <Reveal key={i} delay={i * 0.05}>
                 <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -236,7 +236,7 @@ export default async function CaseStudyDetailPage({
           </div>
 
           {study.phases?.length ? (
-            <ol className="mt-16 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <ol className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {study.phases.map((phase, i) => (
                 <li key={phase.title}>
                   <Reveal
@@ -260,10 +260,10 @@ export default async function CaseStudyDetailPage({
         </Container>
       </Section>
 
-      <Section id="solution" className="scroll-mt-32">
+      <Section id="solution" className="scroll-mt-32 py-14 md:py-20">
         <Container>
           <SectionHeading eyebrow="The solution" title="What we built" />
-          <div className="mt-14 flex flex-col gap-16 md:gap-20">
+          <div className="mt-10 flex flex-col gap-12 md:gap-16">
             {study.solutionFeatures.map((feature, i) => (
               <Reveal key={feature.title}>
                 <FeatureRow
@@ -275,23 +275,23 @@ export default async function CaseStudyDetailPage({
             ))}
           </div>
 
-          <Reveal className="mt-16">
+          <Reveal className="mt-12">
             <TechStackPanel techStack={study.techStack} />
           </Reveal>
         </Container>
       </Section>
 
-      <Section id="results" className="scroll-mt-32 bg-muted/30 py-20 md:py-28">
+      <Section id="results" className="scroll-mt-32 bg-muted/30 py-14 md:py-20">
         <Container>
           <SectionHeading eyebrow="Results" title="What actually changed" />
           <div
             className={
               study.comparisons?.length
-                ? "mt-10 grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]"
-                : "mx-auto mt-10 max-w-[72ch]"
+                ? "mt-6 grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]"
+                : "mx-auto mt-6 max-w-[72ch]"
             }
           >
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               {study.resultsNarrative.map((paragraph, i) => (
                 <Reveal key={i} delay={i * 0.05}>
                   <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -311,7 +311,7 @@ export default async function CaseStudyDetailPage({
       </Section>
 
       {study.testimonial ? (
-        <Section>
+        <Section className="py-14 md:py-20">
           <Container>
             <Reveal>
               <TestimonialBlock testimonial={study.testimonial} />
@@ -324,7 +324,7 @@ export default async function CaseStudyDetailPage({
         <Section className="pt-0">
           <Container>
             <SectionHeading align="left" eyebrow="Gallery" title="A closer look" />
-            <div className="mt-10">
+            <div className="mt-8">
               <CaseStudyGallery images={study.gallery} />
             </div>
           </Container>
