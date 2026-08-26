@@ -189,9 +189,9 @@ export default async function CaseStudyDetailPage({
 
       <Section id="challenge" className="scroll-mt-32 py-14 md:py-20">
         <Container>
-          {/* Narrative sections all use the same centred measure; only the
+          {/* Narrative sections share one centred measure; only the 
               visual blocks (cards, feature rows, panels) run full width. */}
-          <div className="mx-auto max-w-[72ch]">
+          <div className="mx-auto max-w-5xl">
             <SectionHeading
               eyebrow="The challenge"
               title="What the business was up against"
@@ -219,7 +219,7 @@ export default async function CaseStudyDetailPage({
 
       <Section id="approach" className="scroll-mt-32 bg-muted/30 py-14 md:py-20">
         <Container>
-          <div className="mx-auto max-w-[72ch]">
+          <div className="mx-auto max-w-5xl">
             <SectionHeading
               eyebrow="Our approach"
               title="How we scoped and ran it"
@@ -288,7 +288,7 @@ export default async function CaseStudyDetailPage({
             className={
               study.comparisons?.length
                 ? "mt-6 grid items-start gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]"
-                : "mx-auto mt-6 max-w-[72ch]"
+                : "mx-auto mt-6 max-w-5xl"
             }
           >
             <div className="flex flex-col gap-5">
