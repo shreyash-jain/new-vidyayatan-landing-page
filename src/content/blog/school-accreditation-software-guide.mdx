@@ -7,56 +7,56 @@ tag: "Playbook"
 image: "/images/blog/school-accreditation-software-guide.svg"
 ---
 
-Parents compare schools online long before they visit one, and a framed certificate on a principal's wall proves nothing to someone reading on a phone. That is the gap platforms like [ICOSA](https://icosaonline.com/) close — a structured way for a school to demonstrate quality, and for a parent to verify it in seconds.
-
-If you're an education group, a franchise network, or an accreditation body, here's what the build involves. *ICOSA appears throughout as an industry example, not as a Vidyayatan client project.*
+Parents compare schools online long before they visit one, and a framed certificate on a principal's wall proves nothing to someone reading on a phone. That is the gap platforms like [ICOSA](https://icosaonline.com/) close: a structured way for a school to demonstrate quality and for a parent to verify it in seconds. **Vidyayatan builds this category of platform end to end** — framework design, scoring engine, evidence handling, AI-assisted evaluation, public verification. Here is what that build involves. *ICOSA appears throughout as a published industry example, not as a Vidyayatan client project.*
 
 ## Start with the framework, not the features
 
-ICOSA's published methodology is a useful reference: the arithmetic is stated openly. Six pillars, each worth 100 marks: academic performance, teaching competence, resources and pedagogy, sports and infrastructure, 21st-century skills, innovative curriculum. Two parallel evaluations, an expert panel score and a school self-assessment, each on a 5-point scale, with **the final grade being the average of the two**. Bands run from Foundational (2.0–2.50) to Excellence (3.51–5.0); the process is online, 7–10 days.
+ICOSA's published methodology is a useful reference — the arithmetic is stated openly. Six pillars, 100 marks each: academic performance, teaching competence, resources and pedagogy, sports and infrastructure, 21st-century skills, innovative curriculum. Two parallel evaluations, an expert panel score and a school self-assessment, each on a 5-point scale, with **the final grade being the average of the two**. Bands run from Foundational (2.0–2.50) to Excellence (3.51–5.0), online, in 7–10 days.
 
-![How the grade is computed: six pillars of 100 marks each, scored once by an expert panel and once by the school, averaged on a 5-point scale into bands from Foundational to Excellence](/images/blog/school-accreditation-scoring-model.svg)
+Read that as an engineer and one line dominates: the applicant controls half of its own grade. That is transparent and defensible — and it dictates the data model, where these builds quietly succeed or fail.
 
-Read that as an engineer and one line dominates: the applicant controls half of its own grade. That is a transparent, defensible methodology — and it dictates the data model, where these builds quietly succeed or fail.
+## The vision the software serves
+
+ICOSA positions itself as a catalyst rather than a regulatory hurdle. Its stated aims: move past the certificate into continuous improvement, have evaluators who are practising educators hand back a growth roadmap rather than an audit report, hold schools to international benchmarks while protecting their own heritage, and ready them for 2030 — AI, sustainability, 21st-century skills.
+
+Treat that as a product requirement, not a mission statement: a platform that only issues grades delivers none of it. **A roadmap needs per-criterion scores held against a stable rubric version**, so this cycle can be compared with the last. Local identity needs context travelling alongside the score instead of being averaged out of it. Keeping pace with 2030 means new pillars must be addable without invalidating certificates already issued. Design for the second cycle, not the first.
 
 ## The modules that matter
 
 **Application and payment workflow.** Registration, fees, document upload, a status dashboard. The easy part — and the one most estimates over-weight.
 
-**The scoring engine.** Store every criterion score as its own row carrying the rubric version, the evidence it was scored against, the scorer's identity, and a timestamp. The final grade is *derived*, always. Two rules follow. Rubric versions are immutable: a weighting change creates v3, never edits v2, or a 2026 certificate becomes unexplainable in 2029. And store the **divergence** between self-score and expert score per criterion — a school rating itself 1.8 points above the panel on faculty isn't necessarily dishonest, but it's the file a reviewer opens first.
+**The scoring engine.** Store every criterion score as its own row: rubric version, the evidence scored, the scorer, a timestamp. The final grade is *derived*, always. Rubric versions are immutable: a weighting change creates v3, never edits v2. And store the **divergence** between self-score and expert score per criterion — a school rating itself 1.8 points above the panel on faculty isn't necessarily dishonest, but it's the file a reviewer opens first.
 
-**Evidence handling.** This is where the cost lands. Hash every upload and keep it immutable, so an appeal is argued against the exact bytes that were scored. It is also **children's data**: [Section 9 of India's DPDP Act, 2023](https://indiankanoon.org/doc/98869575/) requires verifiable parental consent and bans tracking, profiling and targeted advertising aimed at children — prohibitions consent does not unlock. The Rules were [notified in November 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014), phased in over eighteen months. The cheapest fix is rubric design, not a consent modal: ask for "percentage of the cohort above 90" instead of "upload the mark sheets" and a whole compliance surface disappears.
+**Evidence handling.** This is where the cost lands. Hash every upload and keep it immutable, so an appeal is argued against the exact bytes scored. It is also **children's data**: [Section 9 of India's DPDP Act, 2023](https://indiankanoon.org/doc/98869575/) requires verifiable parental consent and bans tracking, profiling and targeted advertising aimed at children — prohibitions consent does not unlock. The Rules followed in [November 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014). The cheapest fix is rubric design, not a consent modal: ask for "percentage of the cohort above 90" rather than "upload the mark sheets" and a whole compliance surface disappears.
 
-**AI assistance.** Three places it earns its keep: extracting figures from long PDFs with the page cited, flagging contradictions (the staff list says 62 teachers, the claimed ratio implies 45), and detecting reviewer drift across a cohort. Not in issuing the grade. A school that paid a fee and got A instead of A++ will ask why. *"The panel scored it, here is the criterion and the evidence"* is an answer. *"The model scored it"* is not.
+**AI assistance.** Three places it earns its keep: extracting figures from long PDFs with the page cited, flagging contradictions, detecting reviewer drift across a cohort. Not in issuing the grade. A school that paid a fee and got A instead of A++ will ask why. *"The panel scored it, here is the criterion and the evidence"* is an answer. *"The model scored it"* is not.
 
-**Certificate and QR verification.** Treat this as an API, not a PDF. Opaque credential IDs, validity evaluated server-side on every scan, and **revocation as a first-class feature** — a QR that returns "valid" forever is a liability the day an accredited school has an incident. The [W3C Verifiable Credentials 2.0 standard, a Recommendation since 15 May 2025](https://www.w3.org/press-releases/2025/verifiable-credentials-2-0/), gives you a portable format and a revocation model you don't have to invent — though almost nobody in K-12 asks for it yet, and a signed payload plus a hosted status endpoint delivers most of the value.
+**Certificate and QR verification.** Treat this as an API, not a PDF. Opaque credential IDs, validity evaluated server-side on every scan, and **revocation as a first-class feature** — a QR that returns "valid" forever is a liability the day a school has an incident. The [W3C Verifiable Credentials 2.0 standard](https://www.w3.org/press-releases/2025/verifiable-credentials-2-0/), a Recommendation since 15 May 2025, gives you a portable format and a ready-made revocation model.
 
-**Public directory.** Usually the highest-traffic page and the best organic search asset the body will own. Pre-render it rather than hitting the transactional database per request, and keep each school's URL stable across renewals.
+**Public directory.** Usually the highest-traffic page and the best search asset the body will own. Pre-render it, and keep each school's URL stable across renewals.
 
 ## Recommended stack
 
 ![Architecture: applicant workflow, assessor workbench and public verification sit above a shared scoring engine, writing to Postgres, hashed object storage and an append-only audit log, with a cached read layer serving the directory and QR lookups](/images/blog/school-accreditation-architecture.svg)
 
 - **Next.js** for the public site, directory and verification — SEO and caching come with the rendering model.
-- **Node or Python services**, with the scoring engine as a pure function over `(rubric_version, criterion_scores)`: testable, replayable, explainable without a debugger.
-- **PostgreSQL** for scores, rubrics and audit; object storage for evidence; the public read layer kept separate so admissions-season traffic can't contend with reviewers mid-assessment.
+- **Node or Python services**, with the scoring engine as a pure function over `(rubric_version, criterion_scores)`: testable, replayable, explainable.
+- **PostgreSQL** for scores, rubrics and audit; object storage for evidence; the public read layer kept off the transactional core.
 - **Multi-currency payments** decided up front if international schools are in scope — currency is a schema decision, not a plugin.
-- **An append-only audit log from day one.** Retrofitting audit after certificates have been issued is the most expensive rework in this category.
+- **An append-only audit log from day one.** Retrofitting audit after certificates exist is the most expensive rework here.
 
 ## Timeline and cost
 
-An MVP — self-assessment, single-track scoring, a generated certificate — runs **8–12 weeks**. The full platform with dual assessment, a reviewer panel, payments, the directory and QR verification is **4–6 months**. Add AI-assisted evaluation, appeals, revocation and multi-country support and it is **6–9 months**. These are our estimating ranges from comparable builds, not published benchmarks.
+An MVP — self-assessment, one scoring track, a generated certificate — runs **8–12 weeks**. The full platform — dual assessment, reviewer panel, payments, directory, QR verification — is **4–6 months**; add AI-assisted evaluation, appeals and multi-country support and it is **6–9 months**. Our estimating ranges, not published benchmarks.
 
 ![Delivery ranges: an MVP takes 8 to 12 weeks, a full platform 4 to 6 months, and an advanced platform 6 to 9 months](/images/blog/school-accreditation-timeline.svg)
 
-What moves those numbers, in order: **how often the rubric changes**, how many programmes share one platform, whether reviewers work offline, and whether appeals are in scope.
-
-One honest caveat: below roughly 50 institutions a cycle, don't build this. Forms, a spreadsheet and one hosted verification page will run the process while you're still learning it. Build when the rubric has stopped changing and reviewer time, not software, is the bottleneck — the same [judgement we worked through with HABUILD](/blog/habuild-build-vs-buy).
+One honest caveat: below roughly 50 institutions a cycle, don't build this. Forms, a spreadsheet and one hosted verification page will run the process while you learn it. Build when the rubric has stopped changing and reviewer time, not software, is the bottleneck — the [judgement we worked through with HABUILD](/blog/habuild-build-vs-buy).
 
 ## Building it with Vidyayatan
 
-We are an IIT-alumni-led, ISO 9001 and ISO 27001 certified engineering team in Bhopal. The relevant experience: our own EdTech products in Vacademy LMS and Vacademy CRM, AI running in production rather than in demos, and delivery from framework design through to maintenance.
+We are an IIT-alumni-led, ISO 9001 and ISO 27001 certified engineering team in Bhopal, with our own EdTech products in Vacademy LMS and Vacademy CRM.
 
-An accreditation platform is a trust product before it is a software product. Get the rubric versioning, the evidence handling and the revocation model right at the start and the rest is ordinary web engineering — get them wrong and no dashboard will save the credential.
+An accreditation platform is a trust product before it is a software product. Get the rubric versioning, evidence handling and revocation model right at the start and the rest is ordinary web engineering — get them wrong and no dashboard will save the credential.
 
-Planning a school accreditation platform or another EdTech assessment product? [Talk to our engineering team](/contact) — we'll scope the framework and the architecture with you before either gets expensive to change.
+Planning a school accreditation platform or another EdTech assessment product? [Talk to our engineering team](/contact) — we'll scope the framework and architecture before either gets expensive to change.
