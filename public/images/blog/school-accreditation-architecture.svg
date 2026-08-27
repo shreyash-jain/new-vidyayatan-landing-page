@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 622" width="880" height="622" role="img" aria-label="Architecture diagram: the applicant workflow, assessor workbench and public verification surface all sit above one shared scoring engine, which writes to Postgres, to object storage holding hashed evidence, and to a cached read layer serving the directory and QR lookups">
+  <rect width="880" height="622" fill="#ffffff" />
+  <text x="36" y="46" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="700" fill="#2b2e7c">Three surfaces, one core</text>
+  <text x="36" y="78" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">Different traffic, different lifetimes — only one of them is public</text>
+  <rect x="36" y="112" width="264" height="146" rx="16" fill="#ffffff" stroke="#1677ff" stroke-opacity="0.5" stroke-width="2.5" />
+  <rect x="36" y="112" width="264" height="7" rx="3.5" fill="#1677ff" fill-opacity="0.9" />
+  <text x="56" y="156" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Applicant workflow</text>
+  <text x="56" y="186" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#1677ff">Schools</text>
+  <text x="56" y="214" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">Fees, evidence upload,</text>
+  <text x="56" y="238" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">status</text>
+  <path d="M168 258 V296" stroke="#dfe3ee" stroke-width="2.5" fill="none" />
+  <path d="M160 286 L168 298 L176 286 Z" fill="#dfe3ee" />
+  <rect x="308" y="112" width="264" height="146" rx="16" fill="#ffffff" stroke="#d97706" stroke-opacity="0.5" stroke-width="2.5" />
+  <rect x="308" y="112" width="264" height="7" rx="3.5" fill="#d97706" fill-opacity="0.9" />
+  <text x="328" y="156" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Assessor workbench</text>
+  <text x="328" y="186" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#d97706">Reviewers</text>
+  <text x="328" y="214" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">Scoring, calibration,</text>
+  <text x="328" y="238" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">SLA tracking</text>
+  <path d="M440 258 V296" stroke="#dfe3ee" stroke-width="2.5" fill="none" />
+  <path d="M432 286 L440 298 L448 286 Z" fill="#dfe3ee" />
+  <rect x="580" y="112" width="264" height="146" rx="16" fill="#ffffff" stroke="#2b2e7c" stroke-opacity="0.5" stroke-width="2.5" />
+  <rect x="580" y="112" width="264" height="7" rx="3.5" fill="#2b2e7c" fill-opacity="0.9" />
+  <text x="600" y="156" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Public verification</text>
+  <text x="600" y="186" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#2b2e7c">Everyone</text>
+  <text x="600" y="214" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">Directory, QR lookup,</text>
+  <text x="600" y="238" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">revocation</text>
+  <path d="M712 258 V296" stroke="#dfe3ee" stroke-width="2.5" fill="none" />
+  <path d="M704 286 L712 298 L720 286 Z" fill="#dfe3ee" />
+  <rect x="36" y="300" width="808" height="106" rx="16" fill="#e8f1ff" stroke="#1677ff" stroke-opacity="0.5" stroke-width="2.5" />
+  <text x="60" y="342" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="23" font-weight="700" fill="#2b2e7c">Scoring engine</text>
+  <text x="60" y="372" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" fill="#3b3f6b">A pure function over (rubric_version, criterion_scores)</text>
+  <rect x="580" y="326" width="240" height="52" rx="26" fill="#ffffff" stroke="#1677ff" stroke-opacity="0.45" stroke-width="2" />
+  <text x="700" y="359" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#1677ff">rubrics are immutable</text>
+  <path d="M168 406 V444" stroke="#dfe3ee" stroke-width="2.5" fill="none" />
+  <path d="M160 434 L168 446 L176 434 Z" fill="#dfe3ee" />
+  <rect x="36" y="448" width="264" height="122" rx="16" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="2" />
+  <text x="56" y="490" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">PostgreSQL</text>
+  <text x="56" y="520" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#3b3f6b">Scores, rubrics, audit —</text>
+  <text x="56" y="546" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">append-only from day one</text>
+  <path d="M440 406 V444" stroke="#dfe3ee" stroke-width="2.5" fill="none" />
+  <path d="M432 434 L440 446 L448 434 Z" fill="#dfe3ee" />
+  <rect x="308" y="448" width="264" height="122" rx="16" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="2" />
+  <text x="328" y="490" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Object storage</text>
+  <text x="328" y="520" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#3b3f6b">Evidence, hashed at upload,</text>
+  <text x="328" y="546" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">kept past the appeal window</text>
+  <path d="M712 406 V444" stroke="#dfe3ee" stroke-width="2.5" fill="none" />
+  <path d="M704 434 L712 446 L720 434 Z" fill="#dfe3ee" />
+  <rect x="580" y="448" width="264" height="122" rx="16" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="2" />
+  <text x="600" y="490" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Cached read layer</text>
+  <text x="600" y="520" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#3b3f6b">Directory and QR lookups —</text>
+  <text x="600" y="546" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">revocation clears in minutes</text>
+  <text x="36" y="600" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">Keep the public read path off the transactional core.</text>
+</svg>
