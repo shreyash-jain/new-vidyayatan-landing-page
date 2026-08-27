@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 452" width="880" height="452" role="img" aria-label="Bar chart of delivery ranges: an MVP takes eight to twelve weeks, a full platform four to six months, and an advanced platform six to nine months">
   <rect width="880" height="452" fill="#ffffff" />
-  <text x="36" y="46" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="700" fill="#2b2e7c">What it takes to build</text>
-  <text x="36" y="78" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">Vidyayatan estimating ranges — not published industry benchmarks</text>
+  <text x="36" y="46" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="700" fill="#2b2e7c">How long it takes</text>
+  <text x="36" y="78" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">Our own ranges from similar projects — not industry figures</text>
   <line x1="300.0" y1="110" x2="300.0" y2="348" stroke="#dfe3ee" stroke-width="1" />
   <text x="300.0" y="376" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">0</text>
   <line x1="360.0" y1="110" x2="360.0" y2="348" stroke="#dfe3ee" stroke-width="1" />
@@ -22,24 +22,24 @@
   <text x="780.0" y="376" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">8</text>
   <line x1="840.0" y1="110" x2="840.0" y2="348" stroke="#dfe3ee" stroke-width="1" />
   <text x="840.0" y="376" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">9</text>
-  <text x="570" y="404" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">months from kickoff</text>
-  <text x="36" y="146" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">MVP</text>
-  <text x="36" y="170" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">Self-assessment, one</text>
-  <text x="36" y="190" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">scoring track, certificate</text>
+  <text x="570" y="404" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">months from start</text>
+  <text x="36" y="146" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">First version</text>
+  <text x="36" y="170" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">Self-assessment, one set</text>
+  <text x="36" y="190" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">of scores, a certificate</text>
   <rect x="300.0" y="128" width="108.0" height="46" rx="9" fill="#1677ff" fill-opacity="0.92" />
   <rect x="408.0" y="128" width="60.0" height="46" rx="9" fill="#1677ff" fill-opacity="0.18" stroke="#1677ff" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="7 5" />
   <text x="484.0" y="159" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#1677ff">8–12 weeks</text>
   <text x="36" y="222" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Full platform</text>
-  <text x="36" y="246" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">Dual assessment, panel,</text>
+  <text x="36" y="246" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">Both scores, reviewer panel,</text>
   <text x="36" y="266" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">payments, directory, QR</text>
   <rect x="300.0" y="204" width="240.0" height="46" rx="9" fill="#1677ff" fill-opacity="0.92" />
   <rect x="540.0" y="204" width="120.0" height="46" rx="9" fill="#1677ff" fill-opacity="0.18" stroke="#1677ff" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="7 5" />
   <text x="524.0" y="235" text-anchor="end" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#ffffff">4–6 months</text>
   <text x="36" y="298" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="21" font-weight="700" fill="#2b2e7c">Advanced</text>
-  <text x="36" y="322" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">AI-assisted scoring,</text>
-  <text x="36" y="342" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">appeals, multi-country</text>
+  <text x="36" y="322" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">AI support, appeals,</text>
+  <text x="36" y="342" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="16" fill="#6b7194">more than one country</text>
   <rect x="300.0" y="280" width="360.0" height="46" rx="9" fill="#d97706" fill-opacity="0.92" />
   <rect x="660.0" y="280" width="180.0" height="46" rx="9" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="7 5" />
   <text x="644.0" y="311" text-anchor="end" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#ffffff">6–9 months</text>
-  <text x="36" y="430" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">The biggest variable is not scope — it is how often the rubric changes mid-build.</text>
+  <text x="36" y="430" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">What moves the timeline most: how often the rubric changes.</text>
 </svg>
