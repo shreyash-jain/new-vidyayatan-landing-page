@@ -10,13 +10,13 @@ say *how*; this says *where we are*.
 > - **Before you leave:** update statuses, record blockers, list the next actions, and
 >   commit your branch.
 
-*Last updated: 2026-08-21.*
+*Last updated: 2026-08-27.*
 
 ---
 
 ## Where things stand
 
-- **18 posts** in `src/content/blog/` and **2 guides** in `src/content/guides/`.
+- **19 posts** in `src/content/blog/` and **2 guides** in `src/content/guides/`.
 - There is no registry to keep in sync — the folder *is* the collection. `src/lib/mdx.ts`
   reads it at build time.
 
@@ -28,12 +28,14 @@ Content clusters so far:
 | **AI & business** | AI transformation 2026, AI strategy, AI vs human developers, why AI can't replace engineers |
 | **Habuild case study** | 10x growth, architecture at scale, build vs buy, live-session automation, referral system, WhatsApp automation, who built it |
 | **Engagement / process** | choosing an engagement model, Google Sheets to IPO-ready, monolith to microservices (payments) |
+| **EdTech** | how to build a school accreditation platform like ICOSA |
 
 ## In flight
 
 | Work | Branch | State | Next action |
 |---|---|---|---|
 | Blog docs standardisation | *(this folder)* | Uncommitted | Commit `docs/A_Blog_Structure/` + `.claude/commands/blog.md` |
+| School accreditation software guide | `blog/school-accreditation-software-guide` | PR open, awaiting client review | Merge only when the marketing lead says so |
 
 ## Security state
 
@@ -46,6 +48,14 @@ Content clusters so far:
   51 chars.
 - **chrome-devtools-mcp is compiled into the Antigravity IDE** and respawns per window; a
   firewall rule is the mitigation. See `ARCHITECTURE.md § Traps`.
+- **The 2026-08-20 cleanup itself trips two of the safety-check tells — do not escalate on
+  them alone.** Merge `90c33fc` shows committer `saral10-dubey <…@users.noreply.github.com>`
+  rather than `GitHub <noreply@github.com>`, and `gh api …/activity` lists force-pushes to
+  `main` plus four branches at 2026-08-20 07:20–07:21Z. Both are the remediation rewriting
+  history, not a relapse: `90c33fc` has an empty diff against its second parent (so it is
+  not an evil merge), its `postcss.config.mjs` is clean, and there is no force-push activity
+  after that date. Verified again 2026-08-27. **A tell dated after 2026-08-20 is a real
+  signal — re-check rather than assuming this note covers it.**
 
 ## Open items
 
