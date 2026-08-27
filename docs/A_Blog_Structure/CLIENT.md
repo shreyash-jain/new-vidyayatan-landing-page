@@ -85,9 +85,21 @@ The house style is **diagrammatic**. Every existing post's image is an SVG in
 *Append every new one, newest first, with the date and the reason. Never delete an entry
 — supersede it and say so.*
 
+- **2026-08-27 — When a brief states a word count and a title, both are fixed.** A 1,900-word
+  draft was sent back with "keep this under 1000 words" and "please stick with this topic",
+  quoting the brief's own headline. The brief's numbers are an agreed SEO spec, not a
+  starting point. Write to the stated count first time; if the material genuinely needs more
+  room, say so in one line and let them decide. **Corollary:** the house instinct to run
+  long has to be checked against the brief before drafting, not after.
+- **2026-08-27 — Diagrams belong inside the post, not only at the top.** Asked to replace an
+  abstract hero, they added "add some relevant infographs". In-article diagrams work here —
+  but the article column is only ~640px, so a 1200px-wide canvas renders every label at
+  ~8px and is useless. Author in-article SVGs on an **880px canvas with body type at 18–20
+  and titles at 30**, which lands near 15px on screen. Check it in the column, not
+  standalone.
 - **This is our own shop window.** A weak post here costs more than a weak post on a
   client site. When in doubt, cut the post rather than ship a thin one.
 - **Reuse an existing tag** rather than adding a near-duplicate — the tag list is already
   long for 18 posts.
 
-*Last reviewed: 2026-08-21.*
+*Last reviewed: 2026-08-27.*

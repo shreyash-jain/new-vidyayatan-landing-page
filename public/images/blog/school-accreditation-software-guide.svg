@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: a stack of evidence documents feeding a six-segment accreditation seal, which emits verification signals">
+  <defs>
+    <linearGradient id="sa-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="45%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <linearGradient id="sa-seal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <radialGradient id="sa-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sa-bg)" />
+  <circle cx="742" cy="315" r="300" fill="url(#sa-glow)" />
+  <rect x="120" y="250" width="176" height="228" rx="14" fill="#38bdf8" fill-opacity="0.10" stroke="#7dd3fc" stroke-opacity="0.45" stroke-width="2" />
+  <rect x="166" y="218" width="176" height="228" rx="14" fill="#38bdf8" fill-opacity="0.17" stroke="#7dd3fc" stroke-opacity="0.45" stroke-width="2" />
+  <rect x="212" y="186" width="176" height="228" rx="14" fill="#38bdf8" fill-opacity="0.24" stroke="#7dd3fc" stroke-opacity="0.45" stroke-width="2" />
+  <rect x="240" y="228" width="116" height="8" rx="4" fill="#7dd3fc" fill-opacity="0.50" />
+  <rect x="240" y="262" width="132" height="8" rx="4" fill="#7dd3fc" fill-opacity="0.44" />
+  <rect x="240" y="296" width="96" height="8" rx="4" fill="#7dd3fc" fill-opacity="0.38" />
+  <rect x="240" y="330" width="124" height="8" rx="4" fill="#7dd3fc" fill-opacity="0.32" />
+  <rect x="240" y="364" width="78" height="8" rx="4" fill="#7dd3fc" fill-opacity="0.26" />
+  <path d="M400 315 H556" fill="none" stroke="#7dd3fc" stroke-opacity="0.45" stroke-width="2.5" stroke-dasharray="10 10" />
+  <circle cx="566" cy="315" r="7" fill="#7dd3fc" fill-opacity="0.9" />
+  <path d="M749.9 165.2 A150 150 0 0 1 867.8 233.3 L795.7 280.1 A64 64 0 0 0 745.3 251.1 Z" fill="#38bdf8" fill-opacity="0.32" stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" />
+  <path d="M854.3 257.8 A126 126 0 0 1 854.3 372.2 L799.0 344.1 A64 64 0 0 0 799.0 285.9 Z" fill="#38bdf8" fill-opacity="0.23" stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" />
+  <path d="M879.5 404.3 A164 164 0 0 1 750.6 478.8 L745.3 378.9 A64 64 0 0 0 795.7 349.9 Z" fill="#38bdf8" fill-opacity="0.38" stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" />
+  <path d="M736.2 424.8 A110 110 0 0 1 649.7 374.9 L688.3 349.9 A64 64 0 0 0 738.7 378.9 Z" fill="#38bdf8" fill-opacity="0.16" stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" />
+  <path d="M615.5 379.5 A142 142 0 0 1 615.5 250.5 L685.0 285.9 A64 64 0 0 0 685.0 344.1 Z" fill="#38bdf8" fill-opacity="0.29" stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" />
+  <path d="M611.2 230.0 A156 156 0 0 1 733.8 159.2 L738.7 251.1 A64 64 0 0 0 688.3 280.1 Z" fill="#38bdf8" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.55" stroke-width="2" />
+  <circle cx="742" cy="315" r="56" fill="url(#sa-seal)" fill-opacity="0.92" />
+  <circle cx="742" cy="315" r="80" fill="none" stroke="#fbbf24" stroke-opacity="0.35" stroke-width="1.5" />
+  <path d="M921.7 174.6 A228 228 0 0 1 921.7 455.4" fill="none" stroke="#7dd3fc" stroke-opacity="0.4" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M951.6 151.2 A266 266 0 0 1 951.6 478.8" fill="none" stroke="#7dd3fc" stroke-opacity="0.24" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M981.6 127.8 A304 304 0 0 1 981.6 502.2" fill="none" stroke="#7dd3fc" stroke-opacity="0.12" stroke-width="2.5" stroke-linecap="round" />
+</svg>

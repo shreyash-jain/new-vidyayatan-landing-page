@@ -1,0 +1,67 @@
+---
+title: "How we Build a School Accreditation Software Platform Like ICOSA"
+description: "How Vidyayatan Technologies builds school accreditation software — the scoring framework, what we build, the technology we use, and how long it takes."
+date: "2026-08-27"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/school-accreditation-software-guide.svg"
+---
+
+Parents look up schools online long before they visit one. A framed certificate on a principal's wall means nothing to someone reading on a phone.
+
+[ICOSA](https://icosaonline.com/) describes the goal as **the Borderless Graduate**: education as a passport that works anywhere, and schools that produce students who know their subjects, understand other cultures, and are ready to lead and work on a global stage. Accreditation measures a goal like that. Software proves it — to a parent, on a phone, in ten seconds.
+
+That software is what we build. Vidyayatan works with school groups, franchise networks and accreditation bodies. We design the framework, build the scoring system, handle the evidence, add AI where it truly helps, and build the public page where anyone can check a certificate.
+
+## How we help a platform like ICOSA
+
+We start with the framework, not the screens. Here, the score *is* the product. The school being judged is also the one paying for it. So before we write any code, we go through the rubric with you: what each pillar measures, what evidence proves it, and how the two scores become one grade.
+
+Then we build it so the grade still makes sense years later. Every score is saved as its own record: the rubric version, the evidence behind it, and who gave it. The final grade is worked out from those records, never typed in. Old rubric versions are never edited, so you can still explain a 2026 certificate in 2029. We also save the gap between the two scores. If a school rates itself 1.8 points higher than the panel, that proves nothing on its own. But it is the first file a reviewer should open.
+
+## What we build
+
+**Applications and payments.** Sign-up, fees, document upload, and a status page so schools know where they stand.
+
+**Evidence handling.** This is where the real cost sits. We take a fingerprint of every file as it is uploaded and never change it, so an appeal is settled on the exact file that was scored. It is also children's data. [Section 9 of India's DPDP Act, 2023](https://indiankanoon.org/doc/98869575/) says you need proof of a parent's consent. You also may not track, profile or advertise to children. Consent does not change that. The [rules came in during November 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014). The cheapest fix is in the rubric, not a consent pop-up. Ask for "the share of the class scoring above 90" instead of "upload the mark sheets", and the problem goes away.
+
+**AI where it helps.** Three jobs it does well: pulling numbers out of long PDFs and citing the page, spotting claims that contradict each other, and noticing when one reviewer marks harder than the rest. We do not let it set the grade. A school that paid a fee and got A instead of A++ will ask why. *"The panel scored it, and here is the evidence"* is an answer. *"The AI scored it"* is not.
+
+**Certificates and QR checks.** The QR code is not a picture printed on a PDF. It opens a live page that answers four things: is this real, whose is it, what does it say, and is it still valid today. That last one matters. A code that says "valid" for ever is a problem the day an accredited school has an accident. So we build cancellation in from the start.
+
+**The public directory.** The searchable list of accredited schools is usually the busiest page on the site, and the best one for Google. We build it as ready-made pages. Each school keeps the same web address when it renews.
+
+## The technology we use
+
+![How the platform fits together: the school application, the reviewer workspace and the public checking pages all sit above one shared scoring core, which saves to a database, to file storage and to a cached set of public pages](/images/blog/school-accreditation-architecture.svg)
+
+| What it does | What we build it with |
+| --- | --- |
+| Public site, directory, certificate checks | Next.js, ready-made pages on a CDN |
+| School and reviewer dashboards | React and TypeScript, permissions per role |
+| Scoring system | Node.js or Python |
+| Evidence store | S3-compatible file storage, fingerprinted on upload |
+| Records and history | PostgreSQL, with a log of who did what |
+| AI support | LLM reading of documents with page references |
+| Certificates and QR checks | Signed credentials, W3C Verifiable Credentials 2.0 |
+| Fees | Payment gateway with multi-currency billing |
+
+Two choices there matter most. The public pages are kept apart from the working system, so a rush of parents cannot slow down reviewers. And the log of who did what starts on day one. Adding it later, once certificates are out, is the most expensive job on this list.
+
+## How long it takes
+
+A first version — self-assessment, one set of scores, a certificate — takes **8–12 weeks**. The full platform, with both scores, a reviewer panel, payments, the directory and QR checks, takes **4–6 months**. Add AI support, appeals and more than one country and it is **6–9 months**.
+
+![How long each version takes: a first version 8 to 12 weeks, a full platform 4 to 6 months, and an advanced platform 6 to 9 months](/images/blog/school-accreditation-timeline.svg)
+
+We will also tell you when not to build it. Under about 50 schools a year, a form, a spreadsheet and one web page will do. Build the platform once the rubric has settled, and reviewer time — not software — is what slows you down. It is the same call we worked through with [HABUILD](/blog/habuild-build-vs-buy).
+
+## Why teams build it with us
+
+We are an IIT-alumni-led team in Bhopal, certified to ISO 9001 and ISO 27001, with our own EdTech products in Vacademy LMS and Vacademy CRM, and AI running in real systems rather than demos.
+
+An accreditation platform is really a trust product. Get the rubric versions, the evidence and the cancellation right, and the rest is ordinary web work. Get them wrong and no amount of design will save the certificate.
+
+Planning a school accreditation platform, or another EdTech product? [Talk to our team](/contact) — we will help you plan the framework and the system before either gets expensive to change.
+
+*ICOSA is mentioned here as an example of this kind of platform, not as a Vidyayatan client.*
