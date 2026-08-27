@@ -13,41 +13,44 @@ Parents compare schools online long before they visit one, and a framed certific
 
 That part is what we build. For education groups, franchise networks and accreditation bodies pursuing this kind of vision, Vidyayatan designs the assessment framework, builds the scoring engine and the evidence pipeline, puts AI where it genuinely helps and nowhere else, and ships the public verification layer that turns a seal into something anyone can check. Here is how we do it.
 
-## We start with the scoring framework, not the screens
+## How we help a platform like ICOSA
 
-Before we write code we work through the framework with you, because here the score is the entire asset — and it is paid for by the institution being judged.
+We start with the framework, not the screens. In this product the score is the entire asset — and it is paid for by the institution being judged — so before any code we work through the rubric with you: what each pillar measures, what evidence proves it, and how an independent expert score and a school self-assessment combine into one grade.
 
-The design we recommend runs **two parallel evaluations against one rubric**: an independent expert panel score and a school self-assessment, each on the same scale, with the published grade derived from both. It makes self-reflection load-bearing rather than ceremonial, and it is honest about where the number came from. It also hands the applicant real influence over its own grade, so we build three things in from the first sprint.
-
-- **Every criterion score is its own row** — rubric version, the evidence it was scored against, the scorer, a timestamp. The grade is *derived*, never the only stored truth.
-- **Rubric versions are immutable.** A weighting change creates v3; it never edits v2. Otherwise a certificate issued in 2026 becomes unexplainable in 2029, and frameworks get revised often.
-- **We store the divergence** between the two tracks, per criterion. A school rating itself 1.8 points above the panel isn't necessarily dishonest, but it's the file a reviewer should open first.
+Then we build it so the grade stays defensible for years. Every criterion score is stored as its own row with its rubric version, evidence and scorer, so the grade is always derived rather than asserted. Rubric versions are immutable, which is what lets you explain a 2026 certificate in 2029. And we surface the divergence between the two tracks, so a reviewer knows which file to open first.
 
 ## The modules we build
 
-**Application and payment workflow.** Registration, fees, document upload, a status dashboard. The easy part — and the one most estimates over-weight.
+**Application and payments.** Registration, fees, document upload, status dashboard — the easy part, and the one most estimates over-weight.
 
-**Evidence handling.** This is where the cost actually lands. We hash every upload and keep it immutable, so an appeal is argued against the exact bytes that were scored. It is also **children's data**: [Section 9 of India's DPDP Act, 2023](https://indiankanoon.org/doc/98869575/) requires verifiable parental consent and bans tracking, profiling and targeted ads aimed at children — prohibitions consent does not unlock. The Rules followed in [November 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014). The cheapest fix is rubric design, not a consent modal: we push clients to ask for "percentage of the cohort above 90" rather than "upload the mark sheets", and a whole compliance surface disappears.
+**Evidence handling.** This is where the cost actually lands. We hash every upload and keep it immutable, so an appeal is argued against the exact bytes that were scored. It is also **children's data**: [Section 9 of India's DPDP Act, 2023](https://indiankanoon.org/doc/98869575/) requires verifiable parental consent and bans tracking, profiling and targeted ads aimed at children — prohibitions consent does not unlock. The Rules followed in [November 2025](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014). The cheapest fix is rubric design, not a consent modal: ask for "percentage of the cohort above 90" rather than "upload the mark sheets" and a compliance surface disappears.
 
 **AI-assisted evaluation.** Three places it earns its keep: extracting figures from long PDFs with the page cited, flagging contradictions, and spotting reviewer drift across a cohort. We do not let it issue the grade. A school that paid a fee and got A instead of A++ will ask why, and *"the panel scored it, here is the criterion and the evidence"* is an answer. *"The model scored it"* is not.
 
 **Digital certificate and QR verification.** We build this as an API, not a PDF: opaque credential IDs, validity evaluated server-side on every scan, and **revocation as a first-class feature** — a QR that returns "valid" forever is a liability the day an accredited school has an incident. Where it fits, we use the [W3C Verifiable Credentials 2.0 standard](https://www.w3.org/press-releases/2025/verifiable-credentials-2-0/), a Recommendation since 15 May 2025, for a portable format and a ready-made revocation model.
 
-**Public directory.** Usually the highest-traffic page and the best search asset an accreditation body will own. We pre-render it, and keep each school's URL stable across renewals.
+**Public directory.** Usually the highest-traffic page and the best search asset an accreditation body will own. We pre-render it, and keep school URLs stable across renewals.
 
 ## The stack we recommend
 
 ![Architecture: applicant workflow, assessor workbench and public verification sit above a shared scoring engine, writing to Postgres, hashed object storage and an append-only audit log, with a cached read layer serving the directory and QR lookups](/images/blog/school-accreditation-architecture.svg)
 
-- **Next.js** for the public site, directory and verification — SEO and caching come with the rendering model.
-- **Node or Python services**, the scoring engine a pure function over `(rubric_version, criterion_scores)`: testable, replayable, explainable.
-- **PostgreSQL** for scores, rubrics and audit; object storage for evidence; the public read layer kept off the transactional core.
-- **Multi-currency payments** decided up front if international schools are in scope — currency is a schema decision, not a plugin.
-- **An append-only audit log from day one.** Retrofitting audit after certificates exist is the most expensive rework here.
+| What it does | What we build it with |
+| --- | --- |
+| Public site, directory, certificate lookup | Next.js, statically generated, on a CDN |
+| School and reviewer dashboards | React and TypeScript, role-based access control |
+| Scoring engine | Node.js or Python — a pure function over rubric version and scores |
+| Evidence store | S3-compatible object storage, SHA-256 hashed at upload |
+| Records and audit trail | PostgreSQL with an append-only audit log |
+| AI evaluation support | LLM extraction with page citations, anomaly detection on self-reported data |
+| Certificates and QR verification | Signed credentials, W3C Verifiable Credentials 2.0 |
+| Fees | Payment gateway with multi-currency invoicing |
+
+Two of those decisions carry more weight than the rest: the public read path stays off the transactional core, so admissions traffic can't contend with reviewers mid-assessment; and the audit log is append-only from day one, because retrofitting audit after certificates exist is the most expensive rework here.
 
 ## What it takes to build
 
-An MVP — self-assessment, one scoring track, a certificate — runs **8–12 weeks** with us. The full platform, with dual assessment, a reviewer panel, payments, the directory and QR verification, is **4–6 months**; with AI-assisted evaluation, appeals and multi-country support, **6–9 months**. These are our estimating ranges from comparable builds, not published benchmarks.
+An MVP — self-assessment, one scoring track, a certificate — runs **8–12 weeks**. The full platform, with dual assessment, a reviewer panel, payments, the directory and QR verification, is **4–6 months**; with AI-assisted evaluation, appeals and multi-country support, **6–9 months**. Our estimating ranges from comparable builds, not published benchmarks.
 
 ![Delivery ranges: an MVP takes 8 to 12 weeks, a full platform 4 to 6 months, and an advanced platform 6 to 9 months](/images/blog/school-accreditation-timeline.svg)
 
