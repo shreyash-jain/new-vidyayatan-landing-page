@@ -1,0 +1,140 @@
+---
+title: "Exam Day: What Happens When a Thousand Students Hit Submit at Once"
+description: "We load-tested an online assessment platform to 1,000 concurrent test-takers. The infrastructure was never the limit — two application bugs were, and one of them was invisible to the load generator. Numbers, method and both failures."
+date: "2026-08-30"
+author: "Vidyayatan Engineering"
+tag: "Engineering"
+image: "/images/blog/exam-day-load-test.svg"
+---
+
+An online exam is the least forgiving workload in education software. For six weeks nothing happens; then a thousand students open the same paper in the same two minutes, autosave every few seconds for ninety minutes, and submit in a wave you cannot smooth out. There is no retry. A student who loses an attempt does not care about your uptime percentage.
+
+We ran that test properly — a full-journey load test against a real assessment stack, ramping to 1,000 concurrent test-takers. The headline is boring in the best way: at 1,000 concurrent users the platform held with p95 response times under half a second and zero failed requests, and peak CPU never exceeded about 30% of its limit.
+
+The interesting part is everything else. **Infrastructure was never the constraint.** Both real failures were application-level, and the more serious of the two was completely invisible to the load generator — the test reported a clean run while 6.6% of submitted exams were quietly not submitted.
+
+## What we actually measured
+
+Not an endpoint benchmark. A full journey, because that is the only thing that finds ordering bugs: log in, open the paper, start the attempt, autosave repeatedly for the duration, submit. We drove it with [k6](https://grafana.com/docs/k6/latest/), scripting the whole path as one virtual user rather than hammering endpoints independently.
+
+We ramped in stages — 50, 150, 300 on a single application replica, then 500 and 1,000 on two — so that a failure at any level could be attributed rather than guessed at. At the final level:
+
+| Step | p95 response time |
+| --- | --- |
+| Login | 146 ms |
+| Open paper | 465 ms |
+| Start attempt | 134 ms |
+| Autosave | 140 ms |
+| Submit | 139 ms |
+
+Zero errors. All 1,000 attempts finished in a completed state with a recorded submission time. Peak application CPU was roughly 30% of its limit, and the database connection pooler had zero clients waiting at every single level — meaning no request ever queued for a database connection.
+
+That last detail is the one worth internalising. The instinct when an exam platform falls over is to add database capacity. In this system, at this load, the database was close to idle.
+
+![The load test path: a thousand simulated learners log in, open the paper, start the attempt, autosave repeatedly, then submit in a wave. Response times stayed flat while two application-level failures occurred behind them.](/images/blog/exam-day-load-path.svg)
+
+## Bug one: the background job that wasn't
+
+The submit path handed off analytics processing to what was, by name and by comment, an asynchronous method. It was documented as running in the background. It was not annotated as such, so it ran inline on the web request thread.
+
+At small scale this is invisible — it adds a bit of latency to a submit and nobody notices. At a thousand simultaneous submits it serialised the entire request pool. Submit p95 went to about 60 seconds and autosaves backed up behind it to 16 seconds. Every student in the exam felt it, including the ones who weren't submitting yet.
+
+The fix was one annotation and a dedicated thread pool. The lesson is not about that framework:
+
+> Any handoff you believe is asynchronous should be proven asynchronous under load. A method named `sendSomethingAsync` that runs inline is a comment, not a behaviour, and it will only ever hurt you at peak.
+
+This class of bug survives code review indefinitely because the name reads correctly. It is found by load, or by a customer.
+
+## Bug two: the lost update the test could not see
+
+This is the one worth the whole exercise.
+
+The load generator reported 1,000 successful submissions — every request returned a success code. When we queried the database directly, 66 of those 1,000 attempts were still marked live, with no submission time and no result.
+
+The mechanism is a textbook [lost update](https://www.postgresql.org/docs/current/transaction-iso.html), and the ordering only occurs under concurrency. During the exam, a background recalculation runs to keep a student's running score current. It reads the attempt, works for a while, then writes back. If the student submits while that recalculation is mid-flight, the recalculation finishes holding a *pre-submit* copy of the record — and because the write persisted the whole row rather than the fields it had changed, and the record carried no optimistic-locking version, its save silently overwrote the submission.
+
+The student saw a success screen. The database disagreed. In a real exam that is 66 students out of 1,000 whose paper does not exist, discovered at results time.
+
+The fix has two parts, and both matter: re-read the record inside the write and skip if the attempt has already ended, and put a version column on the record so a stale write fails loudly instead of winning quietly.
+
+**The method lesson is bigger than the bug.** We would have shipped this. The load test was green — 1,000 requests, 1,000 successes, no errors, good latency. Every dashboard said pass.
+
+> A load generator measures what the server *said*. It cannot measure what the server *stored*. If the workload writes anything that matters, end every load test with a query against the database that checks the invariant directly.
+
+For an exam, that query is roughly "count the attempts in each state, and how many of the ended ones have a submission time." It takes a minute to write and it is the only reason we found this.
+
+## The earlier one: a quadratic score calculation
+
+Before either of those, an earlier round on a live exam turned up a different shape of problem. Total-marks calculation ran per question, issuing several database queries for each one *and* re-parsing the entire attempt payload each time — quadratic in the number of questions. Each run took 23–31 seconds. It ran on every autosave, not only on submit, so it saturated its thread pool at around nine jobs a minute and then started spilling onto request threads.
+
+Batching it — one projection query, one fetch of the sections, one fetch of existing rows, one parse, one bulk save — removed it as a factor. Worth noting that the infrastructure survived that exam fine, and would have kept surviving it while students watched a spinner.
+
+## The bug class that would have broken the whole exam
+
+While building the second harness we found two entities using a builder pattern without an explicit no-argument constructor, which makes the persistence layer unable to materialise them at all.
+
+Both were invisible because their tables were empty. One of them was read on the *learner autosave path*. That means the feature had never worked, and the day any teacher posted an announcement during an exam, every autosave for every student in that exam would have started failing. A production landmine with a trigger that a teacher pulls.
+
+If you use the same stack, this sweep finds them:
+
+```bash
+for f in $(grep -rl '@Entity' */src/main/java); do
+  grep -q '@Builder' "$f" && ! grep -q NoArgsConstructor "$f" && echo "$f"
+done
+```
+
+The general point: **an empty table hides a broken read path.** Any code path guarded by "there usually aren't any of these" needs a test that creates one.
+
+## A note on file uploads, because the answer surprised people
+
+We ran the same 1,000-student test against a paper where each student uploads a scanned answer sheet — the pattern used for handwritten exams.
+
+It passed comfortably, for an architectural reason worth copying. The uploaded file never touches the application servers. The browser requests a short-lived signed URL, uploads directly to object storage, then makes a small call to acknowledge it. Per student, the platform handles three small JSON requests regardless of whether the file is 200 KB or 20 MB.
+
+The consequence is that **answer-sheet size is irrelevant to platform capacity**, which is not most people's intuition and changes how you size the system. It also means the upload time measured in a load test is a property of the test machine's uplink, not of the platform, and must be excluded from your thresholds or you will tune against your own office wifi.
+
+## How to quote a capacity number honestly
+
+We publish measured numbers with the configuration attached, because a concurrency figure without a configuration is marketing:
+
+| Concurrent test-takers | Basis |
+| --- | --- |
+| 300 | Measured, single application replica |
+| 1,000 | Measured, two replicas |
+| ~650 | Two replicas, for long image-heavy papers of 100+ questions |
+| ~2,500 | Projected from the two-replica curve, not yet measured |
+| ~8,000 | Architectural ceiling, set by database connection limits |
+
+Two conventions we would recommend to anyone publishing these. Say which numbers were measured and which were extrapolated — the honest word for the untested ones is "projected". And quote a customer a number below what you passed; we use the passed level divided by 1.5, because a real exam has heavier papers, worse networks, and students doing things no script does.
+
+## What to take from this
+
+If you run exams online, four things are worth doing before the next season:
+
+1. **Load-test the journey, not the endpoints.** The failures live in the interaction between autosave and submit, which no endpoint benchmark reaches.
+2. **Verify in the database afterwards.** Green tests proved nothing here. One query did.
+3. **Check that anything claiming to run in the background actually does.** Under peak, an inline handoff serialises everything.
+4. **Look for concurrent writes to the same record from two paths.** Where you find one, the record needs a version column and the write needs a re-read.
+
+We reached the point where the platform's own architecture — not its capacity — was the limit, which is where you want to be before an exam season rather than during one. The rest of how we evaluate this kind of platform is in [the eight axes we score an LMS on](/blog/how-to-evaluate-an-lms-eight-axes); peak-load behaviour is the first of them for exactly these reasons.
+
+## Common questions
+
+**How many concurrent users should we test for?**
+Take your largest single cohort sitting one paper, not your total learner count. Then test to at least 1.5× that, because you are buying headroom for the paper being longer and the network being worse than you modelled.
+
+**Is it enough to test with a load generator?**
+No, and that is the main finding here. A load generator validates that the server responded. Pair every run with direct database assertions on the records the run should have written.
+
+**Our platform is cloud-hosted and autoscales. Do we still need this?**
+Yes. Both failures we found were logic bugs that autoscaling makes worse rather than better — more replicas means more concurrent writers racing over the same record.
+
+**When should we run it?**
+At least four weeks before the exam season, so there is time to fix what it finds and re-run. A test whose findings you cannot act on is a report, not a safeguard.
+
+**What does a test like this cost?**
+Days, not weeks, if the platform already has a test environment with realistic data. Building that environment — a tenant, a real paper, a thousand seeded learners — is usually the larger half of the work and it is reusable every season afterwards.
+
+---
+
+We build and load-test assessment platforms, including our own. If you have an exam season coming and no measured capacity number, [talk to our team](/contact) — a journey-level test and a database-level check is a short engagement and it is the cheapest insurance in the calendar.

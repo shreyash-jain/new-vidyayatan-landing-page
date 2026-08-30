@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: eight vertical columns of stacked cells at differing heights, representing eight evaluation axes each scored from zero to three">
+  <defs>
+    <linearGradient id="lr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="45%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <linearGradient id="lr-fill" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#7dd3fc" />
+    </linearGradient>
+    <radialGradient id="lr-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#lr-bg)" />
+  <circle cx="600" cy="330" r="330" fill="url(#lr-glow)" />
+
+  <!-- baseline -->
+  <rect x="220" y="470" width="760" height="2" fill="#7dd3fc" fill-opacity="0.30" />
+
+  <!-- eight columns; each column is four cells, filled from the bottom -->
+  <g>
+    <!-- axis 1: score 3 -->
+    <rect x="220" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="220" y="292" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+    <rect x="220" y="354" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+    <rect x="220" y="416" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+
+    <!-- axis 2: score 1 -->
+    <rect x="315" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="315" y="292" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="315" y="354" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="315" y="416" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+
+    <!-- axis 3: score 3, highlighted gold (the decisive axis) -->
+    <rect x="410" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#fbbf24" stroke-opacity="0.35" stroke-width="2" />
+    <rect x="410" y="292" width="72" height="52" rx="8" fill="#fbbf24" fill-opacity="0.92" />
+    <rect x="410" y="354" width="72" height="52" rx="8" fill="#fbbf24" fill-opacity="0.92" />
+    <rect x="410" y="416" width="72" height="52" rx="8" fill="#fbbf24" fill-opacity="0.92" />
+
+    <!-- axis 4: score 2 -->
+    <rect x="505" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="505" y="292" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="505" y="354" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+    <rect x="505" y="416" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+
+    <!-- axis 5: score 2 -->
+    <rect x="600" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="600" y="292" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="600" y="354" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+    <rect x="600" y="416" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+
+    <!-- axis 6: score 0 -->
+    <rect x="695" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="695" y="292" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="695" y="354" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="695" y="416" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#f87171" stroke-opacity="0.55" stroke-width="2" />
+
+    <!-- axis 7: score 3 -->
+    <rect x="790" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="790" y="292" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+    <rect x="790" y="354" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+    <rect x="790" y="416" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+
+    <!-- axis 8: score 1 -->
+    <rect x="885" y="230" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="885" y="292" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="885" y="354" width="72" height="52" rx="8" fill="#0f172a" fill-opacity="0.35" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="885" y="416" width="72" height="52" rx="8" fill="url(#lr-fill)" fill-opacity="0.92" />
+  </g>
+
+  <!-- weight markers under the baseline: taller tick = heavier weight -->
+  <g fill="#7dd3fc" fill-opacity="0.55">
+    <rect x="248" y="486" width="16" height="34" rx="4" />
+    <rect x="343" y="486" width="16" height="18" rx="4" />
+    <rect x="438" y="486" width="16" height="34" rx="4" fill="#fbbf24" fill-opacity="0.65" />
+    <rect x="533" y="486" width="16" height="26" rx="4" />
+    <rect x="628" y="486" width="16" height="26" rx="4" />
+    <rect x="723" y="486" width="16" height="18" rx="4" />
+    <rect x="818" y="486" width="16" height="12" rx="4" />
+    <rect x="913" y="486" width="16" height="12" rx="4" />
+  </g>
+</svg>

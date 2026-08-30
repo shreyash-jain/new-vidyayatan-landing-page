@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img" aria-label="Bar chart of the eight axis weights used for an online education company: the money path carries 25 of 100, data exit and extension surface 15 each, and one learner record, reach, admin load and change cost 10 each, with peak-load behaviour at 5. A note says that re-weighting for a coaching institute or a university reorders the whole table.">
+  <rect width="880" height="400" fill="#ffffff" />
+
+  <text x="36" y="44" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#2b2e7c">The weights, published</text>
+  <text x="36" y="74" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">For a business that sells courses. Change these and the ranking changes with them.</text>
+
+  <!-- bars: 8 axes, weight out of 100, scaled 6px per point -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15">
+    <text x="36" y="126" fill="#2b2e7c">The money path</text>
+    <rect x="232" y="110" width="150" height="22" rx="6" fill="#fbbf24" />
+    <text x="396" y="126" fill="#92400e" font-weight="700">25</text>
+
+    <text x="36" y="164" fill="#2b2e7c">Data exit</text>
+    <rect x="232" y="148" width="90" height="22" rx="6" fill="#1677ff" fill-opacity="0.75" />
+    <text x="336" y="164" fill="#6b7194">15</text>
+
+    <text x="36" y="202" fill="#2b2e7c">Extension surface</text>
+    <rect x="232" y="186" width="90" height="22" rx="6" fill="#1677ff" fill-opacity="0.75" />
+    <text x="336" y="202" fill="#6b7194">15</text>
+
+    <text x="36" y="240" fill="#2b2e7c">One learner record</text>
+    <rect x="232" y="224" width="60" height="22" rx="6" fill="#1677ff" fill-opacity="0.55" />
+    <text x="306" y="240" fill="#6b7194">10</text>
+
+    <text x="36" y="278" fill="#2b2e7c">Reach</text>
+    <rect x="232" y="262" width="60" height="22" rx="6" fill="#1677ff" fill-opacity="0.55" />
+    <text x="306" y="278" fill="#6b7194">10</text>
+
+    <text x="36" y="316" fill="#2b2e7c">Admin load</text>
+    <rect x="232" y="300" width="60" height="22" rx="6" fill="#1677ff" fill-opacity="0.55" />
+    <text x="306" y="316" fill="#6b7194">10</text>
+
+    <text x="36" y="354" fill="#2b2e7c">Change cost</text>
+    <rect x="232" y="338" width="60" height="22" rx="6" fill="#1677ff" fill-opacity="0.55" />
+    <text x="306" y="354" fill="#6b7194">10</text>
+  </g>
+
+  <text x="36" y="392" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#2b2e7c">Peak-load behaviour</text>
+  <rect x="232" y="376" width="30" height="22" rx="6" fill="#1677ff" fill-opacity="0.35" />
+  <text x="276" y="392" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#6b7194">5</text>
+
+  <!-- side note -->
+  <rect x="470" y="230" width="374" height="150" rx="14" fill="#f8fafc" stroke="#2b2e7c" stroke-opacity="0.18" stroke-width="2" />
+  <text x="494" y="262" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#6b7194" letter-spacing="1">RE-WEIGHT AND THE ORDER MOVES</text>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#2b2e7c">
+    <text x="494" y="292">Coaching institute running exams</text>
+    <text x="494" y="314" fill="#6b7194">peak-load 20 · money 20 · reach 15</text>
+    <text x="494" y="344">University with engineers</text>
+    <text x="494" y="366" fill="#6b7194">data exit 20 · extension 20 · change 15</text>
+  </g>
+</svg>

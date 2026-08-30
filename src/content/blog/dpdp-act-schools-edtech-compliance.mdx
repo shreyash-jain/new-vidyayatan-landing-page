@@ -1,0 +1,119 @@
+---
+title: "India's DPDP Act for Schools and EdTech: What Actually Has to Change in Your Platform"
+description: "The DPDP Rules were notified in November 2025 and core obligations bite on 13 May 2027. What Section 9 means for children's data, why a consent checkbox is no longer consent, and the engineering work it implies for school and EdTech systems."
+date: "2026-08-30"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/dpdp-schools-edtech.svg"
+---
+
+If you run a school system or an EdTech product in India, three things follow from the Digital Personal Data Protection framework. **A child is anyone under 18, and processing their data needs verifiable consent from a parent — a tick-box saying "I am over 18" is not it. Tracking, behavioural monitoring and targeted advertising aimed at children are prohibited outright, and consent does not unlock them. And the core obligations become enforceable on 13 May 2027**, which is a build timeline, not a legal one.
+
+Most of the published commentary covers the law. This is about the software: what changes in your data model, your consent flow, your retention logic and your logs.
+
+## The dates that decide your roadmap
+
+The [DPDP Rules, 2025 were notified](https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf) on 14 November 2025, with a phased schedule rather than a single switch:
+
+| Phase | From | What comes into force |
+| --- | --- | --- |
+| Immediate | November 2025 | Constitution and functioning of the Data Protection Board |
+| 12 months | November 2026 | Registration and regulation of Consent Managers |
+| 18 months | **13 May 2027** | The obligations that affect your product: consent, security safeguards, breach reporting, retention limits, erasure |
+
+The eighteen-month runway is the part people misread. It is not a grace period during which partial compliance is fine — it is the window in which the work is expected to be done, and the [core data-fiduciary duties](https://www.amsshardul.com/insight/enforcement-of-the-dpdp-act-and-notification-of-the-dpdp-rules/) apply in full from that date. Penalties for failures involving children's data run to ₹200 crore, and up to ₹250 crore for a failure of security safeguards.
+
+For a school platform, the practical read is that consent architecture and retention need to be designed into the next major release rather than retrofitted in early 2027, because both of them touch the data model.
+
+## First question: which one are you?
+
+Everything downstream depends on this, and a lot of contracts currently leave it unstated.
+
+A **Data Fiduciary** decides why and how personal data is processed. A **Data Processor** processes it on a fiduciary's instructions. In the usual school arrangement, the school is the fiduciary — it decides the purpose — and the EdTech platform serving that school is a [processor acting under contract](https://ksandk.com/data-protection-and-data-privacy/dpdp-act-compliance-for-edtech-schools/), with the school responsible for obtaining parental consent and for binding the platform to process children's data only within Section 9.
+
+The nuance worth getting right: that clean split holds only for as long as you process data solely for the school's purposes. The moment your platform uses the same student data for its own ends — product analytics beyond service delivery, model training, marketing to families, cross-institution benchmarking sold as a feature — you are making your own purpose decisions, and you are a fiduciary for that processing with the full set of obligations attached.
+
+This is not a legal abstraction. It is a question about a specific line in your analytics pipeline, and it is worth answering before your first enterprise customer's counsel asks it.
+
+## Section 9, and the part that surprises people
+
+**Verifiable parental consent.** Before processing a child's data you need consent from a parent or lawful guardian, and it must be verifiable — you have to establish that the consenting adult is an adult and is that child's parent. The guidance points at identity and age confirmation from details you already reliably hold or from an authorised identity provider such as [DigiLocker](https://www.consently.in/blog/verifiable-parental-consent-dpdp-rules-2025-edtech-gaming). A self-declaration checkbox does not meet the standard.
+
+**The prohibition consent cannot lift.** Section 9(3) bars tracking, behavioural monitoring of children, and targeted advertising directed at children. Read that alongside the consent requirement, because the interaction is where products get caught: you cannot solve behavioural tracking of a fourteen-year-old by asking the parent nicely. The permission does not exist to be granted, subject only to exemptions the government may notify.
+
+For a learning platform this needs a careful, honest line. Tracking a learner's progress through a course to teach them better is the service the school is buying. Building a behavioural profile to decide which upsell to show their parent is not, and neither is passing identifiers to an advertising network. Teams generally know which side a given feature sits on; the failure mode is that nobody is asked to write it down.
+
+**Knowing who is a child.** All of the above needs your system to know a user's age, which many school systems technically do not — they hold a class or a grade and infer. Since the obligation attaches to anyone under 18, a platform serving classes 11 and 12 is squarely in scope, as is any alumni or test-prep product where a chunk of the cohort has not yet turned 18.
+
+![Where the DPDP obligations land in a school platform: an age determination gates the consent flow, the consent record carries purpose and evidence, and retention and erasure run from the record rather than from a flag](/images/blog/dpdp-consent-architecture.svg)
+
+## What changes in the software
+
+This is the part that generic compliance content skips, and it is where the cost sits.
+
+### Consent stops being a boolean
+
+Most school systems today have something like `consent_given = true` on a user row. That cannot answer any question the Act asks. What replaces it is an append-only record where each consent is its own row carrying: whose data, which purpose, who consented, what evidence established that they were the verified parent, which version of the notice they saw, when, and — critically — when it was withdrawn.
+
+Two consequences follow. Consent is **per purpose**, so agreeing to attendance tracking is not agreeing to a parent-communication service or to photographs on the school website. And because consent can be withdrawn, every processing path has to *ask* rather than assume, which usually means a check at the point of use rather than a filter applied at signup.
+
+### Retention becomes code, not policy
+
+The Act requires erasure when the purpose is served and consent is withdrawn. A document saying "we retain records for seven years" satisfies nothing if the system has no mechanism that acts on it. What you need is a retention clock per data category, a job that enforces it, and a defensible answer for what happens to a student's assessment history when they leave.
+
+Plan for the awkward cases in advance, because they are the ones that come up: a learner withdraws consent mid-course, a school's own academic record obligations conflict with erasure, a student appears in a recorded class that other students are still watching. These are design decisions, and they are far cheaper to make now than to reverse-engineer later.
+
+### Breach reporting is a detection problem
+
+Reporting obligations run on a clock from the point of becoming aware. A team without alerting on unusual data access cannot start that clock honestly, and "we became aware when a customer told us" is a poor position. Practically this means access logging on personal-data reads, not only writes, and alerting on the shapes that matter — a bulk export, an unusual out-of-hours query, a support account reading records outside the institution it serves.
+
+### Rights need endpoints
+
+Learners and guardians can ask what you hold, have it corrected, and have it erased. At small volume this is handled by a person and a spreadsheet. At any real scale it is a feature: a request queue, an identity check, a compiled export, and an audit trail proving you answered inside the window.
+
+## The cheapest compliance is in the data you don't collect
+
+The single most effective move we make on these projects is not in the consent screen. It is upstream, in what the product asks for at all.
+
+Every field of a child's personal data you collect is a field you must justify, secure, retain correctly, produce on request and erase on demand. Removing it removes all five obligations at once. So we go through the schema field by field and ask what breaks if it is gone.
+
+A concrete version of the trade, from an [accreditation platform we worked through](/blog/school-accreditation-software-guide): asking a school to "upload the mark sheets" pulls named children's academic records into your storage, with everything that follows. Asking for "the share of the class scoring above 90" answers the same question with no child's data in the system. Same insight for the customer, an entire category of obligation gone.
+
+Applied across a school product this is worth more than any consent tooling. Do you need the student's photograph, or a class list? Their date of birth, or a year of birth? Their home address, or their bus route? Each one you drop is permanent.
+
+## Where to start
+
+For a team with a live product and the 2027 date on the calendar, roughly this order:
+
+1. **Data map.** Every place a child's personal data enters, rests and leaves — including analytics, error tracking, backups, exports and third-party tools. Most teams find personal data in two systems they had forgotten about. This takes a week and everything else depends on it.
+2. **Fiduciary or processor**, decided per processing purpose and written into your contracts. Fix any analytics or model-training path that makes you an unintentional fiduciary.
+3. **Minimise the schema** while the map is fresh, before you build consent machinery around fields you could have deleted.
+4. **Design the consent record** — per purpose, versioned, withdrawable, with the verification evidence attached. This is a schema change and it needs to land in a normal release, not a rushed one.
+5. **Retention and erasure jobs**, with the conflict cases decided explicitly.
+6. **Access logging and alerting**, so the breach clock is one you can actually start.
+7. **Rights endpoints**, once volume justifies them.
+
+Steps one to four are where the schedule risk lives. They change the data model, so they want to be finished well before May 2027 and not in the quarter before it.
+
+## Common questions
+
+**Does the Act apply to a school that only uses paper records?**
+It applies to digital personal data, including paper records later digitised. In practice every school runs a digital system somewhere — fees, attendance, results — so the question is scope, not applicability.
+
+**We use a third-party LMS. Are we covered by their compliance?**
+No. If you are the fiduciary, the obligation is yours and the vendor's compliance is something you must verify and contract for. Ask any vendor for their consent-record structure, retention behaviour and breach-notification commitment in writing, and treat vagueness as an answer.
+
+**Our students are over 18 — does Section 9 apply?**
+Not to those learners, but the rest of the Act still does: notice, consent, security safeguards, retention, rights and breach reporting. Section 9 is an additional layer for under-18s, not the whole law. Check your actual age distribution rather than assuming.
+
+**Is a signature on an admission form enough parental consent?**
+For the purposes it actually names, possibly. For purposes added later, no — consent is tied to a stated purpose, and a form signed in 2023 does not cover a service you launched in 2026. This is the main reason consent has to be a record rather than a flag.
+
+**How long does this work take?**
+For a mid-sized school platform, we typically see six to ten weeks for the data map, schema minimisation and consent architecture, then a further period for retention, logging and rights tooling. The variable is not the compliance work; it is how much personal data turned out to be scattered across systems nobody had inventoried.
+
+---
+
+Building or reworking a school or EdTech platform against these obligations? [Talk to our team](/contact) — the data map and the consent model are the two decisions worth getting right first, and both are much cheaper before the next release than after it.
+
+*This post describes engineering practice, not legal advice. The obligations summarised here come from the DPDP Act, 2023 and the DPDP Rules, 2025 as notified in November 2025; confirm your specific position with counsel.*

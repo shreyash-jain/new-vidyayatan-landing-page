@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: ten horizontal score bars of differing lengths, ranked, with one bar highlighted in gold sitting midway down rather than at the top">
+  <defs>
+    <linearGradient id="tp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="45%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <linearGradient id="tp-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.55" />
+    </linearGradient>
+    <radialGradient id="tp-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#tp-bg)" />
+  <circle cx="560" cy="315" r="320" fill="url(#tp-glow)" />
+
+  <!-- axis -->
+  <rect x="150" y="86" width="2" height="470" fill="#7dd3fc" fill-opacity="0.28" />
+
+  <!-- ten ranked bars -->
+  <g>
+    <rect x="152" y="94"  width="760" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="140" width="682" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="186" width="666" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="232" width="650" height="34" rx="8" fill="#fbbf24" fill-opacity="0.9" />
+    <rect x="152" y="278" width="634" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="324" width="586" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="370" width="586" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="416" width="570" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="462" width="523" height="34" rx="8" fill="url(#tp-bar)" />
+    <rect x="152" y="508" width="443" height="34" rx="8" fill="url(#tp-bar)" />
+  </g>
+
+  <!-- rank ticks on the left of the axis -->
+  <g fill="#7dd3fc" fill-opacity="0.45">
+    <rect x="118" y="107" width="22" height="8" rx="4" />
+    <rect x="118" y="153" width="22" height="8" rx="4" />
+    <rect x="118" y="199" width="22" height="8" rx="4" />
+    <rect x="118" y="245" width="22" height="8" rx="4" fill="#fbbf24" fill-opacity="0.8" />
+    <rect x="118" y="291" width="22" height="8" rx="4" />
+    <rect x="118" y="337" width="22" height="8" rx="4" />
+    <rect x="118" y="383" width="22" height="8" rx="4" />
+    <rect x="118" y="429" width="22" height="8" rx="4" />
+    <rect x="118" y="475" width="22" height="8" rx="4" />
+    <rect x="118" y="521" width="22" height="8" rx="4" />
+  </g>
+
+  <!-- the scale ceiling -->
+  <rect x="1000" y="86" width="2" height="470" fill="#7dd3fc" fill-opacity="0.20" stroke-dasharray="6 8" />
+</svg>

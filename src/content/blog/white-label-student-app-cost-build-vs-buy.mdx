@@ -1,0 +1,116 @@
+---
+title: "What a White-Labelled Student App Actually Costs"
+description: "A real costing of building a branded iOS and Android student app — engineer-months, the maintenance line nobody budgets, and the store submission calendar — against what platforms charge to bundle one. Cost is almost never the reason to build."
+date: "2026-08-30"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/white-label-app-cost.svg"
+---
+
+Building a branded iOS and Android app for your institute takes **five to eight person-months on top of an existing backend, or ten to sixteen without one**, plus an annual maintenance line of 15–25% of the build that most budgets omit entirely. Licensed platforms bundle the same thing for a few thousand rupees one-time, or free above a few hundred learners.
+
+So the honest headline, from a firm that builds custom software for a living: **cost is almost never the reason to build a white-labelled student app.** There are good reasons to build one. Saving money is not among them, and this post is mostly about what the real reasons are.
+
+*Disclosure: Vidyayatan builds custom platforms, and also builds [Vacademy](https://www.vacademy.io), our own LMS. Both sides of this comparison are ours, which is precisely why we can publish the arithmetic instead of arguing for one of them.*
+
+## What "a student app" actually contains
+
+The estimate people bring us is usually for the app they can picture: a login, a list of courses, a video player. That app takes six weeks and nobody wants it, because a student app that institutes actually deploy has to survive contact with a real academic term.
+
+The scope that survives contact:
+
+- **Authentication** that works when a fifteen-year-old forgets a password, including OTP flows and a parent-facing login if guardians get their own view.
+- **Video playback** with resume-where-you-left-off, variable quality for bad networks, and download-for-offline — which immediately raises content protection, because downloadable video is copyable video.
+- **Assessments on a phone**, including the timer surviving a phone call, an app switch, and a network drop mid-attempt. This is the single most underestimated screen in the product.
+- **Push notifications** that route to the right screen, batch sensibly, and respect quiet hours. Deep linking is a week of work that nobody quotes.
+- **Offline tolerance**, because a meaningful share of Indian learners are on intermittent connections. Every write becomes a queue, every read becomes a cache with an invalidation rule.
+- **Payments**, where mobile is genuinely harder — store policies constrain what you may charge for in-app, and the answer differs between Apple and Google.
+- **Accessibility and device spread**: the Android floor is not your phone. Budget for a three-year-old device with 3 GB of RAM.
+
+None of that is exotic. All of it is why the six-week estimate becomes six months.
+
+## The build, in engineer-months
+
+We cost in engineer-months rather than rupees, because the months are stable and rates vary by firm, city and year. Two scenarios, both assuming a production-grade result rather than a demo:
+
+| Work | With an existing backend | Backend too |
+| --- | --- | --- |
+| Discovery, UX, design system | 1.0 | 1.5 |
+| Cross-platform app (iOS + Android) | 3.0 – 4.0 | 3.0 – 4.0 |
+| Backend, APIs, admin surface | — | 4.0 – 7.0 |
+| Content protection & offline | 0.5 – 1.0 | 1.0 – 1.5 |
+| QA and the device matrix | 1.0 – 1.5 | 1.5 – 2.0 |
+| Store submission and release setup | 0.5 | 0.5 |
+| **Total person-months** | **6.0 – 8.0** | **11.5 – 16.5** |
+
+Two notes on that table. Going fully native for both platforms rather than cross-platform roughly doubles the app row — worth it for a heavily media-centric product, hard to justify otherwise. And the backend row assumes you are building the learning platform, not just an API in front of one; if you already run an LMS with a decent API, you are firmly in the left column.
+
+At Indian enterprise development rates — broadly ₹1.5–3 lakh per engineer-month for a firm that will still answer the phone in year two — the left column lands around **₹9–24 lakh** and the right column around **₹17–50 lakh**. Treat that as a market band, not our quote; ours depends on what you already have, and the only honest way to produce it is to look at your existing system.
+
+## The line nobody budgets
+
+The build is the smaller half.
+
+Apple and Google each ship a major OS release every year and periodically change store policy in ways that are not optional. Certificates expire. A push provider deprecates an API. A payment rule changes. None of this adds a feature; all of it is required to keep the app in the store and working.
+
+Plan **15–25% of the build cost per year**, indefinitely, starting the month you ship. On a ₹15 lakh build that is ₹2.25–3.75 lakh a year to stand still. Over five years the maintenance exceeds the build.
+
+The second unbudgeted item is calendar, not money. [App Store review](https://developer.apple.com/app-store/review/guidelines/) is unpredictable in a way that does not fit an academic timetable — a rejection two weeks before term starts is a normal event, and education apps handling children's data attract more scrutiny, not less. Any plan that has students downloading the app on day one of term needs the store submission finished a month earlier.
+
+![The five-year cost shape: a large one-time build, then a maintenance line that never stops, against a licensed platform's flat per-learner fee that already includes both apps above a threshold](/images/blog/white-label-app-cost-curve.svg)
+
+## What buying costs, with real numbers
+
+For contrast, here is our own published list pricing — not because it is the cheapest on the market, but because we can quote it exactly rather than approximating a competitor's.
+
+Vacademy prices the branded apps as a one-time build and store release: **₹8,000 for Android, ₹10,000 for iOS**. From the 500-learner tier upward, both are bundled at no additional cost, along with the website builder and payment setup. The platform itself runs on per-learner annual tiers that fall as you grow — ₹300 per learner up to 100 learners, ₹150 at the 2,000 tier, ₹105 at the 10,000 tier, before tax.
+
+Run the comparison at 2,000 learners. The platform, both branded apps, the website and payment setup come to roughly ₹3 lakh a year at list. A custom app *alone* — with no learning platform behind it — is ₹9–24 lakh to build and ₹2–4 lakh a year to maintain, and you would still need the LMS.
+
+This is not a close call, and we are not going to pretend it is. Most competent platforms in this market will produce a similar shape of answer.
+
+## So when should you build?
+
+Four situations, and notice that none of them is about cost.
+
+**The app is your product.** If you are an EdTech company rather than an institute using software, the app is the business. You cannot licence your core product from someone else and expect to raise money on it, and every strategic option you might want later — a pivot, an acquisition, a platform play — routes through owning the code.
+
+**Your pedagogy genuinely has no product-market fit.** Not "we do things a bit differently" — every institute believes that, and it is usually satisfied by configuration. We mean an assessment model, a credit structure or a delivery format that no platform models, where working around it costs more than owning it. This is rarer than founders think and worth testing honestly against two or three platforms before concluding it.
+
+**A regulatory or contractual constraint decides it.** Data residency, a government tender that requires source ownership, an accreditation body demanding a specific evidence trail, or an enterprise client whose security review no multi-tenant SaaS will pass.
+
+**You have crossed the scale where licensing costs more than owning.** It exists, but it is much further out than most people assume — at the tiers above, tens of thousands of learners before per-learner licensing rivals a build plus a permanent team to run it. And note what you are buying at that point: not an app, but an engineering function.
+
+Outside those four, the version that usually wins is neither: **buy the platform, and build only the piece that is genuinely yours.** A licensed LMS behind your brand, with one custom module for the thing you actually do differently, integrated over its API. That is most of our education work, and it is the recommendation we make most often.
+
+## How to sanity-check any quote you receive
+
+Whoever you ask, four questions separate a real estimate from a hopeful one:
+
+1. **"Is this cross-platform or native, and why?"** A quote that does not say has not been thought about.
+2. **"What is the annual maintenance, in rupees, for years one through three?"** A vendor who will not put a number here is planning to bill you by surprise.
+3. **"Who owns the code, the repositories and the store accounts?"** Store accounts especially — an app published under a vendor's developer account is a hostage. It should be your Apple and Google account from day one.
+4. **"What happens at 500 concurrent users?"** If the app fronts assessments, this is the question that matters most and the one least likely to have been considered. We have written about [what actually breaks under exam load](/blog/exam-day-load-testing-concurrent-submissions).
+
+## Common questions
+
+**Can we build the app now and the backend later?**
+No, and quotes that imply otherwise are hiding the larger half. The app is a client; something has to serve it. If you have no backend, that is the project, and the app is the part users see.
+
+**Is React Native or Flutter good enough for an education app?**
+For the overwhelming majority, yes — including video, offline content and assessments. Native pays off when you are doing heavy media processing, tight hardware integration, or something genuinely unusual on-device. Choose native for a reason you can articulate, not by default.
+
+**How long from signing to students downloading it?**
+On an existing backend, four to six months is realistic including store review; a compressed twelve weeks is possible with scope discipline. Building the backend too, plan eight to twelve months. Work backwards from term dates and add a month of slack for store review.
+
+**We were quoted ₹3 lakh for a white-label app. Is that real?**
+It usually means one of three things: a template rebranded with your logo and colours, a web view wrapped in an app shell, or a quote that excludes the backend, maintenance and store handling. Any of them can be a legitimate purchase — a rebranded template at ₹3 lakh may be exactly right — as long as you know that is what you are buying. Ask the four questions above and it will become clear quickly.
+
+**Do we need separate apps for students and parents?**
+Usually not at first. One app with a guardian role is cheaper to build and to maintain, and the parent's needs — attendance, results, fees, announcements — are a small surface. Separate apps make sense once the parent journey grows its own product.
+
+---
+
+If you are weighing this, the useful next step is not a quote — it is an hour with your existing systems to establish which column of that table you are actually in. [Talk to our team](/contact) and we will tell you honestly if the answer is to buy something instead.
+
+*Vacademy list prices are as published at the time of writing and exclude GST; check the current rate card before relying on them.*

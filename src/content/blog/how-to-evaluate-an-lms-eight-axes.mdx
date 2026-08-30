@@ -1,0 +1,159 @@
+---
+title: "How to Evaluate an LMS: The Eight Axes We Score On"
+description: "A weighted scoring rubric for choosing a learning platform — peak load, data exit, the money path, one learner record, reach, admin load, extension surface and change cost. With the vendor questions and the answers that should disqualify one."
+date: "2026-08-30"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/lms-evaluation-rubric.svg"
+---
+
+Score a learning platform on eight things, not on its feature list: **peak-load behaviour, data exit, the money path, one learner record, reach, admin load, extension surface, and change cost.** Weight them for your own institution, score each 0–3 from a live demo with your own data, and the shortlist usually collapses to two. The feature grid — the thing every vendor sends you — is the least useful document in the process.
+
+*Disclosure: Vidyayatan builds education platforms for clients, and also builds [Vacademy](https://www.vacademy.io), our own LMS. This post is the rubric, not a ranking — we deliberately score nothing here, including our own product. Where we apply it, we say so and we publish where Vacademy loses.*
+
+## Why feature grids fail
+
+Ask six LMS vendors for a feature comparison and you get six grids where every vendor ticks every row. This is not dishonesty. It is that "attendance tracking" is a true statement about a product that marks attendance from a live-session join event, and equally true of one where a teacher types names into a form. The row is the same. The thing you are buying is not.
+
+The grid also has a survivorship problem. It contains the features vendors compete on, which are the features that demo well. It does not contain the things that decide whether you are still happy in year three — what the system does at 9pm on results day, what happens to five years of records when you leave, and how much it costs to change your fee structure.
+
+So we throw the grid away and score behaviour instead. Eight axes, each scored 0–3, each with a question you ask during the demo and an answer that ends the conversation.
+
+## The eight axes
+
+### 1. Peak-load behaviour
+
+Education traffic is not steady. It is flat for weeks and then every learner in the institute does the same thing in the same four minutes — an exam opens, results publish, admissions close. The platform either holds or it becomes the story.
+
+Almost nobody tests this, including most vendors. We have run 1,000 concurrent test-takers through a real assessment stack and the interesting failures were never the database or the CPU — they were application-level: a job that was documented as running in the background but wasn't, and a write race that silently left 6.6% of submitted attempts looking unsubmitted while the load generator reported a clean run. Both were invisible until we queried the database directly.
+
+- **Ask:** "What is the largest simultaneous exam you have run, and can I see the report?"
+- **Score 3** if they name a number, a date, and how they measured it.
+- **Disqualifying answer:** "It scales automatically, it's on the cloud." That sentence means no one has measured it.
+
+### 2. Data exit
+
+The question is not whether there is an export button. It is what comes out of it, and whether you can teach from it somewhere else.
+
+Ask for a full export during the trial, not at renewal. Look for: learner records with their history, the question bank in a re-importable format, assessment attempts with per-question responses, attendance, fee and payment history, and your video content — including whether you have the source files or only streaming access.
+
+- **Ask:** "Export my trial account now, and send me the file."
+- **Score 3** if you receive complete, structured data within a day, unprompted, without a support ticket.
+- **Disqualifying answer:** "We'll handle that if you ever decide to leave." Ask for it in the contract instead, with a deadline and a format. If they won't write it down, you have your answer.
+
+### 3. The money path
+
+Fee collection is where LMS projects quietly fail, because it is the one part where being 98% right is not good enough. Trace the whole path in the demo: a fee is set, a parent pays, the payment reconciles against that specific learner, a receipt is issued, a partial payment is handled, a refund reverses cleanly, and the finance team gets a report they don't have to rebuild in Excel.
+
+Then ask about the cut. Some platforms take a percentage of every transaction on top of the licence. Over a few thousand learners that is not a pricing detail, it is the largest line in the contract.
+
+- **Ask:** "Show me a partial payment, then a refund, then the reconciliation report."
+- **Score 3** if all three happen in the product without a spreadsheet appearing.
+- **Disqualifying answer:** a percentage of collections with no cap.
+
+### 4. One learner record
+
+Most institutes run at least three systems that each think they own the student: an admissions or CRM system, the LMS, and the fee system. If those are three databases, someone reconciles them by hand forever, and every report you ask for is a merge job.
+
+The test is simple and demos badly, which is exactly why it's worth doing. Change a phone number in one place. See where else it appears.
+
+- **Ask:** "Change this learner's phone number in admissions and show me the LMS record."
+- **Score 3** if it is one record with one identifier from enquiry to alumnus.
+- **Disqualifying answer:** "They sync every night."
+
+### 5. Reach
+
+A notification that a learner does not see did not happen. In Indian education specifically, this axis is decided by WhatsApp, not email — open rates are not comparable and everyone in this market knows it. The related question is what the platform does on a weak connection: whether a learner on 3G in a tier-3 town can attend a class, submit homework, and see their result.
+
+Also check who else gets reached. For school-age learners, the parent is a second audience with different needs, and "we send a monthly report" is not the same thing as a parent knowing today that their child missed a test.
+
+- **Ask:** "Show me the message a parent gets when their child misses an assessment. Send it to my phone now."
+- **Score 3** for messaging that reaches learner and guardian on the channel they actually read, and degrades gracefully on a bad connection.
+
+### 6. Admin load
+
+Every platform claims to save time and none of them quantify it. You can, in about an hour: pick your three most frequent admin tasks — enrolling a batch, scheduling a week of classes, publishing results — and time them in each shortlisted product using your own data. Multiply by how often you do them. That number is the real running cost, and it usually dwarfs the licence fee.
+
+- **Ask:** to do it yourself in the trial account, not to be shown.
+- **Score 3** if a task you do weekly takes minutes and needs no support contact.
+- **Watch for:** the demo where the salesperson drives. Anything looks easy when an expert does it.
+
+### 7. Extension surface
+
+You will eventually need this platform to talk to something else — a school ERP, a biometric attendance device, an accounting system, an existing single sign-on. The question is whether that is a project or a permanent negotiation.
+
+Look for a documented API you can read *before* you sign, webhooks for the events you care about, and an honest answer on single sign-on. "We can build that for you" is a fine answer if it comes with a price and a date, and a bad one if it comes with neither.
+
+- **Ask:** "Send me your API documentation." Not a call about it — the URL.
+- **Score 3** if public documentation exists and covers the objects you'd need.
+- **Disqualifying answer:** documentation that requires an NDA. If integration is a sales conversation now, it will be one every time.
+
+### 8. Change cost
+
+Institutions change. New branch, new fee structure, a course that runs in three languages, a board that changes its assessment pattern. The axis measures what those changes cost you in year two: are they configuration you do yourself, a support ticket with a queue, or a quoted development project?
+
+- **Ask:** "We're adding a branch with different fees next quarter. Walk me through it."
+- **Score 3** if an admin can do it unaided.
+- **Disqualifying answer:** anything that starts with "we'd scope that."
+
+![The eight axes on a scoring sheet, each scored zero to three and multiplied by a weight, with weight profiles differing for a coaching institute, a school and a corporate training team](/images/blog/lms-evaluation-axes.svg)
+
+## Weights, because your institution is not the average one
+
+The axes are constant. The weights are not — this is the part generic advice gets wrong. Three profiles we use as starting points, out of 100:
+
+| Axis | Coaching institute | School | Corporate L&D |
+| --- | --- | --- | --- |
+| Peak-load behaviour | 20 | 10 | 5 |
+| Data exit | 10 | 15 | 15 |
+| The money path | 20 | 20 | 5 |
+| One learner record | 15 | 15 | 10 |
+| Reach | 15 | 20 | 10 |
+| Admin load | 10 | 10 | 15 |
+| Extension surface | 5 | 5 | 25 |
+| Change cost | 5 | 5 | 15 |
+
+A coaching institute lives and dies on exam day and on fee collection, so those carry a fifth each. A school's decisive axis is reach, because the parent is half the customer — and a school carries obligations a coaching institute does not, which is a separate evaluation of its own covered in [what the DPDP Act actually changes in a school platform](/blog/dpdp-act-schools-edtech-compliance). A corporate L&D team has almost no peak-load problem and a very large integration problem — the LMS has to sit inside an existing identity and HR stack, so extension surface outweighs everything.
+
+Score each shortlisted platform 0–3 per axis, multiply by the weight, and total out of 300. In practice the arithmetic is not the point. The point is that assigning the weights forces a conversation between the academic head, the finance lead and whoever will actually administer the system — and that conversation, held before the demo rather than after the contract, is most of the value here.
+
+## What we deliberately left out
+
+**Feature count.** Covered above. Every product wins on its own grid.
+
+**"AI-powered."** Not an axis, because it is not a capability — it is a category containing both a tool that generates a usable question paper from your own PDF and a tool that produces confident nonsense. If AI matters to you, score the output, not the label: run your own source material through it and grade what comes back. That is a specific enough test that we will write it up separately.
+
+**Number of customers.** A large installed base tells you the vendor will still exist. It tells you nothing about whether the product fits an institute of your shape, and it correlates with change cost going up, not down.
+
+**Reviews and awards.** Directionally useful for support responsiveness. Useless for everything else on this list.
+
+## When the answer is not to buy an LMS
+
+We build custom platforms, so it would be convenient to end here by recommending one. Usually we don't.
+
+Under roughly 200 active learners with a single fee structure and one location, the honest answer is that a good off-the-shelf platform will beat anything custom on both cost and time, and the effort is better spent on teaching. If you have in-house technical capacity and a long horizon, [Moodle](https://moodle.org/) remains a serious answer for the same reason it has been for twenty years — no licence fee and you own the database. Building is worth considering when your process is genuinely unusual — an assessment model no product supports, a franchise structure with revenue sharing across branches, a regulatory or accreditation requirement with its own evidence trail — or when you have crossed the point where per-learner licensing costs more than owning the system. We wrote up how that call actually went for one client in [build vs buy at HABUILD](/blog/habuild-build-vs-buy).
+
+The third path, and the one most institutions should take, is buying the platform and building only the piece that is genuinely yours.
+
+## Common questions
+
+**How long should an LMS evaluation take?**
+Three to five weeks. One week to set weights and write the shortlist, two to three weeks of hands-on trials with your own data, and a week for reference calls. Faster than that and you are buying the demo. Much slower and the requirements drift.
+
+**How many platforms should we shortlist?**
+Three. Two is not enough to calibrate what "good" looks like on an axis; five means nobody does the trial properly and the decision defaults to price.
+
+**Should we run a pilot with real students?**
+Yes, and pick the hardest cohort rather than the friendliest. A pilot with your most demanding batch and your least technical teacher tells you more in two weeks than a year of the smooth one.
+
+**The vendor won't give us a trial without a call. Is that a red flag?**
+On its own, no — a guided setup is reasonable for a complex product. It becomes a flag if you still cannot get into the product unaccompanied after that call. You are evaluating a system your staff will use without a salesperson present.
+
+**Who should own the decision?**
+Not IT alone, and not the founder alone. The person who will administer the system daily should hold a veto, because axis 6 is the one that gets discovered after signature.
+
+---
+
+We have applied this rubric to ten platforms for one specific buyer — [businesses selling courses in India](/blog/top-learning-platforms-online-education-companies-india) — with the weights and the scores published, including where our own product loses.
+
+We use it on client engagements before recommending anything, including before recommending against a build. If you are running an evaluation and want a second read on the shortlist, [talk to our team](/contact).
