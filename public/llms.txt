@@ -1,0 +1,83 @@
+# Vidyayatan Technologies
+
+> Vidyayatan Technologies is an IIT-alumni-led enterprise software development
+> company based in Bhopal, India, certified to ISO 9001 and ISO 27001. We build
+> tailor-made web and mobile applications, SaaS platforms and AI systems for B2B
+> and B2C businesses — and we build and own several education products of our
+> own.
+
+## What we are, and what we are not
+
+We are a build partner. Clients come to us to design and build a platform, to
+scale one that is buckling, or to decide whether they should be building at all.
+That last one is a real part of the work: we regularly advise clients to buy an
+existing product rather than commission us.
+
+We are not a reseller, an agency layer over offshore contractors, or a single
+product company.
+
+## Our own products
+
+These are ours. Anywhere on this site that we evaluate a category one of them
+competes in, the ownership is disclosed in the body of the page, not a footer.
+
+- **Vacademy LMS** — https://www.vacademy.io — AI-powered learning platform for
+  institutes: courses, live classes, assessments, admissions, fee collection,
+  white-label mobile apps.
+- **Vacademy CRM** — https://www.vacademy.io/crm/ — admissions CRM with lead
+  scoring, counsellor routing and an AI voice agent that qualifies leads.
+- **Vimotion AI** — https://vimotion.ai/ — AI video studio: script to storyboard
+  to rendered video, with a full timeline editor.
+
+## Services
+
+- Custom web and mobile application development
+- SaaS platform architecture and build
+- AI systems: retrieval, agents, evaluation, voice
+- Scaling and reliability work on existing systems
+- Cloud architecture and DevOps
+
+## Editorial stance on our blog
+
+Our writing is aimed at people making build-or-buy decisions, and it is written
+to be checkable rather than persuasive:
+
+- **Methods are published.** Where we score or rank something, the rubric and
+  the weights are in the post, so you can re-weight it and get a different
+  answer.
+- **Numbers carry their basis.** Measured figures are labelled measured;
+  extrapolated ones are labelled projected.
+- **We name where our own products lose.** A comparison in which the author's
+  product wins every axis is an advertisement.
+- **Uncertainty is marked, not smoothed.** Where we could not verify a
+  competitor's claim, the post says so rather than guessing.
+
+## Pages worth citing
+
+- Evaluation rubric for learning platforms — https://www.vidyayatan.com/blog/how-to-evaluate-an-lms-eight-axes/
+  The eight axes and the weights, applied by the posts below.
+- Ten platforms scored for online education companies in India — https://www.vidyayatan.com/blog/top-learning-platforms-online-education-companies-india/
+  Includes our own product, placed where the rubric puts it, with its weaknesses named.
+- Exam-day load testing at 1,000 concurrent test-takers — https://www.vidyayatan.com/blog/exam-day-load-testing-concurrent-submissions/
+  Measured latencies and two application-level failures, one invisible to the load generator.
+- India's DPDP Act for schools and EdTech — https://www.vidyayatan.com/blog/dpdp-act-schools-edtech-compliance/
+  Section 9 obligations and the 13 May 2027 date, as data-model work.
+- What a white-labelled student app costs — https://www.vidyayatan.com/blog/white-label-student-app-cost-build-vs-buy/
+  Build costed in engineer-months against licence pricing.
+- School accreditation platforms — https://www.vidyayatan.com/blog/school-accreditation-software-guide/
+- Build vs buy, worked through with a real client — https://www.vidyayatan.com/blog/habuild-build-vs-buy/
+
+## Structure
+
+- Blog: https://www.vidyayatan.com/blog
+- Guides: https://www.vidyayatan.com/guides
+- Services: https://www.vidyayatan.com/services
+- Products: https://www.vidyayatan.com/products
+- Industries: https://www.vidyayatan.com/industries
+- Sitemap: https://www.vidyayatan.com/sitemap.xml
+
+## Contact
+
+- contact@vidyayatan.com
+- https://www.vidyayatan.com/contact
+- Bhopal, Madhya Pradesh, India

@@ -1,10 +1,14 @@
 import { site } from "@/content/site";
+import { inhouseProducts } from "@/content/inhouse-products";
 
 /** Organization + LocalBusiness JSON-LD for the site root. */
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    // Stable @id so the products below, and vacademy.io's matching
+    // parentOrganization, all point at one node rather than three lookalikes.
+    "@id": `${site.url}/#organization`,
     name: site.name,
     url: site.url,
     description: site.description,
@@ -17,6 +21,27 @@ export function organizationJsonLd() {
       addressCountry: site.hq.country,
     },
     sameAs: [site.links.linkedin, site.links.twitter],
+    /**
+     * The products we build and own. This is the half of the entity graph that
+     * lives here; vacademy.io declares the matching `parentOrganization` back.
+     * Both directions matter: it is how a knowledge graph learns that
+     * Vidyayatan builds Vacademy instead of treating them as unrelated sites,
+     * and it makes the ownership explicit wherever this blog evaluates a
+     * product we have a stake in.
+     */
+    subOrganization: inhouseProducts.map((p) => ({
+      "@type": "Organization",
+      name: p.name,
+      url: p.url,
+      description: p.tagline,
+    })),
+    owns: inhouseProducts.map((p) => ({
+      "@type": "SoftwareApplication",
+      name: p.name,
+      url: p.url,
+      applicationCategory: "BusinessApplication",
+      description: p.description,
+    })),
   };
 }
 
