@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" width="880" height="470" role="img" aria-label="ICOSA's AI-Enabled School Readiness Accreditation: forty-eight assessment questions across six dimensions — infrastructure, curriculum, faculty, student outcomes, governance and innovation — producing a 0 to 100 ICOSA AI Index, with recognition at 2.5 out of 5 or above, inside a 30-day window">
+  <rect width="880" height="470" fill="#ffffff" />
+  <text x="36" y="46" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="700" fill="#2b2e7c">AI-Enabled School Readiness Accreditation</text>
+  <text x="36" y="78" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18" fill="#6b7194">ICOSA's published structure for its AI readiness track, as at August 2026</text>
+  <rect x="36" y="104" width="258" height="76" rx="10" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="1" />
+  <rect x="36" y="104" width="4" height="76" rx="2" fill="#38bdf8" />
+  <text x="165" y="150" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#2b2e7c" text-anchor="middle">Infrastructure</text>
+  <rect x="310" y="104" width="258" height="76" rx="10" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="1" />
+  <rect x="310" y="104" width="4" height="76" rx="2" fill="#38bdf8" />
+  <text x="439" y="150" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#2b2e7c" text-anchor="middle">Curriculum</text>
+  <rect x="584" y="104" width="258" height="76" rx="10" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="1" />
+  <rect x="584" y="104" width="4" height="76" rx="2" fill="#38bdf8" />
+  <text x="713" y="150" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#2b2e7c" text-anchor="middle">Faculty</text>
+  <rect x="36" y="196" width="258" height="76" rx="10" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="1" />
+  <rect x="36" y="196" width="4" height="76" rx="2" fill="#38bdf8" />
+  <text x="165" y="242" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#2b2e7c" text-anchor="middle">Student outcomes</text>
+  <rect x="310" y="196" width="258" height="76" rx="10" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="1" />
+  <rect x="310" y="196" width="4" height="76" rx="2" fill="#38bdf8" />
+  <text x="439" y="242" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#2b2e7c" text-anchor="middle">Governance</text>
+  <rect x="584" y="196" width="258" height="76" rx="10" fill="#f7f9fc" stroke="#dfe3ee" stroke-width="1" />
+  <rect x="584" y="196" width="4" height="76" rx="2" fill="#38bdf8" />
+  <text x="713" y="242" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#2b2e7c" text-anchor="middle">Innovation</text>
+  <line x1="440" y1="288" x2="440" y2="318" stroke="#dfe3ee" stroke-width="2" />
+  <path d="M 432 314 l 8 10 l 8 -10" fill="none" stroke="#6b7194" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="36" y="338" width="258" height="72" rx="10" fill="#e8f1ff" stroke="#1677ff" stroke-width="1" opacity="0.95" />
+  <text x="165" y="372" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#2b2e7c" text-anchor="middle">48</text>
+  <text x="165" y="396" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194" text-anchor="middle">assessment questions</text>
+  <rect x="310" y="338" width="258" height="72" rx="10" fill="#e8f1ff" stroke="#1677ff" stroke-width="1" opacity="0.95" />
+  <text x="439" y="372" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#2b2e7c" text-anchor="middle">0–100</text>
+  <text x="439" y="396" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194" text-anchor="middle">ICOSA AI Index</text>
+  <rect x="584" y="338" width="258" height="72" rx="10" fill="#e8f1ff" stroke="#1677ff" stroke-width="1" opacity="0.95" />
+  <text x="713" y="372" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#2b2e7c" text-anchor="middle">≥ 2.5 / 5</text>
+  <text x="713" y="396" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194" text-anchor="middle">to be recognised AI-Enabled</text>
+  <text x="36" y="444" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="17" fill="#6b7194">Completed inside a 30-day window. Source: ICOSA.</text>
+</svg>
