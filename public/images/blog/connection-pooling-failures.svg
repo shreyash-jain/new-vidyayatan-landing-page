@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: many application connections funnel through a narrow pooler into a small set of database connections, with several connections queued and one carrying contaminated state">
+  <defs>
+    <linearGradient id="cp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="45%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <radialGradient id="cp-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#cp-bg)" />
+  <circle cx="600" cy="315" r="320" fill="url(#cp-glow)" />
+
+  <!-- left: many application connections -->
+  <g fill="#38bdf8" fill-opacity="0.18" stroke="#7dd3fc" stroke-opacity="0.40" stroke-width="2">
+    <rect x="90" y="70"  width="150" height="34" rx="9" />
+    <rect x="90" y="118" width="150" height="34" rx="9" />
+    <rect x="90" y="166" width="150" height="34" rx="9" />
+    <rect x="90" y="214" width="150" height="34" rx="9" />
+    <rect x="90" y="262" width="150" height="34" rx="9" />
+    <rect x="90" y="310" width="150" height="34" rx="9" />
+    <rect x="90" y="358" width="150" height="34" rx="9" />
+    <rect x="90" y="406" width="150" height="34" rx="9" />
+    <rect x="90" y="454" width="150" height="34" rx="9" />
+    <rect x="90" y="502" width="150" height="34" rx="9" />
+  </g>
+
+  <!-- converging lines into the pooler -->
+  <g stroke="#7dd3fc" stroke-opacity="0.30" stroke-width="2" fill="none">
+    <path d="M 240 87  C 340 87,  400 250, 470 282" />
+    <path d="M 240 135 C 340 135, 400 260, 470 292" />
+    <path d="M 240 183 C 340 183, 400 270, 470 302" />
+    <path d="M 240 231 C 340 231, 400 280, 470 312" />
+    <path d="M 240 279 C 340 279, 400 290, 470 318" />
+    <path d="M 240 327 C 340 327, 400 300, 470 324" />
+    <path d="M 240 375 C 340 375, 400 320, 470 334" />
+    <path d="M 240 423 C 340 423, 400 340, 470 344" />
+  </g>
+  <!-- two queued (red, not reaching) -->
+  <g stroke="#f87171" stroke-opacity="0.75" stroke-width="2.5" fill="none" stroke-dasharray="7 8">
+    <path d="M 240 471 C 340 471, 390 400, 430 372" />
+    <path d="M 240 519 C 340 519, 390 430, 430 386" />
+  </g>
+  <circle cx="437" cy="372" r="7" fill="#f87171" fill-opacity="0.8" />
+  <circle cx="437" cy="386" r="7" fill="#f87171" fill-opacity="0.8" />
+
+  <!-- the pooler: a narrow gate -->
+  <rect x="470" y="250" width="34" height="130" rx="17" fill="#fbbf24" fill-opacity="0.85" />
+
+  <!-- right: few server connections; one contaminated -->
+  <g stroke-width="2">
+    <rect x="700" y="212" width="180" height="40" rx="10" fill="#34d399" fill-opacity="0.18" stroke="#34d399" stroke-opacity="0.55" />
+    <rect x="700" y="268" width="180" height="40" rx="10" fill="#34d399" fill-opacity="0.18" stroke="#34d399" stroke-opacity="0.55" />
+    <rect x="700" y="324" width="180" height="40" rx="10" fill="#f87171" fill-opacity="0.20" stroke="#f87171" stroke-opacity="0.75" />
+    <rect x="700" y="380" width="180" height="40" rx="10" fill="#34d399" fill-opacity="0.18" stroke="#34d399" stroke-opacity="0.55" />
+  </g>
+
+  <g stroke="#7dd3fc" stroke-opacity="0.35" stroke-width="2" fill="none">
+    <path d="M 504 290 L 700 232" />
+    <path d="M 504 302 L 700 288" />
+    <path d="M 504 320 L 700 344" />
+    <path d="M 504 336 L 700 400" />
+  </g>
+
+  <!-- contaminated marker on the third -->
+  <circle cx="912" cy="344" r="12" fill="none" stroke="#f87171" stroke-opacity="0.9" stroke-width="3" />
+  <path d="M 906 338 l 12 12 M 918 338 l -12 12" stroke="#f87171" stroke-opacity="0.9" stroke-width="3" stroke-linecap="round" />
+
+  <!-- database -->
+  <g fill="none" stroke="#7dd3fc" stroke-opacity="0.45" stroke-width="3">
+    <ellipse cx="1040" cy="252" rx="62" ry="20" />
+    <path d="M 978 252 v 128 a 62 20 0 0 0 124 0 v -128" />
+    <path d="M 978 316 a 62 20 0 0 0 124 0" />
+  </g>
+</svg>

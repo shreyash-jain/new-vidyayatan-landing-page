@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: a numbered column of twelve question rows, each paired with a response marker — most accepted, several rejected">
+  <defs>
+    <linearGradient id="rfp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="45%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <radialGradient id="rfp-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#rfp-bg)" />
+  <circle cx="600" cy="315" r="330" fill="url(#rfp-glow)" />
+
+  <!-- twelve question rows: index tick, question bar, verdict marker -->
+  <g>
+    <rect x="200" y="82" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="80" width="520" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="89" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="126" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="124" width="450" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="133" r="10" fill="none" stroke="#f87171" stroke-opacity="0.9" stroke-width="3" />
+
+    <rect x="200" y="170" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="168" width="560" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="860" cy="177" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="214" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="212" width="410" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="221" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="258" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="256" width="530" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="265" r="10" fill="none" stroke="#f87171" stroke-opacity="0.9" stroke-width="3" />
+
+    <rect x="200" y="302" width="14" height="14" rx="3" fill="#fbbf24" fill-opacity="0.75" />
+    <rect x="238" y="300" width="600" height="18" rx="9" fill="#fbbf24" fill-opacity="0.42" />
+    <circle cx="880" cy="309" r="10" fill="#fbbf24" fill-opacity="0.9" />
+
+    <rect x="200" y="346" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="344" width="470" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="353" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="390" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="388" width="545" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="840" cy="397" r="10" fill="none" stroke="#f87171" stroke-opacity="0.9" stroke-width="3" />
+
+    <rect x="200" y="434" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="432" width="425" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="441" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="478" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="476" width="580" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="870" cy="485" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="522" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="520" width="490" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="529" r="10" fill="#34d399" fill-opacity="0.85" />
+
+    <rect x="200" y="566" width="14" height="14" rx="3" fill="#7dd3fc" fill-opacity="0.5" />
+    <rect x="238" y="564" width="510" height="18" rx="9" fill="#38bdf8" fill-opacity="0.30" />
+    <circle cx="820" cy="573" r="10" fill="none" stroke="#f87171" stroke-opacity="0.9" stroke-width="3" />
+  </g>
+
+  <!-- left rule -->
+  <rect x="172" y="72" width="2" height="520" fill="#7dd3fc" fill-opacity="0.22" />
+</svg>
