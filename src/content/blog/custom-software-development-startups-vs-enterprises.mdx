@@ -1,0 +1,99 @@
+---
+title: "Custom Software Development for Startups vs Enterprises: What Really Changes"
+description: "How custom software development differs for startups and enterprises — scope, budget, integration and compliance — and how to choose the right custom software development company for your stage."
+date: "2026-09-02"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/custom-software-startups-vs-enterprises.svg"
+---
+
+A founder and a head of IT can send the same email — *"we need a custom platform built"* — and mean two jobs that share almost nothing. The code looks similar. Everything around it differs: who decides, what counts as finished, and what the software must talk to on day one.
+
+Here is the plain version, from a [custom software development company](/services/custom-software) that builds both.
+
+## The one sentence that explains every difference
+
+**A startup's biggest risk is building the wrong thing. An enterprise's biggest risk is breaking the right thing.**
+
+For a startup, the software *is* the business: nothing to integrate with, no committee, no revenue to protect. For an enterprise, it joins a business that already works. Nobody gets a bonus for a smooth launch — everybody hears when order processing stops for a morning.
+
+![Startup builds and enterprise builds compared across six rows: what the software is, the biggest risk, what the first release does, what drives the timeline, who decides, and what finished means](/images/blog/custom-software-stage-comparison.svg)
+
+## Startups: speed, a small scope, and money with an end date
+
+The clock is the constraint. In [CB Insights' 2024 study of 431 venture-backed shutdowns](https://www.cbinsights.com/research/report/startup-failure-reasons-top/), 70% ran out of capital and 43% never found product-market fit. Running out of money is the symptom. Not learning fast enough is the cause.
+
+Release one is not a smaller version of the finished product. It is the cheapest honest test of the assumption the business rests on.
+
+Cut hard: extra user roles, a full admin panel, multiple currencies, microservices. Never cut these — retrofitting costs several times what building costs:
+
+- **The data model.** Everything else can be rewritten in a week.
+- **Login and permissions.**
+- **Anything touching money**, and its audit trail.
+- **Backups you have restored from once.**
+
+AI tools reach a working demo fast, and that demo helps raise money. It is usually not the thing you scale — see [what that code costs six months on](/blog/the-hidden-cost-of-ai-generated-software) and [what production grade takes](/blog/how-to-ensure-vibe-coded-app-is-production-grade).
+
+**The concession:** plenty of startups should not build at all. If an off-the-shelf tool covers 80% of what you do, buy it. We have talked clients out of building — [that call at HABUILD](/blog/habuild-build-vs-buy).
+
+## Enterprises: integration, compliance, and the systems already running
+
+Ask an enterprise team what is hard and you rarely hear about features. You hear about the other seven systems.
+
+**Integration is the project.** The ERP, the identity provider, the warehouse system nobody has patched since 2019. Much of the timeline goes there, and none of it shows in a demo.
+
+**Existing debt sets the pace.** In [McKinsey's survey of 50 CIOs at $1bn-plus companies](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-debt-reclaiming-tech-equity), tech debt ran to 20–40% of the whole technology estate's value, with 10–20% of the new-product budget going on debt problems instead. A vendor who quotes as though the ground is empty has not looked at it.
+
+**Compliance is a hard date.** For personal data in India, core DPDP obligations [become enforceable on 13 May 2027](https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc20251117695301.pdf) — consent, retention, erasure, breach reporting. They touch the data model, so they are a design decision now, not a 2027 patch; we covered the detail for [schools and EdTech platforms](/blog/dpdp-act-schools-edtech-compliance). Selling *to* enterprise buyers runs in reverse: expect a security questionnaire, often a [SOC 2 report](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2/).
+
+**Nothing gets replaced in one go.** Carve out one capability at a time and move traffic when it is proven.
+
+## How we scope each one
+
+[**Satvaa**](/products/satvaa) — an ERP for food-processing companies. Purchase orders, inventory, vendors, traceability and shipments sat in disconnected tools, so scoping meant deciding what one system should own first.
+
+[**Innowell**](/products/innowell) — a multi-tenant SaaS mapping tool modelling site, building, floor, zone, space and workstation. That hierarchy was the whole early design decision — get it wrong and you migrate data a year later.
+
+[**BharatPe**](/products/bharatpe) — the enterprise end. A payments platform moved from monolith to microservices, now handling more than 10 billion transactions a year — nothing pausable while it was rebuilt. [How that was sequenced](/blog/monolith-to-microservices-payments).
+
+A startup engagement opens with *what must we find out?* An enterprise one with *what must not break?*
+
+## Red flags when you evaluate a custom software development company
+
+![Six warning signs when evaluating a software development partner: an identical proposal for every client, a fixed price before discovery, no named engineers, integration deferred to later, vague ownership of code, and a vendor who never says no](/images/blog/custom-software-red-flags.svg)
+
+The pattern behind all six: a partner who has not looked at your situation and will not tell you no. A short paid discovery ending in a real estimate beats a fixed price on a vague scope.
+
+## The questions to ask before you sign
+
+1. Who writes the code, and are they on other projects too?
+2. What is in release one, and what did you deliberately leave out?
+3. Who owns the code, repository and cloud accounts on day one?
+4. How often do you deploy, and what is your change failure rate? [DORA's delivery metrics](https://dora.dev/guides/dora-metrics-four-keys/) are a fair public standard.
+5. What happens if we stop in month four? Ask for the handover plan in writing.
+
+Startups: also ask what they would cut if the budget dropped by a third. Enterprises: ask which of your existing systems worries them most, and why.
+
+## Common questions
+
+### What drives the cost difference?
+
+Rarely the features. It is integrations, security review and the number of people who must approve. Two firms can quote the same feature list and land a long way apart.
+
+### How long should a first release take?
+
+For a properly scoped startup release one, weeks rather than quarters — if it is not that tight, fix that first. On enterprise work the integration and approval calendar decides the date, not the build.
+
+### Should a startup buy off the shelf instead?
+
+Often, yes. Build when your process is genuinely unusual, or when licence costs have overtaken owning the system. [Coming off spreadsheets](/blog/google-sheets-to-ipo-ready) is the common trigger.
+
+### Who should own the code?
+
+You, from day one — code, repository, cloud account and domain, in the contract in plain words. Vagueness here is the answer.
+
+### Can one company do both well?
+
+It can, but ask for a different *method*, not a different brochure. Then agree the relationship — [fixed scope, dedicated team, or longer partnership](/blog/choosing-an-engagement-model) — and settle the basics with our [project kickoff checklist](/guides/software-project-kickoff-checklist).
+
+Tell us which of the two risks worries you more — [talk to us](/contact). That one answer changes most of the plan.
