@@ -1,0 +1,107 @@
+---
+title: "Moodle in 2026: When It Is Still the Right Answer"
+description: "Moodle is the most-deployed LMS in the world and its share is slowly falling. Four situations where it is still clearly the right choice, the cost nobody budgets, and the one question that decides it."
+date: "2026-08-31"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/moodle-2026.svg"
+---
+
+Moodle is the right answer when you have — or will hire — someone who owns it. That is genuinely the whole test. **The licence is free; the operator is not**, and every other consideration is downstream of whether that person exists.
+
+Where they do, Moodle in 2026 is hard to beat on the axes that decide long-horizon decisions: you own the database outright, there is no per-learner cost, and two decades of accumulated extensions mean the odd thing your institution does has probably already been solved by someone.
+
+Where they don't, a hosted platform will beat it on total cost while looking more expensive on paper.
+
+*Disclosure: Vidyayatan builds custom education platforms and also builds [Vacademy](https://www.vacademy.io), our own LMS. So this is a post about a competitor, written by someone with a stake — which is exactly why it is worth writing down where they win. Vacademy's own argument against Moodle is [on their site](https://vacademy.io/compare/vs-moodle/); read both.*
+
+## Where Moodle actually stands
+
+The scale is not in question. Moodle's registered base passed [508 million users across roughly 148,000 sites in 232 countries](https://research.com/education/lms-statistics) by mid-2026, and it holds the [largest single share of the LMS market at around 15%](https://cubite.io/blogs/lms-market-share-2026). In Europe, Latin America and Oceania it exceeds half of all deployments; in Latin American higher education it is [around 73%](https://cubite.io/blogs/lms-market-share-2026).
+
+North America is the exception rather than the rule — there Canvas leads higher education at roughly 39%, with Moodle and Brightspace each near 16%.
+
+And the honest counterpoint, which pro-Moodle writing tends to omit: **its share is slowly declining.** Over the past eight years it has lost several points in Europe, Latin America, Oceania and Asia. Not collapse — erosion, mostly toward hosted platforms, and mostly from institutions that concluded they did not want to run software.
+
+Read those two facts together and you get the actual picture. Moodle is not dying and is not going anywhere; it is losing the buyers for whom self-hosting was always the wrong fit. Comparison figures across sources vary considerably by methodology, so treat all of them as directional.
+
+## Four situations where Moodle is the right choice
+
+### 1. You have in-house technical capacity and a long horizon
+
+A university IT department, a large institution with a systems team, a training provider with a developer. If you have people who already run infrastructure, Moodle converts a recurring per-learner cost into salaried time you are largely paying anyway — and the arithmetic gets better every year you stay.
+
+Over a ten-year horizon this is usually not close.
+
+### 2. Your pedagogy is unusual and specific
+
+Moodle's activity model is more granular than most commercial platforms, and after twenty years the [plugin ecosystem](https://moodle.org/plugins/) runs past 2,300 extensions. Competency frameworks, unusual grading schemes, workshop-style peer assessment, research-driven course structures — these are the things hosted platforms treat as edge cases and Moodle treats as configuration.
+
+If you have found yourself explaining to three vendors why their assessment model does not fit, this is worth taking seriously.
+
+*One operational note: the long-standing Plugins Directory moved to the [Moodle Marketplace](https://marketplace.moodle.com/) during 2026. Older documentation and links still point at the previous location.*
+
+### 3. Data sovereignty is a hard requirement
+
+A national regulator, a defence or government tender, a research institution with data-residency obligations, or a security review no multi-tenant SaaS will pass. Self-hosting is not a preference here, it is the requirement, and Moodle is the mature answer to it.
+
+Worth noting that it also scores highest of any platform we assess on data exit, for the straightforward reason that the database is already yours — the axis we describe second in [our LMS evaluation rubric](/blog/how-to-evaluate-an-lms-eight-axes).
+
+### 4. Interoperability is central to how you operate
+
+Credit transfer, external assessment tools, consortium arrangements, formal standards compliance. Moodle's support for the education interoperability standards is deep and long-established, which matters in higher education far more than in coaching or corporate training.
+
+## The cost nobody budgets
+
+Here is where we are equally blunt, because this is what we see when institutions ask us to rescue a Moodle deployment.
+
+**Someone has to own it.** Upgrades, security patches, plugin compatibility across upgrades, backups that have actually been restored at least once, performance tuning as you grow. Not a person who does this occasionally — a person for whom it is a named responsibility.
+
+**The bus factor is real.** The single most common failure mode we are called into is not Moodle breaking. It is the person who ran Moodle leaving. What follows is an institution running an unpatched version nobody understands, on a server nobody wants to touch, with plugins whose provenance is undocumented.
+
+**Plugins are a supply chain.** Two thousand extensions is a genuine strength and a genuine liability. Each one is code you now run, maintained by someone you do not employ, that may or may not survive the next major upgrade. Institutions that treat plugin selection casually pay for it at every upgrade thereafter.
+
+**Peak load is your problem.** A hosted platform's concurrency is someone else's job. On self-hosted Moodle, exam day is yours — the database tuning, the connection budgeting, the load testing. We have written about [what actually breaks under exam load](/blog/exam-day-load-testing-concurrent-submissions) and [the connection-pool failures behind evening slowdowns](/blog/database-connection-pooling-evening-peak); on Moodle, those are your team's to find.
+
+Budget a competent part-time engineer and Moodle's total cost lands in a similar range to a mid-tier hosted platform — with far more control, and far more responsibility. That trade is often worth making. It is just not a saving.
+
+## Where Moodle is not the answer
+
+**A coaching institute that sells courses and collects fees.** Moodle is a learning platform, not a business platform. Admissions CRM, fee collection with reconciliation, WhatsApp-first parent communication and a branded app are things you assemble around Moodle rather than find inside it. Assembling them is a project, and it never fully ends.
+
+**Anyone without technical staff.** Repeating this because it is the single most common mistake. Choosing Moodle to save money and then having nobody to run it is worse than either alternative done properly.
+
+**Institutions that need it working in six weeks.** Managed Moodle hosting narrows this gap considerably — but at that point you are paying a vendor for a hosted platform, which is worth comparing honestly against hosted platforms rather than against self-hosted Moodle.
+
+**Mobile-first learner bases.** Moodle's mobile app is capable and improving, but if a branded app is the primary way your learners will engage, compare it directly against platforms built mobile-first rather than assuming parity.
+
+## The question that decides it
+
+Not "which has more features." Both will have enough.
+
+**Can you name the person who will own this platform in three years?**
+
+If you can name them, and they want the job, Moodle is very likely your answer and you will be glad of it in year five. If you cannot — or the name is "we'll figure that out" — then you are choosing self-hosted software with no operator, and that decision has a predictable ending we get called in to fix.
+
+That is the same question underneath the build-versus-buy call generally, which we worked through with a real client in [build vs buy at HABUILD](/blog/habuild-build-vs-buy).
+
+## Common questions
+
+**Is Moodle free?**
+The software is. Hosting, backups, upgrades, plugin maintenance and the person doing all of it are not. Institutions that budget zero for Moodle are budgeting wrong.
+
+**Is Moodle outdated?**
+No. It is unfashionable, which is different. The interface is less polished than newer commercial platforms and the administration surface is genuinely large. Both are consequences of doing more things for more institutions than anything else on the market.
+
+**What about managed Moodle hosting?**
+A reasonable middle path — you get the openness and the ecosystem without owning the servers. Just price it against hosted platforms rather than against free self-hosted Moodle, because that is the real comparison, and check what happens to your data and customisations if you leave the host.
+
+**Can Moodle handle our exam load?**
+It can, tuned. Whether *yours* can is an empirical question about your deployment, not about Moodle, and the only honest answer comes from a load test against your own configuration.
+
+**We already run Moodle and it is creaking. Rescue or replace?**
+Usually rescue is cheaper than the migration, and usually the creaking is infrastructure and unmaintained plugins rather than Moodle itself. Get it assessed before concluding the platform is the problem — the exit cost of five years of history is real, as we set out in [leaving an LMS without losing five years of data](/blog/lms-data-exit-without-losing-history).
+
+---
+
+We work on both sides of this — rescuing Moodle deployments and migrating institutions off them — and the honest recommendation depends almost entirely on the operator question above. If you want a second opinion before committing either way, [talk to our team](/contact).

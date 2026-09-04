@@ -1,0 +1,137 @@
+---
+title: "The Twelve Questions in an LMS RFP — and the Answers That Should Disqualify a Vendor"
+description: "A usable RFP template for buying a learning platform. Each question with the answer you want, the answer that should end the conversation, and why the question exists at all."
+date: "2026-08-31"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/lms-rfp-questions.svg"
+---
+
+Most LMS RFPs are a feature checklist, and every vendor ticks every box, so the document that was supposed to differentiate them produces a tie. The questions below are the ones we ask on client evaluations instead. They are written so a vague answer is visibly a vague answer — which is most of the work.
+
+Copy them, paste them into your own document, and send them before the demo rather than after. **The answers you get in writing are worth more than anything said on a call**, and asking early tells you how a vendor behaves when they are still trying to win you.
+
+*A note on how to read this: for each question there is the answer you want, and the answer that should end the conversation. "Disqualifying" is doing real work in that phrase. These are not preferences — they are the responses that reliably predict an unhappy year two.*
+
+## Commercials
+
+### 1. What is the total cost in years one, two and three, for our actual numbers?
+
+Give them your learner count, your branch count and your admin headcount, and ask for three years, not one. Renewal pricing, per-user growth, and anything that steps up at a threshold should all be visible.
+
+**Want:** a written three-year figure with the assumptions stated.
+**Disqualifying:** a year-one price and "we can discuss renewals later."
+
+### 2. Do you take a percentage of the fees we collect?
+
+Ask it directly, because it is often not in the headline price. Some platforms charge a licence *plus* a percentage of collections — Graphy, for instance, is [publicly reported at ₹25K–1L a year plus 5–10% per sale](https://www.igniterapp.com/graphy-alternative), and app-first coaching platforms commonly sit in the 10–20% range. At ₹1 crore of annual collections, 7% is ₹7 lakh a year, every year, for software.
+
+**Want:** no revenue share, or a share with a written cap or a sunset at a revenue threshold.
+**Disqualifying:** an uncapped percentage of collections, or an evasive answer to a direct question about one.
+
+### 3. What is not included?
+
+The useful form of this question is asking what past customers were surprised to be billed for. Messaging volume, storage, AI usage, app-store developer fees, additional environments, training days, integration work.
+
+**Want:** a specific list, offered without defensiveness.
+**Disqualifying:** "everything is included." Nothing is everything, and this answer means you will find the boundary yourself.
+
+## Your data
+
+### 4. Export our trial account now and send us the file.
+
+Not a promise about export — the actual file, during the evaluation. Check that it contains learner records with history, the question bank in a re-importable format, assessment attempts with per-question responses, attendance, and payment history.
+
+**Want:** complete structured data within a day, without a support ticket.
+**Disqualifying:** "we'll handle that if you ever decide to leave." Anything a vendor will not demonstrate during the sale is something they cannot demonstrate.
+
+### 5. What happens to our data if we terminate?
+
+Format, deadline, and what is deleted when. This belongs in the contract with a number of days attached, not in an email.
+
+**Want:** a defined export window, a named format, and written deletion commitments.
+**Disqualifying:** no contractual export obligation. We wrote about why this one matters more than it looks in [leaving an LMS without losing five years of data](/blog/lms-data-exit-without-losing-history).
+
+### 6. Who owns the video content, and where does it live?
+
+Specifically: do you hold the source files, or only streaming access? Institutes discover the difference at the worst possible moment.
+
+**Want:** you own and can retrieve the sources.
+**Disqualifying:** streaming-only access with no path to the originals.
+
+## Operations
+
+### 7. What is the largest simultaneous exam you have run, with a date?
+
+Education traffic is flat and then everyone does the same thing in the same four minutes. Almost nobody measures this, including most vendors.
+
+**Want:** a number, a date, and how it was measured.
+**Disqualifying:** "it scales automatically, it's on the cloud." That sentence means nobody has measured it. We wrote up [what actually breaks at that moment](/blog/exam-day-load-testing-concurrent-submissions), and none of it was infrastructure.
+
+### 8. Walk us through a partial payment, then a refund, then the reconciliation report.
+
+Fee collection is where these projects quietly fail, because being 98% right is not good enough when the other 2% is somebody's child's admission.
+
+**Want:** all three demonstrated in the product, with no spreadsheet appearing.
+**Disqualifying:** any step that ends with "and then finance handles that manually."
+
+### 9. Show us the message a parent receives when their child misses an assessment — send it to my phone now.
+
+Tests three things at once: whether messaging reaches the channel people actually read, whether guardians are a real audience in the product, and whether the person demoing can operate their own system unaided.
+
+**Want:** it arrives, on the channel your parents use, while you are on the call.
+**Disqualifying:** a screenshot instead of a message.
+
+## Change and integration
+
+### 10. Send us your API documentation.
+
+The URL, not a call about it. You will eventually need this platform to talk to a school ERP, an accounting system, a biometric device or an existing single sign-on.
+
+**Want:** public documentation you can read before signing.
+**Disqualifying:** documentation behind an NDA. If integration is a sales conversation now, it will be one every time.
+
+### 11. We are adding a branch with a different fee structure next quarter. Walk us through it.
+
+This measures what change costs in year two: configuration you do yourself, a support ticket in a queue, or a quoted development project.
+
+**Want:** an administrator does it unaided, on screen.
+**Disqualifying:** anything that begins "we'd scope that."
+
+### 12. What are the three things customers most often ask for that you do not do?
+
+The single most informative question on this list, and the one most likely to be dodged. Every product has a list. A vendor who will say theirs out loud is telling you they expect the relationship to survive contact with reality.
+
+**Want:** three specific things, said without flinching.
+**Disqualifying:** "nothing really — we cover everything." You have just learned how this vendor will handle the first thing that goes wrong.
+
+## How to actually run it
+
+**Send all twelve at once, before the demo.** Split across calls, they turn into a negotiation. Sent together, they are a document you can compare across vendors.
+
+**Score them the same way for every vendor.** We use the eight-axis rubric in [how to evaluate an LMS](/blog/how-to-evaluate-an-lms-eight-axes) — these twelve questions map onto those axes, and the weights are what make the comparison yours rather than generic.
+
+**Let the person who will administer the system hold a veto.** Not IT alone, not the founder alone. Question 11 is discovered after signature by whoever does the daily work, and they are the one who should have decided.
+
+**Give it three to five weeks.** One week to shortlist and send, two to three weeks of hands-on trials with your own data, one week for reference calls. Faster and you are buying the demo.
+
+## Common questions
+
+**Is a formal RFP overkill for a small institute?**
+The document is, the questions are not. Under a few hundred learners, send questions 1, 2, 4, 7 and 12 by email and you will have most of the value in an afternoon.
+
+**A vendor refuses to answer in writing. Is that fatal?**
+Not automatically — some genuinely cannot commit to pricing without scoping. It is fatal for questions 2, 4 and 5, which are matters of fact rather than judgement, and a refusal there is itself the answer.
+
+**How many vendors should receive this?**
+Three. Two is not enough to calibrate what a good answer looks like; five and nobody completes the trials properly.
+
+**Should we tell vendors who else is bidding?**
+No. It changes the answers you get, usually toward matching a competitor's claims rather than describing their own product.
+
+**What if every vendor fails question 7?**
+Common, and not necessarily disqualifying on its own — but ask each to run a test before you sign, and make the result a condition. A vendor who agrees is telling you something useful; one who refuses is telling you more.
+
+---
+
+We use this list on client evaluations before recommending anything, including before recommending against a custom build. If you are running an evaluation and want a second read on the answers you are getting, [talk to our team](/contact).

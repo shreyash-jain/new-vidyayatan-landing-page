@@ -1,0 +1,117 @@
+---
+title: "Leaving an LMS Without Losing Five Years of Data"
+description: "What to demand in the contract before you sign: export formats, question-bank portability, video ownership, assessment history, and the deletion clause. Written from the migration side, where we see what actually survives."
+date: "2026-08-31"
+author: "Vidyayatan Engineering"
+tag: "Playbook"
+image: "/images/blog/lms-data-exit.svg"
+---
+
+The reason institutes stay on software they have outgrown is almost never the software. It is that five years of learner records, question banks, assessment history and fee ledgers live inside it, and nobody can say what would survive the move.
+
+We do these migrations. The pattern is consistent and slightly grim: **the things that come out cleanly are the things nobody worried about, and the things that matter most come out worst.** Learner names and emails export fine. The question bank arrives as a PDF. Per-question assessment responses — the data that makes five years of history worth anything — often do not exist in any exportable form at all.
+
+All of that is decided at signature, not at exit. This is what to put in the contract.
+
+*Disclosure: Vidyayatan builds education platforms, including [Vacademy](https://www.vacademy.io), our own LMS. This post argues for making it easy to leave any vendor, ours included. We think that is the correct position for a buyer to take and we would rather write it down than have you discover the alternative.*
+
+## The test that takes ten minutes
+
+Before any of the contractual detail, do this during the trial:
+
+**Ask them to export your trial account, now, and send you the file.**
+
+Not a promise about export. The file. You will learn more from how that request is handled than from the entire demo. A vendor who produces complete structured data within a day, unprompted, has built export as a feature. A vendor who routes it to support, asks why you want it, or offers a call about it has told you what exit will feel like when you actually need it — and they have told you while you still have leverage.
+
+Everything below is what to check once the file arrives.
+
+## What to demand, in order of how badly it goes wrong
+
+### Learner records with history, not a contact list
+
+The easy version of this export is a spreadsheet of names, emails and phone numbers. That is a mailing list, not a student record.
+
+What you want: every learner with their enrolment dates, the batch or cohort structure they sat in, their progression between them, and the identifiers that tie them to everything else in the export. If the learner ID in the attendance file does not match the learner ID in the payments file, you have several unrelated spreadsheets rather than a migration.
+
+**Ask for:** one stable identifier per learner, used consistently across every file in the export.
+
+### The question bank, re-importably
+
+This is the single most common bad surprise, and the most expensive. Question banks represent years of academic work — often the most valuable asset the institute owns — and they are frequently exportable only as rendered documents.
+
+A PDF of your question paper is not your question bank. You cannot re-import it, you cannot restructure it, and rebuilding it means retyping. For a coaching institute with tens of thousands of questions, that is not a migration cost, it is a reason not to migrate.
+
+**Ask for:** structured export with the question text, all options, the correct answer, marks, negative marking, topic and difficulty tagging, and any images as files rather than embedded blobs. Named formats help — [QTI](https://www.1edtech.org/standards/qti) is the interoperability standard for exactly this, but a documented CSV or JSON schema is fine if it round-trips. Test it by re-importing into the same platform.
+
+### Assessment attempts, per question
+
+Aggregate scores are cheap to export and nearly useless later. What makes historical data valuable is the per-question response data — what each learner answered, how long they took, which distractors pulled which cohort. That is what your academic team uses to improve papers, and it is what disappears.
+
+**Ask for:** attempt-level data with per-question responses, timestamps and marks awarded. Check specifically whether this exists at all; on some platforms it is genuinely not retained beyond a window.
+
+### Video: sources, not streams
+
+Ask one question: **do we hold the source files, or streaming access?**
+
+Institutes discover the difference at the worst moment. Streaming access ends when the contract ends. If the platform transcoded your uploads and discarded the originals, or if your recorded live sessions exist only inside their player, then your content library is a rental.
+
+**Ask for:** retrievable source files, a stated retention policy for recordings, and a defined window to bulk-download at exit. If the videos were recorded through the platform rather than uploaded to it, ask that question separately — the answers often differ.
+
+### Fees and payments, reconcilable
+
+Financial history has an external constraint the rest of your data does not: your auditors and your tax obligations do not care that you changed vendors.
+
+**Ask for:** the full transaction ledger including partial payments, refunds, discounts and coupons applied, with invoice numbers and dates intact, in a form your finance team can reconcile against what your gateway and your bank recorded.
+
+### Attendance and communication logs
+
+Lower stakes, until there is a dispute. Attendance records get cited in academic decisions; message logs get cited when a parent says they were never told.
+
+**Ask for:** attendance at session level rather than a monthly summary, and a communication log with timestamps and delivery status.
+
+## The contract clauses
+
+Five things, and they take an hour with whoever signs:
+
+1. **An export window with a number.** "We will provide a complete data export within N days of termination." Without a deadline this is not an obligation.
+2. **Named formats.** Point at the specific formats above. "Standard formats" means whatever is convenient at the time.
+3. **Export during the term, not only at exit.** The right to export at any point, at will. This is the clause vendors resist most, and it is the one that matters most: exit-only export means your first test of it happens when the relationship has already gone wrong.
+4. **A deletion commitment.** What is deleted, when, from backups too, and confirmation in writing. Under India's DPDP framework this is not only good practice — retention and erasure are obligations, which we covered in [what the DPDP Act actually changes in a school platform](/blog/dpdp-act-schools-edtech-compliance).
+5. **No export fee.** Or a capped one, stated now. An unpriced professional-services fee for your own data, quoted at the moment you have decided to leave, is not a price you will be negotiating from strength.
+
+## Doing the migration itself
+
+When it happens, three things determine whether it goes well.
+
+**Run in parallel.** Two to four weeks with both systems live, the old one read-only. Every migration surfaces something nobody mapped, and you want that discovered while the old system still answers questions.
+
+**Reconcile with counts, not impressions.** Learners in, learners out. Attempts in, attempts out. Sum of payments in, sum of payments out. A migration that "looks fine" is not a migration that has been checked — this is the same lesson as verifying a load test against the database rather than the load generator, which we [wrote up here](/blog/exam-day-load-testing-concurrent-submissions).
+
+**Decide explicitly what you are not bringing.** There is always something — a legacy course format, five years of chat messages, a report nobody has opened since 2023. Deciding to leave it behind is fine. Discovering afterwards that it was left behind is not.
+
+## The honest asymmetry
+
+Data portability is the axis buyers weigh least during a purchase and most during an exit, which is exactly backwards and exactly what vendors rely on. It sits second in [our eight-axis evaluation rubric](/blog/how-to-evaluate-an-lms-eight-axes) for that reason.
+
+A platform that makes leaving easy is making a statement about how it intends to keep you. That is worth paying attention to — and worth paying slightly more for.
+
+## Common questions
+
+**How long should a migration take?**
+For a mid-sized institute with clean exports, four to eight weeks including a parallel-run period. The variable is almost never the new platform; it is how much of the old data has to be reconstructed because it did not export cleanly.
+
+**Our vendor says the export needs custom development work. Is that normal?**
+It is common and it is a bad sign. It usually means export was never built as a feature. If you are still pre-signature, this is the moment to get a format and a fee in writing.
+
+**Can we migrate mid-year?**
+Yes, but pick the boundary deliberately — between terms, or after an exam cycle rather than during one. The parallel run matters more than the calendar date.
+
+**What if we cannot get the question bank out?**
+Budget for reconstruction and decide honestly whether the move is still worth it. Some institutes re-key their highest-value papers and abandon the rest. It is a real cost, it is often six figures of staff time, and it should be established before you commit, not after.
+
+**Should we keep a copy of the old system after migrating?**
+Keep the exports, in your own storage, indefinitely. Keeping the old system running is rarely worth the licence — but the files cost you nothing and answer disputes for years.
+
+---
+
+We run these migrations, and we also build the platforms people migrate to. If you are weighing a move and want an honest read on what will actually survive it, [talk to our team](/contact) — the export test above is a good thing to do before that conversation.
