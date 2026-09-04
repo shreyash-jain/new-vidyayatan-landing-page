@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 586" width="880" height="586" role="img" aria-label="A six-row comparison of a startup build and an enterprise build. What the software is: the business itself, versus one part of a business that already runs. Biggest risk: building the wrong thing, versus breaking the right thing. What release one does: tests the assumption the business rests on, versus replaces one capability alongside the old system. What drives the timeline: runway, versus integrations and approvals. Who decides: the founder, versus procurement, security and three departments. Done means: real users to learn from, versus nothing else broke.">
+  <rect width="880" height="586" fill="#ffffff" />
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Same brief. Two different jobs.</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">What actually changes when the same platform is built at each stage.</text>
+
+    <!-- column headers -->
+    <rect x="262" y="96" width="296" height="42" rx="8" fill="#fbbf24" fill-opacity="0.16" />
+    <rect x="570" y="96" width="282" height="42" rx="8" fill="#1677ff" fill-opacity="0.12" />
+    <text x="282" y="124" font-size="20" font-weight="700" fill="#92400e">Startup build</text>
+    <text x="590" y="124" font-size="20" font-weight="700" fill="#1e3a8a">Enterprise build</text>
+
+    <!-- row 1 -->
+    <line x1="30" y1="152" x2="852" y2="152" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+    <text x="30" y="182" font-size="17" font-weight="600" fill="#6b7194">What the</text>
+    <text x="30" y="203" font-size="17" font-weight="600" fill="#6b7194">software is</text>
+    <text x="282" y="182" font-size="18" fill="#1f2340">The business itself</text>
+    <text x="590" y="182" font-size="18" fill="#1f2340">One part of a business</text>
+    <text x="590" y="205" font-size="18" fill="#1f2340">that already runs</text>
+
+    <!-- row 2 -->
+    <line x1="30" y1="224" x2="852" y2="224" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+    <text x="30" y="254" font-size="17" font-weight="600" fill="#6b7194">Biggest risk</text>
+    <text x="282" y="254" font-size="18" font-weight="700" fill="#92400e">Building the wrong thing</text>
+    <text x="590" y="254" font-size="18" font-weight="700" fill="#1e3a8a">Breaking the right thing</text>
+
+    <!-- row 3 -->
+    <line x1="30" y1="278" x2="852" y2="278" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+    <text x="30" y="308" font-size="17" font-weight="600" fill="#6b7194">What release</text>
+    <text x="30" y="329" font-size="17" font-weight="600" fill="#6b7194">one does</text>
+    <text x="282" y="308" font-size="18" fill="#1f2340">Tests the one assumption</text>
+    <text x="282" y="331" font-size="18" fill="#1f2340">the business rests on</text>
+    <text x="590" y="308" font-size="18" fill="#1f2340">Replaces one capability,</text>
+    <text x="590" y="331" font-size="18" fill="#1f2340">beside the old system</text>
+
+    <!-- row 4 -->
+    <line x1="30" y1="350" x2="852" y2="350" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+    <text x="30" y="380" font-size="17" font-weight="600" fill="#6b7194">What drives</text>
+    <text x="30" y="401" font-size="17" font-weight="600" fill="#6b7194">the timeline</text>
+    <text x="282" y="380" font-size="18" fill="#1f2340">Runway — the money</text>
+    <text x="282" y="403" font-size="18" fill="#1f2340">has an end date</text>
+    <text x="590" y="380" font-size="18" fill="#1f2340">Integrations and</text>
+    <text x="590" y="403" font-size="18" fill="#1f2340">approvals</text>
+
+    <!-- row 5 -->
+    <line x1="30" y1="422" x2="852" y2="422" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+    <text x="30" y="452" font-size="17" font-weight="600" fill="#6b7194">Who decides</text>
+    <text x="282" y="452" font-size="18" fill="#1f2340">The founder, in</text>
+    <text x="282" y="475" font-size="18" fill="#1f2340">a corridor</text>
+    <text x="590" y="452" font-size="18" fill="#1f2340">Procurement, security,</text>
+    <text x="590" y="475" font-size="18" fill="#1f2340">three departments</text>
+
+    <!-- row 6 -->
+    <line x1="30" y1="494" x2="852" y2="494" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+    <text x="30" y="524" font-size="17" font-weight="600" fill="#6b7194">"Done" means</text>
+    <text x="282" y="524" font-size="18" fill="#1f2340">Real users we can</text>
+    <text x="282" y="547" font-size="18" fill="#1f2340">learn from</text>
+    <text x="590" y="524" font-size="18" fill="#1f2340">Nothing else broke</text>
+
+    <line x1="30" y1="566" x2="852" y2="566" stroke="#2b2e7c" stroke-opacity="0.10" stroke-width="1" />
+  </g>
+
+  <!-- column tint bands, drawn behind nothing — kept subtle at the edges -->
+  <rect x="262" y="152" width="4" height="414" fill="#fbbf24" fill-opacity="0.55" />
+  <rect x="570" y="152" width="4" height="414" fill="#1677ff" fill-opacity="0.45" />
+</svg>

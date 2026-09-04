@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-label="Six warning signs when evaluating a custom software development company: the same proposal for everyone, a fixed price before any discovery, no named engineers, integrations deferred to later, vague ownership of code and accounts, and a partner who never says no.">
+  <rect width="880" height="560" fill="#ffffff" />
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Six things that should stop the meeting</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Warning signs in a proposal, whichever stage you are at.</text>
+
+    <!-- card 1 -->
+    <rect x="30" y="102" width="406" height="126" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="30" y="102" width="5" height="126" rx="2.5" fill="#fbbf24" />
+    <text x="56" y="140" font-size="20" font-weight="700" fill="#2b2e7c">The same proposal for everyone</text>
+    <text x="56" y="172" font-size="17" fill="#6b7194">Nothing in it names your systems, your</text>
+    <text x="56" y="196" font-size="17" fill="#6b7194">users or your constraints. It was written</text>
+    <text x="56" y="220" font-size="17" fill="#6b7194">before the call.</text>
+
+    <!-- card 2 -->
+    <rect x="460" y="102" width="392" height="126" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="460" y="102" width="5" height="126" rx="2.5" fill="#fbbf24" />
+    <text x="486" y="140" font-size="20" font-weight="700" fill="#2b2e7c">A fixed price before discovery</text>
+    <text x="486" y="172" font-size="17" fill="#6b7194">A firm price on a vague scope is either</text>
+    <text x="486" y="196" font-size="17" fill="#6b7194">padded heavily, or it comes back later</text>
+    <text x="486" y="220" font-size="17" fill="#6b7194">as change requests.</text>
+
+    <!-- card 3 -->
+    <rect x="30" y="246" width="406" height="126" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="30" y="246" width="5" height="126" rx="2.5" fill="#fbbf24" />
+    <text x="56" y="284" font-size="20" font-weight="700" fill="#2b2e7c">No named engineers</text>
+    <text x="56" y="316" font-size="17" fill="#6b7194">Ask who writes the code and whether</text>
+    <text x="56" y="340" font-size="17" fill="#6b7194">they are on other projects. Seniors pitch,</text>
+    <text x="56" y="364" font-size="17" fill="#6b7194">juniors build — the oldest trick here.</text>
+
+    <!-- card 4 -->
+    <rect x="460" y="246" width="392" height="126" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="460" y="246" width="5" height="126" rx="2.5" fill="#fbbf24" />
+    <text x="486" y="284" font-size="20" font-weight="700" fill="#2b2e7c">"We'll do integrations later"</text>
+    <text x="486" y="316" font-size="17" fill="#6b7194">On enterprise work the integrations are</text>
+    <text x="486" y="340" font-size="17" fill="#6b7194">the risk. Later means nobody has</text>
+    <text x="486" y="364" font-size="17" fill="#6b7194">estimated them.</text>
+
+    <!-- card 5 -->
+    <rect x="30" y="390" width="406" height="126" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="30" y="390" width="5" height="126" rx="2.5" fill="#fbbf24" />
+    <text x="56" y="428" font-size="20" font-weight="700" fill="#2b2e7c">Ownership left vague</text>
+    <text x="56" y="460" font-size="17" fill="#6b7194">Code, repository, cloud account, domain</text>
+    <text x="56" y="484" font-size="17" fill="#6b7194">— yours from day one, in plain words,</text>
+    <text x="56" y="508" font-size="17" fill="#6b7194">in the contract.</text>
+
+    <!-- card 6 -->
+    <rect x="460" y="390" width="392" height="126" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" stroke-width="1" />
+    <rect x="460" y="390" width="5" height="126" rx="2.5" fill="#fbbf24" />
+    <text x="486" y="428" font-size="20" font-weight="700" fill="#2b2e7c">Nobody ever says no</text>
+    <text x="486" y="460" font-size="17" fill="#6b7194">Agreeing to every feature in the first</text>
+    <text x="486" y="484" font-size="17" fill="#6b7194">meeting is selling, not scoping. "That</text>
+    <text x="486" y="508" font-size="17" fill="#6b7194">one is expensive, here's why" is better.</text>
+
+    <text x="30" y="546" font-size="17" font-style="italic" fill="#6b7194">One of these is a question worth asking. Three of them is an answer.</text>
+  </g>
+</svg>
