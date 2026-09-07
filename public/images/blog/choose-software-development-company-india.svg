@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: a wide field of near-identical vendor nodes narrowing through three filter gates into a single selected partner, with the discarded candidates fading away on either side">
+  <defs>
+    <linearGradient id="sd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="48%" stop-color="#161431" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <radialGradient id="sd-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="sd-haze" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="sd-gate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.05" />
+      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#7dd3fc" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sd-bg)" />
+  <circle cx="250" cy="315" r="300" fill="url(#sd-haze)" />
+  <circle cx="985" cy="315" r="260" fill="url(#sd-glow)" />
+
+  <!-- the undifferentiated field: many candidates that all look alike -->
+  <g fill="#7dd3fc" fill-opacity="0.34">
+    <circle cx="86" cy="120" r="9" /><circle cx="152" cy="196" r="9" /><circle cx="98" cy="272" r="9" />
+    <circle cx="176" cy="330" r="9" /><circle cx="92" cy="392" r="9" /><circle cx="158" cy="462" r="9" />
+    <circle cx="104" cy="530" r="9" /><circle cx="232" cy="132" r="9" /><circle cx="248" cy="252" r="9" />
+    <circle cx="222" cy="404" r="9" /><circle cx="240" cy="512" r="9" /><circle cx="316" cy="186" r="9" />
+    <circle cx="330" cy="316" r="9" /><circle cx="308" cy="448" r="9" /><circle cx="186" cy="60" r="9" />
+    <circle cx="140" cy="596" r="9" />
+  </g>
+
+  <!-- gate one: the shortlist -->
+  <rect x="404" y="96" width="4" height="438" rx="2" fill="url(#sd-gate)" />
+  <g fill="#7dd3fc" fill-opacity="0.62">
+    <circle cx="470" cy="180" r="11" /><circle cx="486" cy="268" r="11" />
+    <circle cx="462" cy="356" r="11" /><circle cx="492" cy="444" r="11" />
+    <circle cx="474" cy="118" r="11" /><circle cx="466" cy="510" r="11" />
+  </g>
+
+  <!-- gate two: evidence — portfolio, scope statement, named engineers -->
+  <rect x="632" y="150" width="4" height="330" rx="2" fill="url(#sd-gate)" />
+  <g fill="#7dd3fc" fill-opacity="0.85">
+    <circle cx="704" cy="228" r="14" /><circle cx="722" cy="330" r="14" /><circle cx="700" cy="428" r="14" />
+  </g>
+
+  <!-- gate three: the paid pilot -->
+  <rect x="838" y="216" width="4" height="198" rx="2" fill="url(#sd-gate)" />
+
+  <!-- narrowing paths -->
+  <g stroke="#7dd3fc" stroke-opacity="0.22" stroke-width="2" fill="none">
+    <path d="M 160 180 L 470 180 L 704 228 L 985 315" />
+    <path d="M 170 300 L 486 268 L 722 330 L 985 315" />
+    <path d="M 150 420 L 462 356 L 700 428 L 985 315" />
+    <path d="M 200 520 L 492 444" />
+    <path d="M 190 110 L 474 118" />
+  </g>
+
+  <!-- the chosen partner -->
+  <g>
+    <circle cx="985" cy="315" r="30" fill="#fbbf24" />
+    <circle cx="985" cy="315" r="54" fill="none" stroke="#fbbf24" stroke-opacity="0.38" stroke-width="2" />
+    <circle cx="985" cy="315" r="82" fill="none" stroke="#fbbf24" stroke-opacity="0.16" stroke-width="2" />
+  </g>
+  <rect x="1067" y="308" width="86" height="14" rx="7" fill="#fbbf24" fill-opacity="0.55" />
+
+  <!-- the candidates that did not clear a gate, falling away -->
+  <g fill="#7dd3fc" fill-opacity="0.12">
+    <circle cx="546" cy="66" r="8" /><circle cx="596" cy="568" r="8" />
+    <circle cx="780" cy="106" r="8" /><circle cx="796" cy="546" r="8" />
+    <circle cx="884" cy="150" r="8" /><circle cx="872" cy="492" r="8" />
+  </g>
+
+  <!-- ground ticks, implying successive stages -->
+  <g fill="#7dd3fc" fill-opacity="0.20">
+    <rect x="76" y="596" width="290" height="3" rx="1.5" />
+    <rect x="420" y="596" width="190" height="3" rx="1.5" />
+    <rect x="648" y="596" width="176" height="3" rx="1.5" />
+    <rect x="854" y="596" width="270" height="3" rx="1.5" fill="#fbbf24" fill-opacity="0.34" />
+  </g>
+</svg>
