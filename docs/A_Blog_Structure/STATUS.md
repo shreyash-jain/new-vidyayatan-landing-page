@@ -10,13 +10,13 @@ say *how*; this says *where we are*.
 > - **Before you leave:** update statuses, record blockers, list the next actions, and
 >   commit your branch.
 
-*Last updated: 2026-08-27.*
+*Last updated: 2026-09-04.*
 
 ---
 
 ## Where things stand
 
-- **19 posts** in `src/content/blog/` and **2 guides** in `src/content/guides/`.
+- **29 posts** in `src/content/blog/` and **2 guides** in `src/content/guides/`.
 - There is no registry to keep in sync — the folder *is* the collection. `src/lib/mdx.ts`
   reads it at build time.
 
@@ -27,7 +27,7 @@ Content clusters so far:
 | **Vibe coding & scale** | production-grade, maintenance, scaling, hidden cost of AI-generated software |
 | **AI & business** | AI transformation 2026, AI strategy, AI vs human developers, why AI can't replace engineers |
 | **Habuild case study** | 10x growth, architecture at scale, build vs buy, live-session automation, referral system, WhatsApp automation, who built it |
-| **Engagement / process** | choosing an engagement model, Google Sheets to IPO-ready, monolith to microservices (payments) |
+| **Engagement / process** | choosing an engagement model, Google Sheets to IPO-ready, monolith to microservices (payments), custom software for startups vs enterprises |
 | **EdTech** | how to build a school accreditation platform like ICOSA |
 
 ## In flight
@@ -36,6 +36,7 @@ Content clusters so far:
 |---|---|---|---|
 | Blog docs standardisation | *(this folder)* | Uncommitted | Commit `docs/A_Blog_Structure/` + `.claude/commands/blog.md` |
 | School accreditation software guide | `blog/school-accreditation-software-guide` | PR open, awaiting client review | Merge only when the marketing lead says so |
+| Custom software: startups vs enterprises | `blog/custom-software-development-startups-vs-enterprises` | PR open, on `preview` | Awaiting a Shrichakra example to add to the scoping section; merge only when the marketing lead says so |
 
 ## Security state
 

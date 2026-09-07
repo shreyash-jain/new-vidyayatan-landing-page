@@ -85,6 +85,21 @@ The house style is **diagrammatic**. Every existing post's image is an SVG in
 *Append every new one, newest first, with the date and the reason. Never delete an entry
 — supersede it and say so.*
 
+- **2026-09-04 — An FAQ question must be a `###` heading, never a bold line above the answer.**
+  The house pattern of `**Question?**` on its own line then the answer renders as one run-on
+  paragraph — MDX joins a single newline into the same paragraph. Sent back as "fix this FAQ
+  section". `###` also nests the questions in the article's own contents list and gives each
+  one an anchor. The older DPDP post still has the broken form; fix it when next touched.
+- **2026-09-04 — Product examples in a post are the marketing lead's call, not ours.**
+  A brief naming Satvaa, Innowell and BharatPe was changed mid-draft to drop Satvaa and add
+  HABUILD and Shrichakra. Treat the named examples as a starting list, and **never write up a
+  client that has no product page, client entry or logo in the repo** — there is nothing
+  approved to say. Ask for one sentence on what was built and where it sits by stage.
+- **2026-09-04 — "Under 1000 words" can arrive after the draft, so build for the cut.**
+  A 1,600-word draft was cut to 999 without dropping a section, an image or a link — only
+  padding. Second time this client has asked for a hard trim; assume ~1,000 unless told
+  otherwise, even when the brief states no count. Supersedes nothing in the 2026-08-27 entry,
+  which still governs briefs that *do* state a count.
 - **2026-08-27 — When a brief states a word count and a title, both are fixed.** A 1,900-word
   draft was sent back with "keep this under 1000 words" and "please stick with this topic",
   quoting the brief's own headline. The brief's numbers are an agreed SEO spec, not a
@@ -102,4 +117,4 @@ The house style is **diagrammatic**. Every existing post's image is an SVG in
 - **Reuse an existing tag** rather than adding a near-duplicate — the tag list is already
   long for 18 posts.
 
-*Last reviewed: 2026-08-27.*
+*Last reviewed: 2026-09-04.*
