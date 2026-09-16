@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Beyond the chatbot: on the left, a single chat bubble labelled 'the chatbot — what everyone builds first'; an arrow points right to five labelled rows showing where generative AI actually pays off — writing documentation, testing and fixing code, answering data questions, personalising content for each customer, and handling contracts and paperwork.">
+  <defs>
+    <linearGradient id="h-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="55%" stop-color="#161c3a" />
+      <stop offset="100%" stop-color="#2b2e7c" />
+    </linearGradient>
+    <radialGradient id="h-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1677ff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#1677ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#h-bg)" />
+  <circle cx="900" cy="380" r="360" fill="url(#h-glow)" />
+
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 105 H1200 M0 210 H1200 M0 315 H1200 M0 420 H1200 M0 525 H1200" />
+    <path d="M150 0 V630 M300 0 V630 M450 0 V630 M600 0 V630 M750 0 V630 M900 0 V630 M1050 0 V630" />
+  </g>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <!-- heading -->
+    <text x="80" y="88" font-size="22" font-weight="700" fill="#fbbf24" letter-spacing="3">GENERATIVE AI FOR BUSINESS</text>
+    <text x="80" y="140" font-size="46" font-weight="700" fill="#ffffff">Where the money actually is</text>
+    <text x="80" y="178" font-size="22" fill="#c7d2fe">The chatbot is the first thing everyone builds. It is the smallest thing here.</text>
+
+    <!-- left: the chatbot -->
+    <g transform="translate(80, 250)">
+      <rect x="0" y="0" width="300" height="230" rx="18" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15" />
+      <!-- bubble -->
+      <rect x="90" y="36" width="120" height="66" rx="20" fill="#ffffff" fill-opacity="0.96" />
+      <path d="M118 102 L106 124 L140 102 Z" fill="#ffffff" fill-opacity="0.96" />
+      <circle cx="122" cy="69" r="7" fill="#2b2e7c" />
+      <circle cx="150" cy="69" r="7" fill="#2b2e7c" />
+      <circle cx="178" cy="69" r="7" fill="#2b2e7c" />
+      <text x="150" y="168" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">The chatbot</text>
+      <text x="150" y="198" font-size="19" fill="#c7d2fe" text-anchor="middle">what everyone builds first</text>
+    </g>
+
+    <!-- arrow -->
+    <g transform="translate(410, 365)">
+      <path d="M0 0 H80" stroke="#fbbf24" stroke-width="5" stroke-linecap="round" />
+      <path d="M78 -14 L104 0 L78 14 Z" fill="#fbbf24" />
+    </g>
+
+    <!-- right: five real jobs -->
+    <g transform="translate(550, 232)">
+      <g>
+        <rect x="0" y="0" width="570" height="50" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.12" />
+        <rect x="14" y="13" width="24" height="24" rx="6" fill="#38bdf8" />
+        <text x="56" y="33" font-size="22" font-weight="600" fill="#ffffff">Writing the documentation nobody has time for</text>
+      </g>
+      <g transform="translate(0, 62)">
+        <rect x="0" y="0" width="570" height="50" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.12" />
+        <rect x="14" y="13" width="24" height="24" rx="6" fill="#38bdf8" />
+        <text x="56" y="33" font-size="22" font-weight="600" fill="#ffffff">Testing and documenting old code</text>
+      </g>
+      <g transform="translate(0, 124)">
+        <rect x="0" y="0" width="570" height="50" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.12" />
+        <rect x="14" y="13" width="24" height="24" rx="6" fill="#38bdf8" />
+        <text x="56" y="33" font-size="22" font-weight="600" fill="#ffffff">Answering questions about your own data</text>
+      </g>
+      <g transform="translate(0, 186)">
+        <rect x="0" y="0" width="570" height="50" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.12" />
+        <rect x="14" y="13" width="24" height="24" rx="6" fill="#38bdf8" />
+        <text x="56" y="33" font-size="22" font-weight="600" fill="#ffffff">Personalised pages and emails for every customer</text>
+      </g>
+      <g transform="translate(0, 248)">
+        <rect x="0" y="0" width="570" height="50" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.12" />
+        <rect x="14" y="13" width="24" height="24" rx="6" fill="#38bdf8" />
+        <text x="56" y="33" font-size="22" font-weight="600" fill="#ffffff">Contracts, tenders and HR paperwork</text>
+      </g>
+    </g>
+
+    <!-- footer -->
+    <text x="80" y="585" font-size="18" font-weight="700" fill="#ffffff" fill-opacity="0.55">vidyayatan.com</text>
+  </g>
+</svg>
