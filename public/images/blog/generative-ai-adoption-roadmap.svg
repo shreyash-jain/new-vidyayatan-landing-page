@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img" aria-label="A three-step roadmap for adopting generative AI: step one, find the high-friction repetitive workflow; step two, run a six-week pilot on one team with one agreed metric; step three, scale the pilot that moved the number, adding logging, evaluation, access control and an owner.">
+  <rect width="880" height="400" fill="#ffffff" />
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Three steps, one number</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Find it, prove it on one number, then make it someone's job.</text>
+
+    <!-- connector line -->
+    <path d="M110 150 H770" stroke="#2b2e7c" stroke-opacity="0.15" stroke-width="3" fill="none" />
+    <g stroke="#1677ff" stroke-width="2" fill="none" stroke-opacity="0.6">
+      <path d="M300 150 H330" /><path d="M578 150 H608" />
+    </g>
+    <path d="M330 143 L342 150 L330 157 Z" fill="#1677ff" fill-opacity="0.8" />
+    <path d="M608 143 L620 150 L608 157 Z" fill="#1677ff" fill-opacity="0.8" />
+
+    <!-- step 1 -->
+    <circle cx="165" cy="150" r="30" fill="#2b2e7c" />
+    <text x="165" y="159" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="30" y="200" width="270" height="170" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" />
+    <rect x="30" y="200" width="5" height="170" rx="2.5" fill="#1677ff" />
+    <text x="52" y="236" font-size="20" font-weight="700" fill="#2b2e7c">Find the friction</text>
+    <text x="52" y="266" font-size="17" fill="#6b7194">Not a use case from a list.</text>
+    <text x="52" y="290" font-size="17" fill="#6b7194">The workflow where someone</text>
+    <text x="52" y="314" font-size="17" fill="#6b7194">reads and rewrites for hours</text>
+    <text x="52" y="338" font-size="17" fill="#6b7194">every week and dreads it.</text>
+
+    <!-- step 2 -->
+    <circle cx="440" cy="150" r="30" fill="#2b2e7c" />
+    <text x="440" y="159" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="305" y="200" width="270" height="170" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" />
+    <rect x="305" y="200" width="5" height="170" rx="2.5" fill="#fbbf24" />
+    <text x="327" y="236" font-size="20" font-weight="700" fill="#2b2e7c">Pilot narrow</text>
+    <text x="327" y="266" font-size="17" fill="#6b7194">One team. One workflow.</text>
+    <text x="327" y="290" font-size="17" fill="#6b7194">One metric agreed before</text>
+    <text x="327" y="314" font-size="17" fill="#6b7194">any code. Six weeks, then</text>
+    <text x="327" y="338" font-size="17" fill="#6b7194">a go / stop decision.</text>
+
+    <!-- step 3 -->
+    <circle cx="715" cy="150" r="30" fill="#2b2e7c" />
+    <text x="715" y="159" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="580" y="200" width="270" height="170" rx="12" fill="#f6f7fb" stroke="#2b2e7c" stroke-opacity="0.12" />
+    <rect x="580" y="200" width="5" height="170" rx="2.5" fill="#38bdf8" />
+    <text x="602" y="236" font-size="20" font-weight="700" fill="#2b2e7c">Scale what moved</text>
+    <text x="602" y="266" font-size="17" fill="#6b7194">Logging, an evaluation set,</text>
+    <text x="602" y="290" font-size="17" fill="#6b7194">access control and a named</text>
+    <text x="602" y="314" font-size="17" fill="#6b7194">owner. The pilot that impressed</text>
+    <text x="602" y="338" font-size="17" fill="#6b7194">is not always the one that paid.</text>
+  </g>
+</svg>
