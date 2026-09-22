@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" width="880" height="620" role="img" aria-label="One stock record in the centre, holding three levels — fabric roll, dye lot and finished SKU — with four teams around it: the store writes every receipt, issue and return; purchase, production and sales only read from it, for what is on order, what is free versus committed, and what date can be promised.">
+  <rect width="880" height="620" fill="#ffffff" />
+
+  <defs>
+    <marker id="ar-in" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b" />
+    </marker>
+    <marker id="ar-out" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0ea5e9" />
+    </marker>
+  </defs>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">One record, four readers</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">The store writes once, at the moment stock moves. Everyone else reads.</text>
+
+    <!-- centre: the record -->
+    <rect x="250" y="210" width="380" height="240" rx="16" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+    <text x="440" y="243" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">The stock record</text>
+
+    <rect x="272" y="262" width="336" height="50" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="1.5" />
+    <text x="288" y="283" font-size="18" font-weight="700" fill="#2b2e7c">Fabric roll</text>
+    <text x="288" y="303" font-size="17" fill="#6b7194">R-2041 · 118 m · lot D-17 · bay 3</text>
+
+    <rect x="272" y="320" width="336" height="50" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="1.5" />
+    <text x="288" y="341" font-size="18" font-weight="700" fill="#2b2e7c">Dye lot</text>
+    <text x="288" y="361" font-size="17" fill="#6b7194">D-17 · 14 rolls · shade checked · 2 cut tickets</text>
+
+    <rect x="272" y="378" width="336" height="50" rx="10" fill="#ffffff" stroke="#fde68a" stroke-width="1.5" />
+    <text x="288" y="399" font-size="18" font-weight="700" fill="#2b2e7c">Finished SKU</text>
+    <text x="288" y="419" font-size="17" fill="#6b7194">ST-402 · M · navy · 340 pcs · 300 committed</text>
+
+    <!-- STORE (left) — writes -->
+    <rect x="30" y="270" width="170" height="120" rx="12" fill="#fff7e0" stroke="#fbbf24" stroke-width="1.5" />
+    <text x="115" y="300" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Store</text>
+    <text x="115" y="326" font-size="17" fill="#6b7194" text-anchor="middle">writes every</text>
+    <text x="115" y="348" font-size="17" fill="#6b7194" text-anchor="middle">receipt, issue,</text>
+    <text x="115" y="370" font-size="17" fill="#6b7194" text-anchor="middle">return</text>
+    <path d="M200 330 H 248" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#ar-in)" />
+
+    <!-- PURCHASE (top) — reads -->
+    <rect x="310" y="100" width="260" height="80" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" />
+    <text x="440" y="130" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Purchase</text>
+    <text x="440" y="156" font-size="17" fill="#6b7194" text-anchor="middle">reads: what is on order</text>
+    <path d="M440 208 V 182" fill="none" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#ar-out)" />
+
+    <!-- PRODUCTION (right) — reads -->
+    <rect x="680" y="270" width="170" height="120" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" />
+    <text x="765" y="300" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Production</text>
+    <text x="765" y="326" font-size="17" fill="#6b7194" text-anchor="middle">reads: free</text>
+    <text x="765" y="348" font-size="17" fill="#6b7194" text-anchor="middle">versus committed,</text>
+    <text x="765" y="370" font-size="17" fill="#6b7194" text-anchor="middle">by roll and lot</text>
+    <path d="M632 330 H 678" fill="none" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#ar-out)" />
+
+    <!-- SALES (bottom) — reads -->
+    <rect x="310" y="480" width="260" height="80" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" />
+    <text x="440" y="510" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Sales</text>
+    <text x="440" y="536" font-size="17" fill="#6b7194" text-anchor="middle">reads: the date it can promise</text>
+    <path d="M440 452 V 478" fill="none" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#ar-out)" />
+
+    <!-- legend -->
+    <line x1="30" y1="592" x2="60" y2="592" stroke="#f59e0b" stroke-width="2.5" />
+    <text x="68" y="597" font-size="17" fill="#6b7194">writes (once, at the point of movement)</text>
+    <line x1="400" y1="592" x2="430" y2="592" stroke="#0ea5e9" stroke-width="2.5" />
+    <text x="438" y="597" font-size="17" fill="#6b7194">reads (no re-typing, no second register)</text>
+  </g>
+</svg>
