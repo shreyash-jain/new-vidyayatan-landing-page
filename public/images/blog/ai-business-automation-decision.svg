@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" width="880" height="620" role="img" aria-label="Does this process need AI? A three-question guide. First: is it repetitive and high volume? If no, leave it manual for now. If yes: does someone have to read or interpret something first, such as emails, scans or free text? If no, use simple rule-based automation. If yes: is a mistake cheap to catch, or can a person review the uncertain cases? If yes, it is a good fit for AI business automation, starting with a small proof of concept. If no, use AI with human approval on every case.">
+  <rect width="880" height="620" fill="#ffffff" />
+  <defs>
+    <marker id="dc-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9ca3c4" />
+    </marker>
+  </defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Does this process need AI?</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Three questions before you spend anything</text>
+
+    <!-- Q1 -->
+    <rect x="30" y="104" width="470" height="76" rx="12" fill="#f4f5fa" stroke="#2b2e7c" stroke-width="2" />
+    <text x="52" y="136" font-size="20" font-weight="700" fill="#2b2e7c">1. Is it repetitive and high volume?</text>
+    <text x="52" y="162" font-size="17" fill="#6b7194">The same job, many times a week</text>
+    <line x1="502" y1="142" x2="596" y2="142" stroke="#9ca3c4" stroke-width="3" marker-end="url(#dc-ar)" />
+    <text x="548" y="132" font-size="17" font-weight="700" fill="#6b7194" text-anchor="middle">No</text>
+    <rect x="600" y="104" width="250" height="76" rx="12" fill="#f9fafb" stroke="#d5d8e8" stroke-width="2" />
+    <text x="725" y="136" font-size="19" font-weight="700" fill="#6b7194" text-anchor="middle">Leave it manual</text>
+    <text x="725" y="162" font-size="17" fill="#6b7194" text-anchor="middle">for now</text>
+
+    <line x1="150" y1="182" x2="150" y2="226" stroke="#9ca3c4" stroke-width="3" marker-end="url(#dc-ar)" />
+    <text x="164" y="210" font-size="17" font-weight="700" fill="#0369a1">Yes</text>
+
+    <!-- Q2 -->
+    <rect x="30" y="230" width="470" height="76" rx="12" fill="#f4f5fa" stroke="#2b2e7c" stroke-width="2" />
+    <text x="52" y="262" font-size="20" font-weight="700" fill="#2b2e7c">2. Does someone have to read it first?</text>
+    <text x="52" y="288" font-size="17" fill="#6b7194">Emails, scans, free text, varied formats</text>
+    <line x1="502" y1="268" x2="596" y2="268" stroke="#9ca3c4" stroke-width="3" marker-end="url(#dc-ar)" />
+    <text x="548" y="258" font-size="17" font-weight="700" fill="#6b7194" text-anchor="middle">No</text>
+    <rect x="600" y="230" width="250" height="76" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="725" y="262" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Rule-based</text>
+    <text x="725" y="288" font-size="17" fill="#0369a1" text-anchor="middle">automation is enough</text>
+
+    <line x1="150" y1="308" x2="150" y2="352" stroke="#9ca3c4" stroke-width="3" marker-end="url(#dc-ar)" />
+    <text x="164" y="336" font-size="17" font-weight="700" fill="#0369a1">Yes</text>
+
+    <!-- Q3 -->
+    <rect x="30" y="356" width="470" height="76" rx="12" fill="#f4f5fa" stroke="#2b2e7c" stroke-width="2" />
+    <text x="52" y="388" font-size="20" font-weight="700" fill="#2b2e7c">3. Can a person catch the mistakes?</text>
+    <text x="52" y="414" font-size="17" fill="#6b7194">Uncertain cases go to review</text>
+    <line x1="502" y1="394" x2="596" y2="394" stroke="#9ca3c4" stroke-width="3" marker-end="url(#dc-ar)" />
+    <text x="548" y="384" font-size="17" font-weight="700" fill="#6b7194" text-anchor="middle">No</text>
+    <rect x="600" y="356" width="250" height="76" rx="12" fill="#fef2f2" stroke="#fca5a5" stroke-width="2" />
+    <text x="725" y="388" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">AI suggests,</text>
+    <text x="725" y="414" font-size="17" fill="#b91c1c" text-anchor="middle">a person approves each</text>
+
+    <line x1="150" y1="434" x2="150" y2="478" stroke="#9ca3c4" stroke-width="3" marker-end="url(#dc-ar)" />
+    <text x="164" y="462" font-size="17" font-weight="700" fill="#0369a1">Yes</text>
+
+    <!-- result -->
+    <rect x="30" y="482" width="820" height="100" rx="14" fill="#fffbeb" stroke="#f59e0b" stroke-width="3" />
+    <text x="52" y="522" font-size="22" font-weight="800" fill="#2b2e7c">A good fit for AI business automation</text>
+    <text x="52" y="554" font-size="18" fill="#b45309">Start with a small proof of concept on this one process, and pick one number to beat.</text>
+  </g>
+</svg>
