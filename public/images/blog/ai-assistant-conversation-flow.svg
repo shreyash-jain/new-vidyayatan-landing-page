@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 720" width="880" height="720" role="img" aria-label="How an AI customer support and sales assistant handles one enquiry. A customer message arrives by website chat, WhatsApp or email. The assistant identifies the intent, then answers from approved knowledge. A sales lead is qualified, its details captured, a CRM lead created and the right salesperson notified. A support request is resolved if the answer is approved, otherwise a ticket is raised with the whole conversation and routed to the right team. At any step a handoff rule can pass the conversation to a person.">
+  <rect width="880" height="720" fill="#ffffff" />
+  <defs>
+    <marker id="cf-ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0ea5e9" />
+    </marker>
+    <marker id="cf-am" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">One enquiry, two paths</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">What the assistant does with a single customer message</text>
+
+    <!-- trunk -->
+    <rect x="240" y="100" width="400" height="64" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+    <text x="440" y="128" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Customer message</text>
+    <text x="440" y="151" font-size="16" fill="#6b7194" text-anchor="middle">website chat · WhatsApp · email</text>
+    <line x1="440" y1="166" x2="440" y2="184" stroke="#0ea5e9" stroke-width="3" marker-end="url(#cf-ar)" />
+
+    <rect x="240" y="188" width="400" height="64" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="440" y="216" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Identify the intent</text>
+    <text x="440" y="239" font-size="16" fill="#6b7194" text-anchor="middle">a question, a sales lead, or a support problem</text>
+    <line x1="440" y1="254" x2="440" y2="272" stroke="#0ea5e9" stroke-width="3" marker-end="url(#cf-ar)" />
+
+    <rect x="240" y="276" width="400" height="64" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="440" y="304" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Answer from approved knowledge</text>
+    <text x="440" y="327" font-size="16" fill="#6b7194" text-anchor="middle">never from the model's memory</text>
+
+    <!-- branch -->
+    <path d="M440 342 L440 358 L230 358 L230 378" fill="none" stroke="#0ea5e9" stroke-width="3" marker-end="url(#cf-ar)" />
+    <path d="M440 358 L650 358 L650 378" fill="none" stroke="#f59e0b" stroke-width="3" marker-end="url(#cf-am)" />
+
+    <!-- sales -->
+    <rect x="30" y="384" width="400" height="236" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="54" y="418" font-size="17" font-weight="800" fill="#0369a1" letter-spacing="1">IF IT IS A SALES LEAD</text>
+    <g font-size="18" fill="#2b2e7c">
+      <circle cx="68" cy="456" r="15" fill="#0ea5e9" /><text x="68" y="462" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="96" y="462">Ask the qualifying questions</text>
+      <circle cx="68" cy="502" r="15" fill="#0ea5e9" /><text x="68" y="508" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="96" y="508">Capture name, email, company</text>
+      <circle cx="68" cy="548" r="15" fill="#0ea5e9" /><text x="68" y="554" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="96" y="554">Create the lead in the CRM</text>
+      <circle cx="68" cy="594" r="15" fill="#0ea5e9" /><text x="68" y="600" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="96" y="600">Notify the right salesperson</text>
+    </g>
+
+    <!-- support -->
+    <rect x="450" y="384" width="400" height="236" rx="14" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+    <text x="474" y="418" font-size="17" font-weight="800" fill="#b45309" letter-spacing="1">IF IT IS A SUPPORT REQUEST</text>
+    <g font-size="18" fill="#2b2e7c">
+      <circle cx="488" cy="456" r="15" fill="#f59e0b" /><text x="488" y="462" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="516" y="462">Resolve it, if the answer exists</text>
+      <circle cx="488" cy="502" r="15" fill="#f59e0b" /><text x="488" y="508" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="516" y="508">Otherwise raise a ticket</text>
+      <circle cx="488" cy="548" r="15" fill="#f59e0b" /><text x="488" y="554" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="516" y="554">Attach the whole conversation</text>
+      <circle cx="488" cy="594" r="15" fill="#f59e0b" /><text x="488" y="600" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="516" y="600">Route it to the right team</text>
+    </g>
+
+    <!-- handoff bar -->
+    <rect x="30" y="644" width="820" height="52" rx="12" fill="#2b2e7c" />
+    <text x="440" y="677" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">At any step: a handoff rule fires → a person takes over</text>
+  </g>
+</svg>

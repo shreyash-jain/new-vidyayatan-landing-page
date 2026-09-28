@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 700" width="880" height="700" role="img" aria-label="Six real AI customer service examples. What worked: Air India's AI.g handled nearly 4 million queries, 97% without a person; Octopus Energy's AI-written emails scored 80% satisfaction against 65% for staff; Klarna's assistant handled two-thirds of its chats in its first month. What went wrong: Air Canada was held liable for its chatbot's wrong refund answer; a Chevrolet dealer's chatbot agreed to sell a new SUV for $1; DPD's chatbot swore at a customer after a software update.">
+  <rect width="880" height="700" fill="#ffffff" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Six real AI assistants, six lessons</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">What worked, and what went wrong</text>
+
+    <!-- column headers -->
+    <rect x="30" y="98" width="400" height="44" rx="10" fill="#0ea5e9" />
+    <text x="230" y="127" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">WHAT WORKED</text>
+    <rect x="450" y="98" width="400" height="44" rx="10" fill="#f59e0b" />
+    <text x="650" y="127" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">WHAT WENT WRONG</text>
+
+    <!-- left cards -->
+    <g>
+      <rect x="30" y="158" width="400" height="148" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+      <text x="52" y="192" font-size="20" font-weight="700" fill="#2b2e7c">Air India · since 2023</text>
+      <text x="52" y="236" font-size="34" font-weight="800" fill="#0369a1">97%</text>
+      <text x="142" y="228" font-size="16" fill="#2b2e7c">of nearly 4 million queries</text>
+      <text x="142" y="248" font-size="16" fill="#2b2e7c">answered without a person</text>
+      <text x="52" y="286" font-size="15" fill="#6b7194">Lesson: routine questions are the easy win</text>
+
+      <rect x="30" y="322" width="400" height="148" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+      <text x="52" y="356" font-size="20" font-weight="700" fill="#2b2e7c">Octopus Energy · 2023</text>
+      <text x="52" y="400" font-size="34" font-weight="800" fill="#0369a1">80%</text>
+      <text x="142" y="392" font-size="16" fill="#2b2e7c">satisfaction for AI emails,</text>
+      <text x="142" y="412" font-size="16" fill="#2b2e7c">vs 65% for staff emails</text>
+      <text x="52" y="450" font-size="15" fill="#6b7194">Lesson: AI can write answers customers like</text>
+
+      <rect x="30" y="486" width="400" height="148" rx="12" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+      <text x="52" y="520" font-size="20" font-weight="700" fill="#2b2e7c">Klarna · 2024</text>
+      <text x="52" y="564" font-size="34" font-weight="800" fill="#0369a1">2/3</text>
+      <text x="142" y="556" font-size="16" fill="#2b2e7c">of all support chats handled</text>
+      <text x="142" y="576" font-size="16" fill="#2b2e7c">by AI in its first month</text>
+      <text x="52" y="614" font-size="15" fill="#6b7194">Lesson: scale fast, but keep people (see 2025)</text>
+    </g>
+
+    <!-- right cards -->
+    <g>
+      <rect x="450" y="158" width="400" height="148" rx="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+      <text x="472" y="192" font-size="20" font-weight="700" fill="#2b2e7c">Air Canada · 2024</text>
+      <text x="472" y="226" font-size="16" fill="#2b2e7c">Chatbot gave a wrong refund policy.</text>
+      <text x="472" y="248" font-size="16" fill="#2b2e7c">A tribunal held the airline liable.</text>
+      <text x="472" y="286" font-size="15" font-weight="700" fill="#b45309">Lesson: feed it correct information</text>
+
+      <rect x="450" y="322" width="400" height="148" rx="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+      <text x="472" y="356" font-size="20" font-weight="700" fill="#2b2e7c">Chevrolet dealer · 2023</text>
+      <text x="472" y="390" font-size="16" fill="#2b2e7c">A visitor tricked the chatbot into</text>
+      <text x="472" y="412" font-size="16" fill="#2b2e7c">"agreeing" to sell a new SUV for $1.</text>
+      <text x="472" y="450" font-size="15" font-weight="700" fill="#b45309">Lesson: prices come from rules, not AI</text>
+
+      <rect x="450" y="486" width="400" height="148" rx="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+      <text x="472" y="520" font-size="20" font-weight="700" fill="#2b2e7c">DPD · 2024</text>
+      <text x="472" y="554" font-size="16" fill="#2b2e7c">After a software update, the chatbot</text>
+      <text x="472" y="576" font-size="16" fill="#2b2e7c">swore at a customer. AI switched off.</text>
+      <text x="472" y="614" font-size="15" font-weight="700" fill="#b45309">Lesson: re-test after every change</text>
+    </g>
+
+    <text x="30" y="672" font-size="14" fill="#6b7194">Sources: Microsoft case study (Air India), The Times via City AM (Octopus), Klarna press release, BC Civil Resolution Tribunal,</text>
+    <text x="30" y="690" font-size="14" fill="#6b7194">Jalopnik (Chevrolet), Silicon UK (DPD). Links in the article.</text>
+  </g>
+</svg>
