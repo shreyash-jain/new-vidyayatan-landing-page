@@ -1,0 +1,240 @@
+---
+title: "How to Build an AI Customer Support & Sales Assistant for Your Business"
+description: "Learn how to build an AI customer support and sales assistant that handles customer queries, qualifies leads, automates follow-ups, and supports business growth."
+date: "2026-09-28"
+author: "Vidyayatan Engineering"
+tag: "AI & Business"
+image: "/images/blog/ai-customer-support-sales-assistant.jpg"
+---
+
+It is 11 p.m. A parent visits a coaching institute's website and asks, "Is there a weekend batch for Class 10 maths, and what are the fees?" Nobody is in the office. By morning, the parent has already booked a demo class somewhere else.
+
+That lost enquiry is the problem an **AI customer support and sales assistant** solves. It answers at 11 p.m. It asks the parent a couple of questions. It books the demo and tells your counsellor, who calls back at 9 a.m. with the details already in hand.
+
+This guide explains, in plain terms, what such an assistant does, how to build one, and what real companies learned doing it, including the ones that got it wrong. At Vidyayatan we [build custom AI systems](/services/artificial-intelligence) like this for businesses.
+
+**Have an idea for an AI assistant?** [Talk to Vidyayatan's AI experts.](/contact)
+
+## What is an AI customer support and sales assistant?
+
+It is a chat assistant on your website, WhatsApp or email that does two jobs:
+
+- **Support:** answers customers' questions and solves simple problems.
+- **Sales:** spots people who want to buy, asks them a few questions, and passes them to your sales team.
+
+When a question is too hard, it hands the chat to a person, along with everything said so far.
+
+**A simple example.** A customer types: *"What does your enterprise plan cost?"*
+
+An ordinary chatbot pastes a link to the pricing page. An AI assistant does more:
+
+1. It understands this is someone who might buy.
+2. It gives the approved price range.
+3. It asks, "How big is your team, and when do you want to start?"
+4. It takes their name and work email.
+5. It adds them to your CRM (the system where you keep customer records).
+6. It messages the right salesperson.
+
+All of that happens in about a minute.
+
+![Diagram: how an AI customer support and sales assistant handles one enquiry — it identifies intent, answers from approved information, then either qualifies the lead, captures details and updates the CRM, or creates a support ticket, handing over to a human whenever a rule says it should](/images/blog/ai-assistant-conversation-flow.svg)
+
+## Why businesses build one
+
+### Slow replies lose sales
+
+In a [Harvard Business Review study of 2,241 US companies](https://hbr.org/2011/03/the-short-life-of-online-sales-leads), only 37% replied to a web enquiry within an hour. Almost a quarter never replied at all. The average reply took 42 hours. Businesses that replied within an hour were nearly **seven times** more likely to have a real conversation with the buyer.
+
+![Chart: of 2,241 US companies sent a web enquiry, 37% replied within an hour, 16% in one to 24 hours, 24% after more than 24 hours and 23% never replied; average response time was 42 hours. Source: Harvard Business Review, 2011](/images/blog/ai-assistant-speed-to-lead.svg)
+
+That study is from 2011. Customers have not become more patient since.
+
+### Your team answers the same questions all day
+
+"Where is my order?" "What is your refund policy?" "Do you deliver to Pune?" Each answer takes a few minutes. Hundreds of them take up a whole day, while the difficult cases wait.
+
+### The answers are spread across different systems
+
+Prices are on the website, policies are in a PDF, orders are in one system and customer history is in another. An assistant connected to all of them finds the answer in seconds.
+
+## Real examples: what worked
+
+These are real companies, with figures from their own announcements or trusted reporting.
+
+- **Air India.** Its assistant, AI.g, launched in May 2023. By late 2024 it had handled [nearly 4 million customer queries, 97% of them without a person](https://www.microsoft.com/en/customers/story/19768-air-india-azure-open-ai-service), according to Microsoft's case study. It handles routine questions such as baggage allowance, flight status and check-in.
+- **Octopus Energy** (a UK electricity supplier). In May 2023 its CEO said AI was answering customer emails and [doing the work of about 250 people](https://www.cityam.com/ai-doing-the-work-of-over-200-people-at-octopus-chief-executive-says/). Customers rated the AI-written emails 80% satisfactory, against 65% for emails written by staff.
+- **Klarna** (a payments company). In its first month, its assistant handled [2.3 million chats, two-thirds of all its customer service chats](https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/). Klarna said the average time to solve a problem fell from 11 minutes to under 2.
+
+Keep reading, though. Klarna appears again in the list of what went wrong.
+
+## What the assistant can do
+
+- **Answer questions** from your approved FAQs, product details and policies.
+- **Qualify leads** by asking what the customer needs, how big their team is and when they want to start.
+- **Suggest** the right product, plan or course.
+- **Collect details** such as name, email, phone and company.
+- **Book meetings** straight into a salesperson's calendar.
+- **Raise support tickets** for problems it cannot solve.
+- **Hand over to a person** when needed. This matters most. The aim is not to make AI answer everything.
+
+## How to build an AI customer support and sales assistant
+
+### Step 1: Pick one goal
+
+"Better customer service" is too vague. "Reply to every website enquiry within five minutes" is a goal you can measure. Start with one.
+
+### Step 2: Gather the information it is allowed to use
+
+Your website, FAQs, price lists, policies and product documents. **Check that all of it is correct and up to date.** An assistant repeats whatever you give it. If your refund policy PDF is from 2022, it will quote the 2022 policy.
+
+### Step 3: Choose the AI model and set it up
+
+The assistant uses an AI language model, the same kind of technology behind ChatGPT. We set it up so that it **looks up the answer in your own documents first**, then replies. It does not answer from general knowledge. (The technical name for this is retrieval-augmented generation, or RAG.)
+
+Some decisions should never be left to AI: discounts, refunds, who qualifies for an offer. Those follow fixed business rules. AI models change every few months (as at September 2026), so we build the system so the model can be swapped later without starting again.
+
+![Architecture: customer channels (website chat, WhatsApp, email) feed an AI customer support and sales assistant made of a language model, retrieval over approved business knowledge, and business rules; it connects to the CRM, helpdesk, calendar, ERP and databases, with a human handoff path to the support and sales teams](/images/blog/ai-assistant-architecture.svg)
+
+### Step 4: Plan the conversations
+
+For each type of message, decide how the chat should end: a lead in the CRM, a support ticket, a booked call, or a handover to a person. A chat with no clear ending just goes round in circles.
+
+### Step 5: Connect it to your systems
+
+CRM, helpdesk, calendar, WhatsApp, email, order system. **This is usually the biggest part of the work.** A sales assistant whose leads never reach your CRM is just a form that talks.
+
+### Step 6: Decide when a person takes over
+
+Write these rules down before you launch.
+
+![Decision guide: an AI customer support and sales assistant hands over to a person for complaints and angry customers, sensitive or account-specific requests, high-value deals, technical problems it cannot resolve, anything needing approval, and whenever the customer asks for a human](/images/blog/ai-assistant-handoff-rules.svg)
+
+Customers care about this. In a [Gartner survey of 5,728 customers](https://www.gartner.com/en/newsroom/press-releases/2024-07-09-gartner-survey-finds-64-percent-of-customers-would-prefer-that-companies-didnt-use-ai-for-customer-service), 64% said they would rather companies didn't use AI for customer service. Their biggest worry was that it would make a real person harder to reach.
+
+### Step 7: Test it with real questions
+
+Use real enquiries from the last few months, not made-up ones. Check that the answers are correct, leads are captured and handovers happen. Then try to trick it, the way a mischievous customer would.
+
+### Step 8: Start small and keep improving
+
+Launch on one channel, such as your website. Read the chats every week. Each time it says "I don't know", add the missing answer. That is how it gets better.
+
+## Real examples: what went wrong
+
+Each of these mistakes is easy to avoid, which is why they are worth knowing about.
+
+![Six real AI customer service examples. What worked: Air India's AI.g handled nearly 4 million queries, 97% without a person; Octopus Energy's AI emails scored 80% satisfaction against 65% for staff; Klarna's assistant handled two-thirds of chats in its first month. What went wrong: Air Canada was held liable for its chatbot's wrong refund answer; a Chevrolet dealer's chatbot agreed to sell a car for $1; DPD's chatbot swore at a customer after a software update](/images/blog/ai-assistant-real-examples.svg)
+
+1. **Giving it wrong information: Air Canada, 2024.** Its website chatbot told a grieving customer he could claim a bereavement discount after flying. The airline's actual policy said no. Air Canada argued the chatbot was responsible for its own words. [A Canadian tribunal disagreed](https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html): the chatbot is part of your website, so you are responsible for what it says.
+2. **No rules on what it can promise: a Chevrolet dealership, 2023.** A visitor told the dealer's chatbot to agree to anything. It then "agreed" to sell a new Tahoe SUV [for $1](https://www.jalopnik.com/chevrolet-dealer-ai-help-chatbot-goes-rogue-pranksters-1851112556/). Prices and discounts should come from fixed rules, never from the AI.
+3. **Not testing after changes: DPD, 2024.** After a software update, the parcel company's chatbot [swore at a customer and called DPD "the worst delivery firm in the world"](https://www.silicon.co.uk/e-innovation/artificial-intelligence/dpd-disable-ai-chatbot-546650). DPD switched the AI off. Re-test after every update.
+4. **Cutting costs too far: Klarna, 2025.** In May 2025 Klarna's CEO said cost had been ["a too predominant evaluation factor"](https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/) and quality had suffered. Klarna began hiring people again so customers could always reach a human.
+5. **Not measuring results.** If you don't track what the assistant solves and where it fails, you can't improve it.
+
+## AI customer support vs AI sales assistant
+
+| AI customer support | AI sales assistant |
+|---|---|
+| Answers questions | Finds serious buyers |
+| Solves common problems | Collects contact details |
+| Creates support tickets | Suggests products or services |
+| Searches your help articles | Asks what the customer needs |
+| Passes problems to your team | Books meetings and follow-ups |
+
+You can build them separately. We usually combine them into one AI customer support and sales assistant, because customers don't separate their questions. Someone who asks "where is my order?" today may ask for a bulk discount tomorrow.
+
+## Key features to include
+
+Natural conversation · answers from your own information · lead questions · CRM connection · handover to a person · chat history · reports · customer login where needed · access controls for your team · website and WhatsApp · connections to your other software · security controls.
+
+## What does it cost?
+
+There is no honest fixed price. It depends on how many systems it connects to, which AI model it uses, how many chats it handles each month, how much information it needs to learn, which channels you want, and your security needs.
+
+Two things to plan for. AI costs a little for every chat, every month, so we use smaller, cheaper models wherever they do the job well. But, as Klarna found, the cheapest option can cost you customers.
+
+**Want a figure for your business?** [Get a custom AI development estimate.](/contact)
+
+## Examples by industry
+
+- **Education:** a student asks about the MBA course at midnight. The assistant explains the fees and eligibility and books a counsellor call. See our [EdTech work](/industries/edtech).
+- **Software (SaaS):** a visitor asks whether your tool works with their accounting software. The assistant answers, checks their company size and books a demo.
+- **Online shops:** "Where is my order?" The assistant checks the order system and replies with the tracking status, with no agent needed.
+- **Real estate:** someone asks about 2BHK flats in a project. The assistant shares the price range, asks about budget and books a site visit.
+- **Financial services:** general questions and application status, with the record-keeping [fintech](/industries/fintech) needs. Financial advice stays with licensed people.
+
+## How to measure it
+
+- **Support:** how fast it replies, how many problems it solves alone, how often it hands over, customer ratings.
+- **Sales:** leads collected, leads qualified, meetings booked, sales from those meetings.
+- **Cost:** chats handled fully by AI and cost per chat.
+
+The most useful early number is simple: **wrong answers per 100 chats.** Get that down first.
+
+## Your AI assistant planning checklist
+
+Answer these before you speak to any developer, including us:
+
+1. The one goal, and how you will measure it
+2. Your 20 most common support questions and 5 most common sales questions
+3. Where the correct answers are kept, and who keeps them up to date
+4. The systems it must connect to
+5. When a person should take over, and who that person is
+6. Information it must never share
+7. The first channel to launch on
+
+Bring the answers and we will turn them into a plan. [Get your AI assistant development plan.](/contact)
+
+## How Vidyayatan builds your assistant
+
+Most of this work is software engineering, not AI. We study how your support and sales teams work today. Then we design the system, build the assistant, [connect it to your CRM, website and other software](/services/custom-software), test it on your real questions, launch it and keep improving it.
+
+We have built messaging at scale before. For HABUILD, a fitness community with 20 lakh+ members, we built the [WhatsApp system that sends personalised reminders](/blog/habuild-whatsapp-automation) with no manual messages. That system runs on rules, not AI, but it deals with the same problems of connecting systems and delivering messages reliably. For more ideas, read [generative AI use cases beyond chatbots](/blog/generative-ai-for-business-use-cases-beyond-chatbots).
+
+**Planning an AI customer support or sales assistant?** [Get an AI development consultation.](/contact)
+
+## Frequently asked questions
+
+### What is an AI customer support and sales assistant?
+
+A chat assistant that answers customer questions from your approved information, finds and qualifies sales leads, updates your CRM, and hands over to a person when needed.
+
+### How does an AI sales assistant qualify leads?
+
+It asks the first questions your salesperson would ask, such as what they need, their team size, timeline and budget. Then it sends the best leads to the right person.
+
+### Can an AI assistant connect to a CRM?
+
+Yes, and it should. Without that, leads get lost.
+
+### Can AI handle customer support 24/7?
+
+It can reply at any hour. If it hands a chat to a person at night, it should tell the customer when someone will get back to them.
+
+### How much does it cost to build an AI assistant?
+
+It depends on the systems, channels, chat volume and security needs. A small first version on one channel gives you a real figure before you spend more.
+
+### How long does it take to build an AI assistant?
+
+A focused first version on one channel usually takes a few weeks. Each extra system connection adds time.
+
+### Can an AI assistant be added to my existing website?
+
+Yes. It usually appears as a chat window on your current website. You don't need a new site.
+
+### Can AI hand conversations over to human agents?
+
+Yes, and it must. A good handover passes on the whole chat, so the customer doesn't have to repeat anything.
+
+### Can Vidyayatan build a custom AI assistant?
+
+Yes. We design, build, connect and support custom AI assistants, as a project or with a [dedicated team](/services/hire-developers).
+
+## Build an AI customer support & sales assistant with Vidyayatan
+
+Your AI assistant should fit the way your business already works. It should not be just another chatbot bolted onto the website. The best ones get the details right: correct information, clear rules, a quick handover to a person, and a new lead in your CRM before your salesperson has finished their morning tea.
+
+Vidyayatan can help you plan it, build it and connect it to the systems you already use.
+
+**Have an AI assistant idea?** [Talk to Vidyayatan's AI experts.](/contact)

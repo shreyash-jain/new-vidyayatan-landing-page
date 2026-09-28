@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-label="When an AI customer support and sales assistant hands over to a person: a complaint or angry customer; a sensitive or account-specific request; a high-value deal; a technical problem it cannot solve; anything needing approval, such as a refund, discount or exception; and whenever the customer asks for a human, always, with no exceptions. A good handoff passes the whole conversation so the customer never repeats themselves.">
+  <rect width="880" height="560" fill="#ffffff" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">When the assistant hands over</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Write these rules before launch, not in the moment</text>
+
+    <!-- cards: 2 columns x 3 rows, 400 x 100 -->
+    <g>
+      <rect x="30" y="102" width="400" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="54" y="142" font-size="19" font-weight="700" fill="#2b2e7c">A complaint</text>
+      <text x="54" y="172" font-size="16" fill="#6b7194">or a customer who is already upset</text>
+
+      <rect x="450" y="102" width="400" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="474" y="142" font-size="19" font-weight="700" fill="#2b2e7c">A sensitive request</text>
+      <text x="474" y="172" font-size="16" fill="#6b7194">account details, health, money, legal</text>
+
+      <rect x="30" y="220" width="400" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="54" y="260" font-size="19" font-weight="700" fill="#2b2e7c">A high-value deal</text>
+      <text x="54" y="290" font-size="16" fill="#6b7194">a senior salesperson should take it</text>
+
+      <rect x="450" y="220" width="400" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="474" y="260" font-size="19" font-weight="700" fill="#2b2e7c">A problem it cannot solve</text>
+      <text x="474" y="290" font-size="16" fill="#6b7194">two failed attempts is enough</text>
+
+      <rect x="30" y="338" width="400" height="100" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="54" y="378" font-size="19" font-weight="700" fill="#2b2e7c">Anything needing approval</text>
+      <text x="54" y="408" font-size="16" fill="#6b7194">refunds, discounts, exceptions</text>
+
+      <rect x="450" y="338" width="400" height="100" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="3" />
+      <text x="474" y="378" font-size="19" font-weight="700" fill="#b45309">The customer asks for a human</text>
+      <text x="474" y="408" font-size="16" font-weight="700" fill="#b45309">Always. No exceptions.</text>
+    </g>
+
+    <rect x="30" y="462" width="820" height="68" rx="12" fill="#2b2e7c" />
+    <text x="440" y="492" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">A good handoff passes the whole conversation,</text>
+    <text x="440" y="516" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">so the customer never has to repeat themselves.</text>
+  </g>
+</svg>
