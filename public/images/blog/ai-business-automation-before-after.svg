@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" width="880" height="640" role="img" aria-label="Before and after. Manual: documents arrive, a person reads each one, types the fields into the CRM, and routes it on — a person touches every document at every step. With AI business automation: documents arrive, AI extracts the fields, rules check them against existing records, and clean data flows into the CRM and workflow; only documents the system is unsure about go to a person for review.">
+  <rect width="880" height="640" fill="#ffffff" />
+
+  <defs>
+    <marker id="ar-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9ca3c4" />
+    </marker>
+    <marker id="ar-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0ea5e9" />
+    </marker>
+    <marker id="ar-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Who touches each document?</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Same job, two ways. The difference is where a person is needed.</text>
+
+    <!-- BEFORE -->
+    <text x="30" y="124" font-size="20" font-weight="700" fill="#6b7194">BEFORE — manual</text>
+
+    <rect x="30" y="140" width="180" height="84" rx="12" fill="#f4f5fa" stroke="#d5d8e8" stroke-width="2" />
+    <text x="120" y="176" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Documents</text>
+    <text x="120" y="202" font-size="18" fill="#6b7194" text-anchor="middle">arrive</text>
+
+    <rect x="250" y="140" width="180" height="84" rx="12" fill="#f4f5fa" stroke="#d5d8e8" stroke-width="2" />
+    <text x="340" y="176" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Person reads</text>
+    <text x="340" y="202" font-size="18" fill="#6b7194" text-anchor="middle">every one</text>
+
+    <rect x="470" y="140" width="180" height="84" rx="12" fill="#f4f5fa" stroke="#d5d8e8" stroke-width="2" />
+    <text x="560" y="176" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Person types</text>
+    <text x="560" y="202" font-size="18" fill="#6b7194" text-anchor="middle">into the CRM</text>
+
+    <rect x="690" y="140" width="160" height="84" rx="12" fill="#f4f5fa" stroke="#d5d8e8" stroke-width="2" />
+    <text x="770" y="176" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Person</text>
+    <text x="770" y="202" font-size="18" fill="#6b7194" text-anchor="middle">routes it on</text>
+
+    <line x1="212" y1="182" x2="246" y2="182" stroke="#9ca3c4" stroke-width="3" marker-end="url(#ar-grey)" />
+    <line x1="432" y1="182" x2="466" y2="182" stroke="#9ca3c4" stroke-width="3" marker-end="url(#ar-grey)" />
+    <line x1="652" y1="182" x2="686" y2="182" stroke="#9ca3c4" stroke-width="3" marker-end="url(#ar-grey)" />
+
+    <rect x="250" y="240" width="600" height="40" rx="8" fill="#fef2f2" />
+    <text x="550" y="267" font-size="18" fill="#b91c1c" text-anchor="middle">A person handles 100% of documents, at every step</text>
+
+    <line x1="30" y1="318" x2="850" y2="318" stroke="#e5e7f0" stroke-width="2" stroke-dasharray="6 6" />
+
+    <!-- AFTER -->
+    <text x="30" y="362" font-size="20" font-weight="700" fill="#0ea5e9">AFTER — AI business automation</text>
+
+    <rect x="30" y="378" width="180" height="84" rx="12" fill="#f4f5fa" stroke="#d5d8e8" stroke-width="2" />
+    <text x="120" y="414" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Documents</text>
+    <text x="120" y="440" font-size="18" fill="#6b7194" text-anchor="middle">arrive</text>
+
+    <rect x="250" y="378" width="180" height="84" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2" />
+    <text x="340" y="414" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">AI extracts</text>
+    <text x="340" y="440" font-size="18" fill="#0369a1" text-anchor="middle">the fields</text>
+
+    <rect x="470" y="378" width="180" height="84" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2" />
+    <text x="560" y="414" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Rules check</text>
+    <text x="560" y="440" font-size="18" fill="#0369a1" text-anchor="middle">against records</text>
+
+    <rect x="690" y="378" width="160" height="84" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2" />
+    <text x="770" y="414" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Clean data</text>
+    <text x="770" y="440" font-size="18" fill="#0369a1" text-anchor="middle">into CRM</text>
+
+    <line x1="212" y1="420" x2="246" y2="420" stroke="#0ea5e9" stroke-width="3" marker-end="url(#ar-blue)" />
+    <line x1="432" y1="420" x2="466" y2="420" stroke="#0ea5e9" stroke-width="3" marker-end="url(#ar-blue)" />
+    <line x1="652" y1="420" x2="686" y2="420" stroke="#0ea5e9" stroke-width="3" marker-end="url(#ar-blue)" />
+
+    <!-- exception branch -->
+    <path d="M560 464 L560 520" stroke="#f59e0b" stroke-width="3" fill="none" stroke-dasharray="7 5" marker-end="url(#ar-amber)" />
+    <text x="572" y="498" font-size="17" fill="#b45309">only if unsure</text>
+
+    <rect x="430" y="524" width="260" height="84" rx="12" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+    <text x="560" y="560" font-size="19" font-weight="700" fill="#2b2e7c" text-anchor="middle">Person reviews</text>
+    <text x="560" y="586" font-size="18" fill="#b45309" text-anchor="middle">the exceptions</text>
+
+    <text x="30" y="560" font-size="18" fill="#2b2e7c" font-weight="700">A person sees only</text>
+    <text x="30" y="586" font-size="18" fill="#2b2e7c" font-weight="700">what needs judgement</text>
+  </g>
+</svg>

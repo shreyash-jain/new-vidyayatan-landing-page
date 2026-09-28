@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" width="880" height="640" role="img" aria-label="How Vidyayatan approaches AI business automation, in seven steps. 1 Understand the process as it runs today. 2 Find the steps worth automating. 3 Design: model, APIs, rules, screens. 4 Build around your workflow. 5 Integrate with CRM, ERP, LMS and databases. 6 Test on your real data. 7 Deploy, monitor and improve. Steps 1 and 2 decide where AI is used and where plain rules will do.">
+  <rect width="880" height="640" fill="#ffffff" />
+  <defs>
+    <marker id="pr-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0ea5e9" />
+    </marker>
+  </defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">From process to production, in seven steps</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">We start with how the work runs today — not with a model</text>
+
+    <!-- phase labels -->
+    <rect x="30" y="100" width="820" height="36" rx="8" fill="#fffbeb" />
+    <text x="46" y="125" font-size="17" font-weight="700" fill="#b45309">DECIDE — steps 1–2 choose where AI is used, and where plain rules will do</text>
+
+    <!-- vertical spine -->
+    <line x1="76" y1="170" x2="76" y2="590" stroke="#e0e7ef" stroke-width="4" />
+
+    <!-- step rows: y = 170 + i*70 -->
+    <g>
+      <circle cx="76" cy="176" r="24" fill="#f59e0b" />
+      <text x="76" y="184" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="124" y="172" font-size="20" font-weight="700" fill="#2b2e7c">Understand the process</text>
+      <text x="124" y="197" font-size="17" fill="#6b7194">Who does the work, in which tools, with what data, and where it waits</text>
+    </g>
+    <g>
+      <circle cx="76" cy="246" r="24" fill="#f59e0b" />
+      <text x="76" y="254" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="124" y="242" font-size="20" font-weight="700" fill="#2b2e7c">Find the steps worth automating</text>
+      <text x="124" y="267" font-size="17" fill="#6b7194">Repetitive, high volume, and needs someone to read something</text>
+    </g>
+    <g>
+      <circle cx="76" cy="316" r="24" fill="#0ea5e9" />
+      <text x="76" y="324" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="124" y="312" font-size="20" font-weight="700" fill="#2b2e7c">Design the solution</text>
+      <text x="124" y="337" font-size="17" fill="#6b7194">AI model, APIs, business rules, the screens your team needs</text>
+    </g>
+    <g>
+      <circle cx="76" cy="386" r="24" fill="#0ea5e9" />
+      <text x="76" y="394" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="124" y="382" font-size="20" font-weight="700" fill="#2b2e7c">Build it around your business</text>
+      <text x="124" y="407" font-size="17" fill="#6b7194">Fitted to your workflow, not a product's idea of how work should run</text>
+    </g>
+    <g>
+      <circle cx="76" cy="456" r="24" fill="#0ea5e9" />
+      <text x="76" y="464" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+      <text x="124" y="452" font-size="20" font-weight="700" fill="#2b2e7c">Integrate with existing systems</text>
+      <text x="124" y="477" font-size="17" fill="#6b7194">CRM, ERP, LMS, website, apps, databases, internal tools</text>
+    </g>
+    <g>
+      <circle cx="76" cy="526" r="24" fill="#2b2e7c" />
+      <text x="76" y="534" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+      <text x="124" y="522" font-size="20" font-weight="700" fill="#2b2e7c">Test on your real data</text>
+      <text x="124" y="547" font-size="17" fill="#6b7194">Accuracy, speed and security measured on real documents, not demos</text>
+    </g>
+    <g>
+      <circle cx="76" cy="596" r="24" fill="#2b2e7c" />
+      <text x="76" y="604" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">7</text>
+      <text x="124" y="592" font-size="20" font-weight="700" fill="#2b2e7c">Deploy, monitor, improve</text>
+      <text x="124" y="617" font-size="17" fill="#6b7194">Watch what it gets wrong and where people override it</text>
+    </g>
+
+    <!-- loop-back hint -->
+    <path d="M800 590 C 850 590, 850 330, 800 330" fill="none" stroke="#0ea5e9" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#pr-ar)" />
+    <text x="822" y="452" font-size="16" fill="#0369a1" text-anchor="end">keeps</text>
+    <text x="822" y="472" font-size="16" fill="#0369a1" text-anchor="end">improving</text>
+  </g>
+</svg>

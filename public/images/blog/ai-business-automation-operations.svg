@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" width="880" height="600" role="img" aria-label="Five business areas AI business automation can take off the desk. Customer support: answers repeat questions, routes tickets, drafts replies. Sales and leads: reads enquiries, scores leads, updates the CRM. Documents: extracts data from invoices, forms and PDFs. Reporting: pulls numbers together and flags anything unusual. Internal workflows: approvals, notifications, task assignment and data sync. What they share: someone has to read something before acting.">
+  <rect width="880" height="600" fill="#ffffff" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">What AI can take off the desk</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Five areas where the work starts with someone reading something</text>
+
+    <!-- centre -->
+    <circle cx="440" cy="320" r="92" fill="#2b2e7c" />
+    <text x="440" y="312" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">AI business</text>
+    <text x="440" y="340" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">automation</text>
+
+    <!-- connectors -->
+    <g stroke="#bae6fd" stroke-width="3">
+      <line x1="440" y1="228" x2="440" y2="200" />
+      <line x1="360" y1="280" x2="300" y2="250" />
+      <line x1="520" y1="280" x2="580" y2="250" />
+      <line x1="380" y1="390" x2="300" y2="440" />
+      <line x1="500" y1="390" x2="580" y2="440" />
+    </g>
+
+    <!-- top: documents -->
+    <rect x="300" y="100" width="280" height="100" rx="14" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+    <text x="440" y="134" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Documents</text>
+    <text x="440" y="160" font-size="17" fill="#6b7194" text-anchor="middle">Invoices, forms, contracts, PDFs</text>
+    <text x="440" y="184" font-size="17" fill="#b45309" text-anchor="middle">Often the fastest win</text>
+
+    <!-- left: support -->
+    <rect x="30" y="200" width="270" height="100" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="165" y="234" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Customer support</text>
+    <text x="165" y="260" font-size="17" fill="#6b7194" text-anchor="middle">Repeat questions, ticket</text>
+    <text x="165" y="284" font-size="17" fill="#6b7194" text-anchor="middle">routing, draft replies</text>
+
+    <!-- right: sales -->
+    <rect x="580" y="200" width="270" height="100" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="715" y="234" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Sales and leads</text>
+    <text x="715" y="260" font-size="17" fill="#6b7194" text-anchor="middle">Read enquiries, score leads,</text>
+    <text x="715" y="284" font-size="17" fill="#6b7194" text-anchor="middle">update the CRM</text>
+
+    <!-- bottom left: reporting -->
+    <rect x="30" y="420" width="270" height="100" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="165" y="454" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Reporting</text>
+    <text x="165" y="480" font-size="17" fill="#6b7194" text-anchor="middle">Pull numbers together,</text>
+    <text x="165" y="504" font-size="17" fill="#6b7194" text-anchor="middle">flag what looks unusual</text>
+
+    <!-- bottom right: internal -->
+    <rect x="580" y="420" width="270" height="100" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="715" y="454" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">Internal workflows</text>
+    <text x="715" y="480" font-size="17" fill="#6b7194" text-anchor="middle">Approvals, notifications,</text>
+    <text x="715" y="504" font-size="17" fill="#6b7194" text-anchor="middle">tasks, data sync</text>
+
+    <text x="440" y="570" font-size="18" fill="#2b2e7c" text-anchor="middle" font-weight="700">The common thread: repetitive, high volume, and needs reading first.</text>
+  </g>
+</svg>
