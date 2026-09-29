@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" width="880" height="600" role="img" aria-label="Worked example with illustrative numbers. An invoice process of 1,200 invoices a month takes 120 hours by hand. With AI automation it takes 44 hours: 20 hours of quick checks and 24 hours of closer looks, saving 76 hours. At an assumed 400 rupees an hour that is 30,400 rupees a month; minus an assumed 6,000 rupees running cost leaves about 24,400 rupees a month, so a 3 lakh rupee build pays back in about a year. It only becomes a real saving if the 76 hours go into other work.">
+  <rect width="880" height="600" fill="#ffffff" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">One process, before and after</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">1,200 invoices a month · illustrative numbers — use your own</text>
+
+    <!-- before bar: 5px per hour, starts at x=200 -->
+    <text x="30" y="132" font-size="20" font-weight="700" fill="#2b2e7c">By hand</text>
+    <text x="30" y="156" font-size="16" fill="#6b7194">6 min per invoice</text>
+    <rect x="200" y="110" width="600" height="50" rx="6" fill="#cbd5e1" />
+    <text x="500" y="143" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="middle">120 hours a month</text>
+
+    <!-- after bar -->
+    <text x="30" y="222" font-size="20" font-weight="700" fill="#2b2e7c">With AI</text>
+    <text x="30" y="246" font-size="16" fill="#6b7194">a person checks</text>
+    <rect x="200" y="200" width="100" height="50" rx="6" fill="#0ea5e9" />
+    <rect x="300" y="200" width="120" height="50" fill="#f59e0b" />
+    <text x="250" y="232" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">20 h</text>
+    <text x="360" y="232" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">24 h</text>
+    <rect x="420" y="200" width="380" height="50" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="2" stroke-dasharray="8 6" />
+    <text x="610" y="232" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">76 hours saved</text>
+
+    <!-- legend -->
+    <rect x="200" y="270" width="16" height="16" rx="3" fill="#0ea5e9" />
+    <text x="224" y="284" font-size="16" fill="#6b7194">quick 1-min check on every invoice</text>
+    <rect x="510" y="270" width="16" height="16" rx="3" fill="#f59e0b" />
+    <text x="534" y="284" font-size="16" fill="#6b7194">closer look at 1 in 5</text>
+
+    <!-- money sum -->
+    <rect x="30" y="316" width="820" height="186" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" />
+    <text x="60" y="356" font-size="20" fill="#2b2e7c">76 hours × ₹400 an hour</text>
+    <text x="820" y="356" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="end">₹30,400</text>
+    <text x="60" y="394" font-size="20" fill="#2b2e7c">minus AI running cost</text>
+    <text x="820" y="394" font-size="20" font-weight="700" fill="#b45309" text-anchor="end">− ₹6,000</text>
+    <line x1="60" y1="414" x2="820" y2="414" stroke="#cbd5e1" stroke-width="2" />
+    <text x="60" y="446" font-size="22" font-weight="700" fill="#2b2e7c">Ahead each month</text>
+    <text x="820" y="446" font-size="24" font-weight="800" fill="#047857" text-anchor="end">≈ ₹24,400</text>
+    <text x="60" y="482" font-size="17" fill="#6b7194">A ₹3 lakh build pays for itself in about a year</text>
+
+    <!-- caveat -->
+    <rect x="30" y="520" width="820" height="52" rx="10" fill="#fffbeb" />
+    <text x="50" y="553" font-size="19" font-weight="700" fill="#b45309">Only real if those 76 hours go into other work — decide where first</text>
+  </g>
+</svg>
