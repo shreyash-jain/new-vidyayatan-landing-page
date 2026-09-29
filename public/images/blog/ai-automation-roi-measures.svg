@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-label="Six measures for the ROI of AI automation, each measured for a few weeks before launch and again after: time saved in hours per week; operating cost including staff time and AI running cost; output per person each day; processing speed from request to done; error rate per hundred items; and customer response time to first reply. If time saved rises but output per person stays flat, the time is saved but not used.">
+  <rect width="880" height="560" fill="#ffffff" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Six numbers that show it's paying off</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">Measure each for a few weeks before launch, then again after</text>
+
+    <!-- 2 columns x 3 rows; card 400x104 -->
+    <g>
+      <rect x="30" y="100" width="400" height="104" rx="12" fill="#f0f9ff" />
+      <circle cx="70" cy="152" r="22" fill="#0ea5e9" />
+      <text x="70" y="160" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+      <text x="106" y="144" font-size="21" font-weight="700" fill="#2b2e7c">Time saved</text>
+      <text x="106" y="172" font-size="17" fill="#6b7194">Hours a week on the task</text>
+    </g>
+    <g>
+      <rect x="450" y="100" width="400" height="104" rx="12" fill="#f0f9ff" />
+      <circle cx="490" cy="152" r="22" fill="#0ea5e9" />
+      <text x="490" y="160" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+      <text x="526" y="144" font-size="21" font-weight="700" fill="#2b2e7c">Operating cost</text>
+      <text x="526" y="172" font-size="17" fill="#6b7194">Staff time plus AI running cost</text>
+    </g>
+    <g>
+      <rect x="30" y="220" width="400" height="104" rx="12" fill="#fffbeb" />
+      <circle cx="70" cy="272" r="22" fill="#f59e0b" />
+      <text x="70" y="280" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+      <text x="106" y="264" font-size="21" font-weight="700" fill="#2b2e7c">Output per person</text>
+      <text x="106" y="292" font-size="17" fill="#6b7194">Tickets, invoices or leads a day</text>
+    </g>
+    <g>
+      <rect x="450" y="220" width="400" height="104" rx="12" fill="#f0f9ff" />
+      <circle cx="490" cy="272" r="22" fill="#0ea5e9" />
+      <text x="490" y="280" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+      <text x="526" y="264" font-size="21" font-weight="700" fill="#2b2e7c">Processing speed</text>
+      <text x="526" y="292" font-size="17" fill="#6b7194">From request arriving to done</text>
+    </g>
+    <g>
+      <rect x="30" y="340" width="400" height="104" rx="12" fill="#f0f9ff" />
+      <circle cx="70" cy="392" r="22" fill="#0ea5e9" />
+      <text x="70" y="400" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+      <text x="106" y="384" font-size="21" font-weight="700" fill="#2b2e7c">Error rate</text>
+      <text x="106" y="412" font-size="17" fill="#6b7194">Mistakes per hundred items</text>
+    </g>
+    <g>
+      <rect x="450" y="340" width="400" height="104" rx="12" fill="#f0f9ff" />
+      <circle cx="490" cy="392" r="22" fill="#0ea5e9" />
+      <text x="490" y="400" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+      <text x="526" y="384" font-size="21" font-weight="700" fill="#2b2e7c">Customer response time</text>
+      <text x="526" y="412" font-size="17" fill="#6b7194">Wait for a first reply</text>
+    </g>
+
+    <!-- the check -->
+    <rect x="30" y="466" width="820" height="72" rx="10" fill="#2b2e7c" />
+    <text x="50" y="496" font-size="18" font-weight="700" fill="#fbbf24">THE CHECK</text>
+    <text x="50" y="524" font-size="19" fill="#ffffff">Time saved up, but output per person flat? The time is saved, not used.</text>
+  </g>
+</svg>
