@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/common/page-hero";
 import { Container, Section } from "@/components/common/container";
 import { SectionHeading } from "@/components/common/section-heading";
 import { Reveal } from "@/components/common/reveal";
-import { Badge } from "@/components/ui/badge";
 import { CtaBand } from "@/components/common/cta-band";
 import { pageMetadata } from "@/lib/metadata";
-import { openRoles, perks } from "@/content/careers";
+import { perks } from "@/content/careers";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Careers",
   description:
-    "Become part of an exceptional, IIT-alumni-led engineering team. Explore open roles at Vidyayatan Technologies in Bhopal and remote.",
+    "Become part of an exceptional, IIT-alumni-led engineering team. Work with Vidyayatan Technologies in Bhopal and remote.",
   path: "/careers",
 });
 
@@ -46,42 +45,20 @@ export default function CareersPage() {
 
       <Section className="bg-muted/40">
         <Container>
-          <SectionHeading eyebrow="Open roles" title="Positions we're hiring for" />
-          <div className="mx-auto mt-12 max-w-3xl space-y-4">
-            {openRoles.map((role, i) => (
-              <Reveal key={role.title} delay={(i % 4) * 0.04}>
-                <a
-                  href={applyHref}
-                  className="card-hover group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-soft sm:flex-row sm:items-center sm:justify-between"
-                >
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-navy">
-                      {role.title}
-                    </h3>
-                    <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                      <Badge variant="primary">{role.team}</Badge>
-                      <span className="inline-flex items-center gap-1">
-                        <MapPin className="size-3.5" />
-                        {role.location}
-                      </span>
-                      <span>· {role.type}</span>
-                    </div>
-                  </div>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all group-hover:gap-2.5">
-                    Apply
-                    <ArrowUpRight className="size-4" />
-                  </span>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-          <p className="mt-8 text-center text-sm text-muted-foreground">
-            Don&apos;t see your role?{" "}
-            <a href={applyHref} className="font-semibold text-primary hover:underline">
+          <SectionHeading
+            eyebrow="Join us"
+            title="Always keen to meet great people"
+            description="We don't have specific openings listed right now, but we'd love to hear from engineers and designers who care about craft."
+          />
+          <div className="mt-8 text-center">
+            <a
+              href={applyHref}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
+            >
               Send us your resume
-            </a>{" "}
-            — we&apos;re always keen to meet great people.
-          </p>
+              <ArrowUpRight className="size-4" />
+            </a>
+          </div>
         </Container>
       </Section>
 
