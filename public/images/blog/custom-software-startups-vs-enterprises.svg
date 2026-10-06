@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Abstract graphic: on the left a single node running fast along one clear path; on the right a new node being woven into a dense mesh of systems that are already connected">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" role="img" aria-label="Custom software development for startups vs enterprises. The startup side: speed over completeness, MVP scope, runway decides the date — the risk is building the wrong thing. The enterprise side: integration is the project, compliance has a date, legacy cannot pause — the risk is breaking the right thing.">
   <defs>
     <linearGradient id="cs-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0a0f1d" />
@@ -6,71 +6,97 @@
       <stop offset="100%" stop-color="#2b2e7c" />
     </linearGradient>
     <linearGradient id="cs-dash" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.05" />
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.04" />
       <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.95" />
     </linearGradient>
     <radialGradient id="cs-glow-a" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.20" />
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.16" />
       <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="cs-glow-b" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16" />
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
     </radialGradient>
   </defs>
 
   <rect width="1200" height="630" fill="url(#cs-bg)" />
-  <circle cx="300" cy="315" r="270" fill="url(#cs-glow-a)" />
-  <circle cx="880" cy="315" r="300" fill="url(#cs-glow-b)" />
+  <circle cx="300" cy="360" r="300" fill="url(#cs-glow-a)" />
+  <circle cx="900" cy="340" r="320" fill="url(#cs-glow-b)" />
 
-  <!-- the seam between the two worlds -->
-  <rect x="599" y="90" width="2" height="450" fill="#7dd3fc" fill-opacity="0.18" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
 
-  <!-- LEFT: one path, nothing in the way, momentum -->
-  <rect x="120" y="308" width="400" height="14" rx="7" fill="url(#cs-dash)" />
-  <g fill="#fbbf24">
-    <circle cx="500" cy="315" r="30" />
-    <circle cx="500" cy="315" r="52" fill="none" stroke="#fbbf24" stroke-opacity="0.35" stroke-width="2" />
-  </g>
-  <!-- speed trail behind it -->
-  <g fill="#fbbf24">
-    <rect x="404" y="266" width="70" height="10" rx="5" fill-opacity="0.55" />
-    <rect x="352" y="356" width="110" height="10" rx="5" fill-opacity="0.40" />
-    <rect x="286" y="222" width="120" height="8" rx="4" fill-opacity="0.22" />
-    <rect x="252" y="404" width="150" height="8" rx="4" fill-opacity="0.16" />
-  </g>
+    <!-- ── header ────────────────────────────────────────────── -->
+    <text x="72" y="74" font-size="19" font-weight="700" letter-spacing="3.5" fill="#fbbf24">CUSTOM SOFTWARE DEVELOPMENT</text>
+    <text x="72" y="132" font-size="52" font-weight="800" fill="#ffffff">Startups vs Enterprises</text>
+    <text x="72" y="174" font-size="22" fill="#a7b0d4">What really changes when you build at each stage</text>
 
-  <!-- RIGHT: an existing mesh, already wired together -->
-  <g stroke="#7dd3fc" stroke-opacity="0.30" stroke-width="2" fill="none">
-    <path d="M 720 190 L 900 150 L 1060 226" />
-    <path d="M 720 190 L 806 330 L 900 150" />
-    <path d="M 806 330 L 1060 226" />
-    <path d="M 806 330 L 940 430 L 1060 226" />
-    <path d="M 720 470 L 806 330" />
-    <path d="M 720 470 L 940 430" />
-    <path d="M 900 150 L 1060 226" />
-  </g>
-  <g fill="#38bdf8" fill-opacity="0.85">
-    <circle cx="720" cy="190" r="19" />
-    <circle cx="900" cy="150" r="15" />
-    <circle cx="1060" cy="226" r="17" />
-    <circle cx="806" cy="330" r="22" />
-    <circle cx="940" cy="430" r="16" />
-    <circle cx="720" cy="470" r="14" />
-  </g>
+    <!-- ── left panel: STARTUP ───────────────────────────────── -->
+    <rect x="72" y="208" width="512" height="346" rx="18" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1" />
+    <rect x="72" y="208" width="5" height="346" rx="2.5" fill="#fbbf24" />
 
-  <!-- the new piece, being threaded into the mesh -->
-  <g>
-    <path d="M 806 330 L 662 315" stroke="#fbbf24" stroke-opacity="0.65" stroke-width="3" stroke-dasharray="9 8" fill="none" />
-    <path d="M 720 190 L 662 315" stroke="#fbbf24" stroke-opacity="0.40" stroke-width="3" stroke-dasharray="9 8" fill="none" />
-    <path d="M 720 470 L 662 315" stroke="#fbbf24" stroke-opacity="0.40" stroke-width="3" stroke-dasharray="9 8" fill="none" />
-    <circle cx="662" cy="315" r="21" fill="#fbbf24" />
-    <circle cx="662" cy="315" r="34" fill="none" stroke="#fbbf24" stroke-opacity="0.30" stroke-width="2" />
-  </g>
+    <text x="108" y="256" font-size="21" font-weight="700" letter-spacing="3" fill="#fbbf24">STARTUP</text>
 
-  <!-- ground ticks under both halves, implying two different scales -->
-  <g fill="#7dd3fc" fill-opacity="0.22">
-    <rect x="120" y="540" width="380" height="3" rx="1.5" />
-    <rect x="700" y="540" width="380" height="3" rx="1.5" />
+    <!-- motion motif -->
+    <rect x="112" y="312" width="258" height="12" rx="6" fill="url(#cs-dash)" />
+    <rect x="152" y="288" width="96" height="7" rx="3.5" fill="#fbbf24" fill-opacity="0.38" />
+    <rect x="128" y="342" width="140" height="7" rx="3.5" fill="#fbbf24" fill-opacity="0.26" />
+    <circle cx="402" cy="318" r="25" fill="#fbbf24" />
+    <circle cx="402" cy="318" r="40" fill="none" stroke="#fbbf24" stroke-opacity="0.32" stroke-width="2" />
+
+    <g fill="#c9d1e9" font-size="20">
+      <circle cx="116" cy="399" r="4" fill="#fbbf24" />
+      <text x="136" y="406">Speed over completeness</text>
+      <circle cx="116" cy="432" r="4" fill="#fbbf24" />
+      <text x="136" y="439">MVP scope, ruthlessly cut</text>
+      <circle cx="116" cy="465" r="4" fill="#fbbf24" />
+      <text x="136" y="472">Runway decides the date</text>
+    </g>
+
+    <rect x="108" y="496" width="440" height="44" rx="10" fill="#fbbf24" fill-opacity="0.14" />
+    <text x="128" y="524" font-size="20" font-weight="600" fill="#fde68a">Risk: building the wrong thing</text>
+
+    <!-- ── right panel: ENTERPRISE ───────────────────────────── -->
+    <rect x="616" y="208" width="512" height="346" rx="18" fill="#ffffff" fill-opacity="0.045" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1" />
+    <rect x="616" y="208" width="5" height="346" rx="2.5" fill="#38bdf8" />
+
+    <text x="652" y="256" font-size="21" font-weight="700" letter-spacing="3" fill="#38bdf8">ENTERPRISE</text>
+
+    <!-- existing-systems mesh -->
+    <g stroke="#7dd3fc" stroke-opacity="0.32" stroke-width="2" fill="none">
+      <path d="M 742 300 L 838 288 L 930 338" />
+      <path d="M 742 300 L 806 352 L 838 288" />
+      <path d="M 806 352 L 930 338 L 1012 296" />
+      <path d="M 806 352 L 884 372" />
+      <path d="M 884 372 L 930 338" />
+      <path d="M 930 338 L 1012 296" />
+    </g>
+    <g fill="#38bdf8">
+      <circle cx="742" cy="300" r="13" />
+      <circle cx="838" cy="288" r="10" />
+      <circle cx="806" cy="352" r="15" />
+      <circle cx="930" cy="338" r="12" />
+      <circle cx="1012" cy="296" r="11" />
+      <circle cx="884" cy="372" r="9" />
+    </g>
+    <path d="M 742 300 L 678 322" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="3" stroke-dasharray="8 7" fill="none" />
+    <path d="M 806 352 L 678 322" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="3" stroke-dasharray="8 7" fill="none" />
+    <circle cx="678" cy="322" r="16" fill="#fbbf24" />
+    <circle cx="678" cy="322" r="27" fill="none" stroke="#fbbf24" stroke-opacity="0.28" stroke-width="2" />
+
+    <g fill="#c9d1e9" font-size="20">
+      <circle cx="660" cy="399" r="4" fill="#38bdf8" />
+      <text x="680" y="406">Integration is the project</text>
+      <circle cx="660" cy="432" r="4" fill="#38bdf8" />
+      <text x="680" y="439">Compliance has a hard date</text>
+      <circle cx="660" cy="465" r="4" fill="#38bdf8" />
+      <text x="680" y="472">Legacy systems cannot pause</text>
+    </g>
+
+    <rect x="652" y="496" width="440" height="44" rx="10" fill="#38bdf8" fill-opacity="0.14" />
+    <text x="672" y="524" font-size="20" font-weight="600" fill="#bae6fd">Risk: breaking the right thing</text>
+
+    <!-- ── footer ────────────────────────────────────────────── -->
+    <text x="72" y="600" font-size="18" fill="#7f88b0">vidyayatan.com</text>
+    <text x="1128" y="600" font-size="18" text-anchor="end" fill="#7f88b0">Same brief. Two different jobs.</text>
   </g>
 </svg>
