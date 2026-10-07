@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 494" width="880" height="494" role="img" aria-label="How an AI assistant handles a patient message: routine questions about timings, fees, appointments, documents and reports are answered straight away, while symptoms, complaints, payment disputes and anything unclear go to a staff member with the conversation attached. The AI never gives medical advice.">
+  <rect width="880" height="494" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">How an AI assistant handles a patient message</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">It answers the routine questions and hands the rest to your staff</text>
+<rect x="30" y="110" width="250" height="110" rx="12" fill="#eef0fb"/>
+<text x="155" y="152" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="middle">Patient message</text>
+<text x="155" y="182" font-size="18" font-weight="400" fill="#6b7194" text-anchor="middle">“Can I come at 7 p.m.?”</text>
+<text x="155" y="206" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">WhatsApp, website, app</text>
+<line x1="284" y1="165" x2="336" y2="165" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="340" y="110" width="200" height="110" rx="12" fill="#0ea5e9"/>
+<text x="440" y="157" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">AI assistant</text>
+<text x="440" y="187" font-size="18" font-weight="400" fill="#ffffff" text-anchor="middle">Checks what kind</text>
+<text x="440" y="209" font-size="18" font-weight="400" fill="#ffffff" text-anchor="middle">of question it is</text>
+<path d="M544 145 C 580 145, 580 125, 606 125" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<path d="M544 195 C 580 195, 580 300, 606 300" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="610" y="96" width="240" height="160" rx="12" fill="#ecfdf5"/>
+<text x="630" y="128" font-size="21" font-weight="700" fill="#047857" text-anchor="start">Routine</text>
+<text x="630" y="158" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Timings and fees</text>
+<text x="630" y="182" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Booking, rescheduling</text>
+<text x="630" y="206" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Documents to bring</text>
+<text x="630" y="230" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Report ready?</text>
+<rect x="610" y="270" width="240" height="160" rx="12" fill="#fffbeb"/>
+<text x="630" y="302" font-size="21" font-weight="700" fill="#b45309" text-anchor="start">Needs a person</text>
+<text x="630" y="332" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Symptoms or pain</text>
+<text x="630" y="356" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Complaints</text>
+<text x="630" y="380" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Payment disputes</text>
+<text x="630" y="404" font-size="18" font-weight="400" fill="#2b2e7c" text-anchor="start">• Anything unclear</text>
+<rect x="30" y="270" width="510" height="72" rx="12" fill="#ecfdf5"/>
+<text x="50" y="302" font-size="20" font-weight="700" fill="#047857" text-anchor="start">Answered straight away, day or night</text>
+<text x="50" y="328" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">and the booking lands in your system</text>
+<rect x="30" y="358" width="510" height="72" rx="12" fill="#fffbeb"/>
+<text x="50" y="390" font-size="20" font-weight="700" fill="#b45309" text-anchor="start">Handed to staff with the chat attached</text>
+<text x="50" y="416" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">so the patient never has to repeat themselves</text>
+<text x="30" y="470" font-size="18" font-weight="700" fill="#2b2e7c" text-anchor="start">The AI never gives medical advice. A person always does.</text>
+
+  </g>
+</svg>
