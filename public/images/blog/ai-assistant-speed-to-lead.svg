@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" width="880" height="600" role="img" aria-label="Bar chart. Of 2,241 US companies sent a test web enquiry, 37% replied within an hour, 16% replied in one to 24 hours, 24% took more than 24 hours and 23% never replied. The average reply took 42 hours. Firms that replied within an hour were nearly seven times as likely to qualify the lead. Source: Oldroyd, McElheran and Elkington, Harvard Business Review, 2011.">
+  <rect width="880" height="600" fill="#ffffff" />
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">Most web enquiries wait far too long</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">How 2,241 US companies responded to a test enquiry</text>
+
+    <!-- rows: bar starts x=250, 12px per percentage point -->
+    <g font-size="19">
+      <text x="30" y="143" font-weight="700" fill="#2b2e7c">Within 1 hour</text>
+      <rect x="250" y="116" width="444" height="44" rx="6" fill="#0ea5e9" />
+      <text x="706" y="146" font-size="24" font-weight="800" fill="#0369a1">37%</text>
+
+      <text x="30" y="213" font-weight="700" fill="#2b2e7c">1 to 24 hours</text>
+      <rect x="250" y="186" width="192" height="44" rx="6" fill="#cbd5e1" />
+      <text x="454" y="216" font-size="24" font-weight="800" fill="#475569">16%</text>
+
+      <text x="30" y="283" font-weight="700" fill="#2b2e7c">Over 24 hours</text>
+      <rect x="250" y="256" width="288" height="44" rx="6" fill="#cbd5e1" />
+      <text x="550" y="286" font-size="24" font-weight="800" fill="#475569">24%</text>
+
+      <text x="30" y="353" font-weight="700" fill="#2b2e7c">Never replied</text>
+      <rect x="250" y="326" width="276" height="44" rx="6" fill="#f59e0b" />
+      <text x="538" y="356" font-size="24" font-weight="800" fill="#b45309">23%</text>
+    </g>
+    <line x1="250" y1="104" x2="250" y2="382" stroke="#94a3b8" stroke-width="2" />
+
+    <!-- callouts -->
+    <rect x="30" y="410" width="395" height="120" rx="14" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+    <text x="54" y="468" font-size="44" font-weight="800" fill="#b45309">42 hours</text>
+    <text x="54" y="506" font-size="18" fill="#2b2e7c">average time to reply</text>
+
+    <rect x="455" y="410" width="395" height="120" rx="14" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="479" y="468" font-size="44" font-weight="800" fill="#0369a1">~7×</text>
+    <text x="479" y="506" font-size="18" fill="#2b2e7c">likelier to qualify if called within 1 hour</text>
+
+    <text x="30" y="572" font-size="15" fill="#6b7194">Source: Oldroyd, McElheran &amp; Elkington, "The Short Life of Online Sales Leads", Harvard Business Review, 2011</text>
+  </g>
+</svg>

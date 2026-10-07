@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 640" width="880" height="640" role="img" aria-label="Architecture of an AI customer support and sales assistant. Customer channels — website chat, WhatsApp and email — feed the assistant. The assistant has three parts: a language model that understands and writes, retrieval over approved business knowledge that finds the right passage, and business rules for discounts, refunds and eligibility. The assistant reads from and writes to the CRM, helpdesk, calendar, and ERP and databases. A handoff path passes conversations to the support and sales teams.">
+  <rect width="880" height="640" fill="#ffffff" />
+  <defs>
+    <marker id="ar-ar" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0ea5e9" />
+    </marker>
+    <marker id="ar-am" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c">What sits behind the chat window</text>
+    <text x="30" y="74" font-size="18" fill="#6b7194">The model is one part of three. Integration is most of the build.</text>
+
+    <!-- column labels -->
+    <text x="120" y="118" font-size="15" font-weight="800" fill="#6b7194" text-anchor="middle" letter-spacing="1">CHANNELS</text>
+    <text x="440" y="118" font-size="15" font-weight="800" fill="#6b7194" text-anchor="middle" letter-spacing="1">THE ASSISTANT</text>
+    <text x="760" y="118" font-size="15" font-weight="800" fill="#6b7194" text-anchor="middle" letter-spacing="1">YOUR SYSTEMS</text>
+
+    <!-- channels -->
+    <g font-size="18" font-weight="700" fill="#2b2e7c" text-anchor="middle">
+      <rect x="30" y="140" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="120" y="175">Website chat</text>
+      <rect x="30" y="218" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="120" y="253">WhatsApp</text>
+      <rect x="30" y="296" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="120" y="331">Email</text>
+    </g>
+    <line x1="212" y1="247" x2="262" y2="247" stroke="#0ea5e9" stroke-width="3" marker-start="url(#ar-ar)" marker-end="url(#ar-ar)" />
+
+    <!-- assistant core -->
+    <rect x="268" y="132" width="344" height="296" rx="16" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2" />
+    <rect x="288" y="152" width="304" height="76" rx="10" fill="#ffffff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="304" y="182" font-size="19" font-weight="700" fill="#2b2e7c">Language model</text>
+    <text x="304" y="208" font-size="16" fill="#6b7194">reads the message, writes the reply</text>
+    <rect x="288" y="242" width="304" height="76" rx="10" fill="#ffffff" stroke="#7dd3fc" stroke-width="2" />
+    <text x="304" y="272" font-size="19" font-weight="700" fill="#2b2e7c">Retrieval (RAG)</text>
+    <text x="304" y="298" font-size="16" fill="#6b7194">looks up your approved content</text>
+    <rect x="288" y="332" width="304" height="76" rx="10" fill="#fffbeb" stroke="#fbbf24" stroke-width="2" />
+    <text x="304" y="362" font-size="19" font-weight="700" fill="#2b2e7c">Business rules</text>
+    <text x="304" y="388" font-size="16" fill="#6b7194">discounts, refunds, eligibility</text>
+
+    <!-- systems -->
+    <g font-size="18" font-weight="700" fill="#2b2e7c" text-anchor="middle">
+      <rect x="670" y="140" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="760" y="175">CRM</text>
+      <rect x="670" y="212" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="760" y="247">Helpdesk</text>
+      <rect x="670" y="284" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="760" y="319">Calendar</text>
+      <rect x="670" y="356" width="180" height="58" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" />
+      <text x="760" y="391" font-size="17">ERP &amp; databases</text>
+    </g>
+    <line x1="618" y1="280" x2="664" y2="280" stroke="#0ea5e9" stroke-width="3" marker-start="url(#ar-ar)" marker-end="url(#ar-ar)" />
+    <text x="641" y="262" font-size="14" fill="#6b7194" text-anchor="middle">APIs</text>
+
+    <!-- handoff -->
+    <line x1="440" y1="430" x2="440" y2="486" stroke="#f59e0b" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#ar-am)" />
+    <text x="456" y="464" font-size="16" font-weight="700" fill="#b45309">handoff, with the full conversation</text>
+    <rect x="200" y="492" width="480" height="72" rx="14" fill="#2b2e7c" />
+    <text x="440" y="524" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Your support and sales teams</text>
+    <text x="440" y="550" font-size="16" fill="#c7d2fe" text-anchor="middle">complaints, big deals, anything needing judgement</text>
+
+    <text x="30" y="608" font-size="15" fill="#6b7194">Models change every few months (as at September 2026). Design so one can be swapped without a rebuild.</text>
+  </g>
+</svg>
