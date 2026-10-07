@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img" aria-label="A checklist before starting an AI project in healthcare: protect patient data and get consent, keep a human in charge of medical decisions, clean your data first, plan how it connects to existing systems, design for patients and staff, and set one measurable goal.">
+  <rect width="880" height="420" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">Before you start an AI project in healthcare</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Six checks that decide whether it saves time or creates work</text>
+<rect x="30" y="100" width="400" height="90" rx="12" fill="#f0f9ff"/>
+<circle cx="66" cy="145" r="18" fill="#047857"/><path d="M57 145 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98" y="140" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Protect patient data</text>
+<text x="98" y="168" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Consent, access control, DPDP</text>
+<rect x="450" y="100" width="400" height="90" rx="12" fill="#f0f9ff"/>
+<circle cx="486" cy="145" r="18" fill="#047857"/><path d="M477 145 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="518" y="140" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Keep a human in charge</text>
+<text x="518" y="168" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">AI never makes medical calls</text>
+<rect x="30" y="204" width="400" height="90" rx="12" fill="#f0f9ff"/>
+<circle cx="66" cy="249" r="18" fill="#047857"/><path d="M57 249 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98" y="244" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Clean your data first</text>
+<text x="98" y="272" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Messy records, messy answers</text>
+<rect x="450" y="204" width="400" height="90" rx="12" fill="#f0f9ff"/>
+<circle cx="486" cy="249" r="18" fill="#047857"/><path d="M477 249 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="518" y="244" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Plan the integration</text>
+<text x="518" y="272" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Connect billing, lab, records</text>
+<rect x="30" y="308" width="400" height="90" rx="12" fill="#f0f9ff"/>
+<circle cx="66" cy="353" r="18" fill="#047857"/><path d="M57 353 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="98" y="348" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Design for real users</text>
+<text x="98" y="376" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Patients, front desk, doctors</text>
+<rect x="450" y="308" width="400" height="90" rx="12" fill="#f0f9ff"/>
+<circle cx="486" cy="353" r="18" fill="#047857"/><path d="M477 353 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="518" y="348" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Set one measurable goal</text>
+<text x="518" y="376" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">e.g. calls handled, turnaround</text>
+
+  </g>
+</svg>

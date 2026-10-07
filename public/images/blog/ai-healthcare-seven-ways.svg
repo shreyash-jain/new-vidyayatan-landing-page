@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 646" width="880" height="646" role="img" aria-label="The seven areas where AI helps a healthcare business: patient support, business automation, data analytics, mobile apps, document processing, system integration and personalised experiences, with a typical task for each.">
+  <rect width="880" height="646" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">7 ways AI is transforming healthcare</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Most of the change is in the work around patient care</text>
+<rect x="30" y="100" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="66" cy="138" r="20" fill="#0ea5e9"/>
+<text x="66" y="145" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="98" y="145" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Patient support</text>
+<text x="98" y="176" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Answers timings, fees and</text>
+<text x="98" y="200" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">appointment questions, 24/7</text>
+<rect x="450" y="100" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="486" cy="138" r="20" fill="#0ea5e9"/>
+<text x="486" y="145" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="518" y="145" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Business automation</text>
+<text x="518" y="176" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Reminders, follow-ups and</text>
+<text x="518" y="200" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">report-ready messages</text>
+<rect x="30" y="234" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="66" cy="272" r="20" fill="#0ea5e9"/>
+<text x="66" y="279" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+<text x="98" y="279" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Data analytics</text>
+<text x="98" y="310" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">One dashboard for bookings,</text>
+<text x="98" y="334" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">billing and lab data</text>
+<rect x="450" y="234" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="486" cy="272" r="20" fill="#0ea5e9"/>
+<text x="486" y="279" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+<text x="518" y="279" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Mobile apps</text>
+<text x="518" y="310" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Reports, medicine reminders</text>
+<text x="518" y="334" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">and self-service for patients</text>
+<rect x="30" y="368" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="66" cy="406" r="20" fill="#0ea5e9"/>
+<text x="66" y="413" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+<text x="98" y="413" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Document processing</text>
+<text x="98" y="444" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Reads forms and reports,</text>
+<text x="98" y="468" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">files the details for you</text>
+<rect x="450" y="368" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="486" cy="406" r="20" fill="#0ea5e9"/>
+<text x="486" y="413" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+<text x="518" y="413" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">System integration</text>
+<text x="518" y="444" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Connects billing, lab and</text>
+<text x="518" y="468" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">records so nothing is retyped</text>
+<rect x="240" y="502" width="400" height="120" rx="12" fill="#f0f9ff"/>
+<circle cx="276" cy="540" r="20" fill="#0ea5e9"/>
+<text x="276" y="547" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">7</text>
+<text x="308" y="547" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Personalised experiences</text>
+<text x="308" y="578" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Messages in the patient&#x27;s</text>
+<text x="308" y="602" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">language, timed to their visit</text>
+
+  </g>
+</svg>
