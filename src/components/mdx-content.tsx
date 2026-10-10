@@ -1,5 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
+import { ProductCta } from "@/components/common/product-cta";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
@@ -110,6 +111,8 @@ const components = {
       {...props}
     />
   ),
+  // Product band linking out to a product's own site: <ProductCta href="…" />
+  ProductCta,
   hr: (props: ComponentPropsWithoutRef<"hr">) => (
     <hr className="my-10 border-t border-border/60" {...props} />
   ),
