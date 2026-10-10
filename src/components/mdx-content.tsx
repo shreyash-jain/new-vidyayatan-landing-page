@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { slugify } from "@/lib/slug";
+import { ArticleCta } from "@/components/common/article-cta";
 
 /** Flatten MDX children to plain text so headings can carry a stable id. */
 function toText(node: ReactNode): string {
@@ -112,6 +113,9 @@ const components = {
   hr: (props: ComponentPropsWithoutRef<"hr">) => (
     <hr className="my-10 border-t border-border/60" {...props} />
   ),
+  // The only non-HTML component MDX may use. Lets a post drop a Vidyayatan
+  // band mid-article with no import: <ArticleCta title="…" label="…" />
+  ArticleCta,
 };
 
 /**
