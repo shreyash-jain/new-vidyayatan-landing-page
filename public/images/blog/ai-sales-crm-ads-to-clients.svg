@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 950" width="880" height="950" role="img" aria-label="From ad click to sales call: leads arrive from Google Ads lead forms, Instagram lead ads and LinkedIn lead gen forms; they land in one list in an AI sales CRM, where the source is saved, the lead is scored 0 to 100 and assigned to a rep; automation starts the moment the lead arrives; an AI calling agent rings the lead within minutes in their language and asks qualifying questions; interested leads go to a sales rep with the call notes, not-now leads get a follow-up date, and unanswered leads get a retry and then a WhatsApp message.">
+  <rect width="880" height="950" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9aa0c3"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">From ad click to sales call, automatically</text>
+    <text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">How an AI sales CRM turns ad leads into potential clients</text>
+    <rect x="30" y="134" width="260" height="96" rx="14" fill="#ffffff" stroke="#4285f4" stroke-width="2.5"/>
+    <rect x="30" y="134" width="10" height="96" rx="5" fill="#4285f4"/>
+    <text x="60" y="174" font-size="22" font-weight="700" fill="#2b2e7c" text-anchor="start">Google Ads</text>
+    <text x="60" y="204" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Lead form on a search ad</text>
+    <path d="M160,232 C160,259.0 440,259.0 440,286" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="310" y="134" width="260" height="96" rx="14" fill="#ffffff" stroke="#d62976" stroke-width="2.5"/>
+    <rect x="310" y="134" width="10" height="96" rx="5" fill="#d62976"/>
+    <text x="340" y="174" font-size="22" font-weight="700" fill="#2b2e7c" text-anchor="start">Instagram</text>
+    <text x="340" y="204" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Lead ad in the feed</text>
+    <path d="M440,232 C440,259.0 440,259.0 440,286" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="590" y="134" width="260" height="96" rx="14" fill="#ffffff" stroke="#0a66c2" stroke-width="2.5"/>
+    <rect x="590" y="134" width="10" height="96" rx="5" fill="#0a66c2"/>
+    <text x="620" y="174" font-size="22" font-weight="700" fill="#2b2e7c" text-anchor="start">LinkedIn</text>
+    <text x="620" y="204" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Lead gen form</text>
+    <path d="M720,232 C720,259.0 440,259.0 440,286" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="120" y="292" width="640" height="128" rx="16" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2.5"/>
+    <text x="440" y="330" font-size="24" font-weight="800" fill="#2b2e7c" text-anchor="middle">AI sales CRM</text>
+    <text x="440" y="356" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Every lead lands in one list, whichever ad it came from</text>
+    <rect x="150" y="372" width="180" height="34" rx="17" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+    <text x="240" y="395" font-size="16" font-weight="600" fill="#2b2e7c" text-anchor="middle">Source saved</text>
+    <rect x="350" y="372" width="180" height="34" rx="17" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+    <text x="440" y="395" font-size="16" font-weight="600" fill="#2b2e7c" text-anchor="middle">Scored 0–100</text>
+    <rect x="550" y="372" width="180" height="34" rx="17" fill="#ffffff" stroke="#0ea5e9" stroke-width="1.5"/>
+    <text x="640" y="395" font-size="16" font-weight="600" fill="#2b2e7c" text-anchor="middle">Assigned to a rep</text>
+    <path d="M440,422 L440,462" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="120" y="468" width="640" height="88" rx="16" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="440" y="504" font-size="22" font-weight="800" fill="#2b2e7c" text-anchor="middle">Automation kicks in</text>
+    <text x="440" y="532" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">No one has to remember: the workflow starts the moment the lead arrives</text>
+    <path d="M440,558 L440,598" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="120" y="604" width="640" height="96" rx="16" fill="#2b2e7c"/>
+    <text x="440" y="642" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">AI calling agent rings the lead</text>
+    <text x="440" y="672" font-size="17" font-weight="400" fill="#d6d9ea" text-anchor="middle">Within minutes, in the lead&#x27;s language, asking your qualifying questions</text>
+    <path d="M440,702 C440,727.0 160,727.0 160,752" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="30" y="756" width="260" height="110" rx="14" fill="#ecfdf5" stroke="#047857" stroke-width="2.5"/>
+    <text x="160" y="792" font-size="21" font-weight="800" fill="#047857" text-anchor="middle">Interested</text>
+    <text x="160" y="822" font-size="17" font-weight="400" fill="#2b2e7c" text-anchor="middle">Passed to a sales rep</text>
+    <text x="160" y="846" font-size="17" font-weight="400" fill="#2b2e7c" text-anchor="middle">with the call notes</text>
+    <path d="M440,702 C440,727.0 440,727.0 440,752" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="310" y="756" width="260" height="110" rx="14" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="440" y="792" font-size="21" font-weight="800" fill="#b45309" text-anchor="middle">Not right now</text>
+    <text x="440" y="822" font-size="17" font-weight="400" fill="#2b2e7c" text-anchor="middle">Follow-up date set</text>
+    <text x="440" y="846" font-size="17" font-weight="400" fill="#2b2e7c" text-anchor="middle">automatically</text>
+    <path d="M440,702 C440,727.0 720,727.0 720,752" stroke="#9aa0c3" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="590" y="756" width="260" height="110" rx="14" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2.5"/>
+    <text x="720" y="792" font-size="21" font-weight="800" fill="#0ea5e9" text-anchor="middle">No answer</text>
+    <text x="720" y="822" font-size="17" font-weight="400" fill="#2b2e7c" text-anchor="middle">Retry later, then</text>
+    <text x="720" y="846" font-size="17" font-weight="400" fill="#2b2e7c" text-anchor="middle">a WhatsApp message</text>
+    <rect x="30" y="886" width="820" height="46" rx="23" fill="#047857"/>
+    <text x="440" y="916" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Your sales team spends its time on potential clients, already qualified</text>
+  </g>
+</svg>
