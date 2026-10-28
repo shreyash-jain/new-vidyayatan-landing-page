@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" width="880" height="600" role="img" aria-label="The first minutes of a new lead in an AI-powered sales CRM: the lead arrives from a form, is scored 0 to 100 and tagged Hot, Warm or Cold, is routed to a rep on shift, gets an AI voice call within minutes in one of 10 Indian languages, gets a retry and a WhatsApp message if unanswered, and two timers track time to first touch and time since the rep last acted.">
+  <rect width="880" height="600" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">The first minutes of a new lead</text>
+    <text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">What happens before a rep has even opened the laptop</text>
+    <line x1="62" y1="120" x2="62" y2="545" stroke="#d6d9ea" stroke-width="4"/>
+    <circle cx="62" cy="120" r="16" fill="#0ea5e9"/>
+    <text x="62" y="126" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="100" y="116" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Lead arrives</text>
+    <text x="100" y="146" font-size="19" font-weight="400" fill="#6b7194" text-anchor="start">From a Meta or Google lead form, your website or Zoho Forms</text>
+    <circle cx="62" cy="205" r="16" fill="#0ea5e9"/>
+    <text x="62" y="211" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="100" y="201" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Scored 0–100</text>
+    <text x="100" y="231" font-size="19" font-weight="400" fill="#6b7194" text-anchor="start">Tagged Hot, Warm or Cold on source, detail, recency, engagement</text>
+    <circle cx="62" cy="290" r="16" fill="#0ea5e9"/>
+    <text x="62" y="296" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="100" y="286" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Routed</text>
+    <text x="100" y="316" font-size="19" font-weight="400" fill="#6b7194" text-anchor="start">Sent to a rep who is actually on shift</text>
+    <circle cx="62" cy="375" r="16" fill="#047857"/>
+    <text x="62" y="381" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="100" y="371" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">AI voice call</text>
+    <text x="100" y="401" font-size="19" font-weight="400" fill="#6b7194" text-anchor="start">Within minutes, in Hindi, English or 8 other Indian languages</text>
+    <circle cx="62" cy="460" r="16" fill="#f59e0b"/>
+    <text x="62" y="466" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="100" y="456" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">No answer?</text>
+    <text x="100" y="486" font-size="19" font-weight="400" fill="#6b7194" text-anchor="start">Retry later, then a WhatsApp message</text>
+    <circle cx="62" cy="545" r="16" fill="#2b2e7c"/>
+    <text x="62" y="551" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+    <text x="100" y="541" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Two timers run</text>
+    <text x="100" y="571" font-size="19" font-weight="400" fill="#6b7194" text-anchor="start">Time to first touch, and time since the rep last acted</text>
+
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" width="880" height="500" role="img" aria-label="Salesforce&#x27;s State of Sales survey of 5,500 sales professionals found reps spend 70% of their time on non-selling tasks and 30% selling. An AI sales CRM takes on typing in leads, remembering follow-ups, making first calls and building reports.">
+  <rect width="880" height="500" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">Where a salesperson&#x27;s time goes</text>
+    <text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Salesforce State of Sales, 5,500 sales professionals, 2024</text>
+    <rect x="30" y="104" width="574" height="70" rx="10" fill="#f59e0b"/>
+    <rect x="604" y="104" width="246" height="70" rx="10" fill="#047857"/>
+    <rect x="594" y="104" width="20" height="70" fill="#047857"/>
+    <text x="52" y="148" font-size="22" font-weight="700" fill="#ffffff" text-anchor="start">70% non-selling work</text>
+    <text x="626" y="148" font-size="22" font-weight="700" fill="#ffffff" text-anchor="start">30% selling</text>
+    <text x="30" y="226" font-size="22" font-weight="700" fill="#2b2e7c" text-anchor="start">What an AI sales CRM takes off the 70%</text>
+    <rect x="30" y="250" width="400" height="104" rx="12" fill="#fffbeb"/>
+    <text x="54" y="292" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Typing in new leads</text>
+    <text x="54" y="324" font-size="19" font-weight="600" fill="#047857" text-anchor="start">→ Leads captured from forms and ads</text>
+    <rect x="450" y="250" width="400" height="104" rx="12" fill="#fffbeb"/>
+    <text x="474" y="292" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Remembering follow-ups</text>
+    <text x="474" y="324" font-size="19" font-weight="600" fill="#047857" text-anchor="start">→ Reminders, retries and WhatsApp</text>
+    <rect x="30" y="370" width="400" height="104" rx="12" fill="#fffbeb"/>
+    <text x="54" y="412" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Making first calls</text>
+    <text x="54" y="444" font-size="19" font-weight="600" fill="#047857" text-anchor="start">→ AI voice agent calls within minutes</text>
+    <rect x="450" y="370" width="400" height="104" rx="12" fill="#fffbeb"/>
+    <text x="474" y="412" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Building weekly reports</text>
+    <text x="474" y="444" font-size="19" font-weight="600" fill="#047857" text-anchor="start">→ Report views that update themselves</text>
+
+  </g>
+</svg>

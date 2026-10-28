@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 610" width="880" height="610" role="img" aria-label="How an AI sales CRM works in six steps arranged in a loop: capture, where leads arrive by themselves; organise, with a record, score and owner; qualify, where an AI call asks your questions; follow up with reminders and WhatsApp; convert through the pipeline; and analyse, where reports show what worked so you can change the rules.">
+  <rect width="880" height="610" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">How an AI sales CRM works</text>
+    <text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Six steps, and the last one feeds back into the first</text>
+    <ellipse cx="440" cy="340" rx="290" ry="200" fill="none" stroke="#d6d9ea" stroke-width="4" stroke-dasharray="10 8"/>
+    <rect x="290" y="96" width="300" height="88" rx="14" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+    <circle cx="320" cy="140" r="18" fill="#0ea5e9"/>
+    <text x="320" y="146" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="350" y="134" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Capture</text>
+    <text x="350" y="162" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Leads arrive by themselves</text>
+    <rect x="565" y="206" width="300" height="88" rx="14" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+    <circle cx="595" cy="250" r="18" fill="#0ea5e9"/>
+    <text x="595" y="256" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="625" y="244" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Organise</text>
+    <text x="625" y="272" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Record, score, owner</text>
+    <rect x="565" y="386" width="300" height="88" rx="14" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+    <circle cx="595" cy="430" r="18" fill="#0ea5e9"/>
+    <text x="595" y="436" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="625" y="424" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Qualify</text>
+    <text x="625" y="452" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">AI call asks your questions</text>
+    <rect x="290" y="496" width="300" height="88" rx="14" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="320" cy="540" r="18" fill="#f59e0b"/>
+    <text x="320" y="546" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="350" y="534" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Follow up</text>
+    <text x="350" y="562" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Reminders and WhatsApp</text>
+    <rect x="15" y="386" width="300" height="88" rx="14" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+    <circle cx="45" cy="430" r="18" fill="#047857"/>
+    <text x="45" y="436" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="75" y="424" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Convert</text>
+    <text x="75" y="452" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Moves through the pipeline</text>
+    <rect x="15" y="206" width="300" height="88" rx="14" fill="#eef0fb" stroke="#2b2e7c" stroke-width="2"/>
+    <circle cx="45" cy="250" r="18" fill="#2b2e7c"/>
+    <text x="45" y="256" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+    <text x="75" y="244" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="start">Analyse</text>
+    <text x="75" y="272" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Reports show what worked</text>
+    <text x="440" y="330" font-size="18" font-weight="700" fill="#2b2e7c" text-anchor="middle">Step 6 feeds step 1:</text>
+    <text x="440" y="358" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">what the reports show</text>
+    <text x="440" y="382" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">changes your rules</text>
+
+  </g>
+</svg>
