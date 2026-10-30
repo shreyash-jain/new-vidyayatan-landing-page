@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 624" width="880" height="624" role="img" aria-label="Seven steps to build an AI agent workflow: pick one repetitive process, define the goal and what done looks like, connect the data and systems, choose the model, build the trigger-to-verification flow, add human approval points, then test and monitor accuracy, cost and errors.">
+  <rect width="880" height="624" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">How to build an AI agent workflow</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Seven steps, starting small</text>
+<rect x="30" y="100" width="820" height="64" rx="10" fill="#f0f9ff" stroke="#dbe4f0" stroke-width="1"/>
+<circle cx="66" cy="132" r="18" fill="#0ea5e9"/>
+<text x="66" y="139" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="100" y="139" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Pick one process</text>
+<text x="330" y="139" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Repetitive, with a clear finish line</text>
+<rect x="30" y="172" width="820" height="64" rx="10" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<circle cx="66" cy="204" r="18" fill="#0ea5e9"/>
+<text x="66" y="211" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="100" y="211" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Define the goal</text>
+<text x="330" y="211" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">What does "done" look like?</text>
+<rect x="30" y="244" width="820" height="64" rx="10" fill="#f0f9ff" stroke="#dbe4f0" stroke-width="1"/>
+<circle cx="66" cy="276" r="18" fill="#0ea5e9"/>
+<text x="66" y="283" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+<text x="100" y="283" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Connect the data</text>
+<text x="330" y="283" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">CRM, ERP, documents, APIs. Read-only first</text>
+<rect x="30" y="316" width="820" height="64" rx="10" fill="#ffffff" stroke="#dbe4f0" stroke-width="1"/>
+<circle cx="66" cy="348" r="18" fill="#0ea5e9"/>
+<text x="66" y="355" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+<text x="100" y="355" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Choose the model</text>
+<text x="330" y="355" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Cost, speed, accuracy and privacy</text>
+<rect x="30" y="388" width="820" height="64" rx="10" fill="#f0f9ff" stroke="#dbe4f0" stroke-width="1"/>
+<circle cx="66" cy="420" r="18" fill="#0ea5e9"/>
+<text x="66" y="427" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+<text x="100" y="427" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Build the flow</text>
+<text x="330" y="427" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Trigger → reasoning → tools → action → check</text>
+<rect x="30" y="460" width="820" height="64" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+<circle cx="66" cy="492" r="18" fill="#f59e0b"/>
+<text x="66" y="499" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+<text x="100" y="499" font-size="20" font-weight="700" fill="#b45309" text-anchor="start">Add human approval</text>
+<text x="330" y="499" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Money, legal commitments, deleting data</text>
+<rect x="30" y="532" width="820" height="64" rx="10" fill="#f0f9ff" stroke="#dbe4f0" stroke-width="1"/>
+<circle cx="66" cy="564" r="18" fill="#0ea5e9"/>
+<text x="66" y="571" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">7</text>
+<text x="100" y="571" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Test and monitor</text>
+<text x="330" y="571" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Accuracy, cost per task, errors, weekly reviews</text>
+
+  </g>
+</svg>
