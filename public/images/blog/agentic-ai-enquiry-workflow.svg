@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 546" width="880" height="546" role="img" aria-label="An autonomous enquiry workflow: a message arrives, the agent understands the request, checks the CRM and order history, decides the next step, replies to the customer and updates the CRM. Refunds above a set limit, complaints and anything unclear are sent to a person with the full context attached.">
+  <rect width="880" height="546" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">An autonomous enquiry workflow</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">One customer message, handled end to end, with a clear exit to a person</text>
+<rect x="30" y="110" width="250" height="100" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<circle cx="60" cy="142" r="16" fill="#0ea5e9"/>
+<text x="60" y="148" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+<text x="86" y="149" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Message arrives</text>
+<text x="50" y="178" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Email, WhatsApp or</text>
+<text x="50" y="199" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">website form</text>
+<path d="M282,160 H312" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="315" y="110" width="250" height="100" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<circle cx="345" cy="142" r="16" fill="#0ea5e9"/>
+<text x="345" y="148" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+<text x="371" y="149" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Understand it</text>
+<text x="335" y="178" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Price question, complaint</text>
+<text x="335" y="199" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">or reorder?</text>
+<path d="M567,160 H597" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="600" y="110" width="250" height="100" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<circle cx="630" cy="142" r="16" fill="#0ea5e9"/>
+<text x="630" y="148" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+<text x="656" y="149" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Check the CRM</text>
+<text x="620" y="178" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Customer history and</text>
+<text x="620" y="199" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">order status</text>
+<rect x="30" y="260" width="250" height="100" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<circle cx="60" cy="292" r="16" fill="#0ea5e9"/>
+<text x="60" y="298" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+<text x="86" y="299" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Decide next step</text>
+<text x="50" y="328" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Within its limits,</text>
+<text x="50" y="349" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">or hand over?</text>
+<path d="M282,310 H312" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="315" y="260" width="250" height="100" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<circle cx="345" cy="292" r="16" fill="#0ea5e9"/>
+<text x="345" y="298" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+<text x="371" y="299" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Reply to customer</text>
+<text x="335" y="328" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Payment link, quote</text>
+<text x="335" y="349" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">or booking</text>
+<path d="M567,310 H597" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="600" y="260" width="250" height="100" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<circle cx="630" cy="292" r="16" fill="#0ea5e9"/>
+<text x="630" y="298" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">6</text>
+<text x="656" y="299" font-size="20" font-weight="700" fill="#2b2e7c" text-anchor="start">Update the CRM</text>
+<text x="620" y="328" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Log it and confirm</text>
+<text x="620" y="349" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">the record saved</text>
+<path d="M725,212 V235 H155 V256" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="30" y="420" width="820" height="96" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+<text x="56" y="458" font-size="20" font-weight="700" fill="#b45309" text-anchor="start">Sent to a person instead</text>
+<text x="56" y="488" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Refunds above a set limit, complaints, or anything the agent isn&#x27;t sure about.</text>
+<text x="56" y="508" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">Your team gets the full conversation and customer history, so nobody starts again.</text>
+<path d="M155,362 V416" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  </g>
+</svg>
