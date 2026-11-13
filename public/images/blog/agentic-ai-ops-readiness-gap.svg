@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img" aria-label="Bar chart from Deloitte's August 2026 survey of 501 business leaders. 31% expect at least half their processes rebuilt around AI agents within two years, 74% within four years, and only 5% say their processes are highly prepared today.">
+  <rect width="880" height="420" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">The readiness gap</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Deloitte survey of 501 business leaders, August 2026</text>
+<text x="30" y="110" font-size="19" font-weight="600" fill="#2b2e7c" text-anchor="start">Expect half their processes rebuilt around agents within 2 years</text>
+<rect x="30" y="124" width="820" height="38" rx="8" fill="#f4f5fb"/><rect x="30" y="124" width="254" height="38" rx="8" fill="#0ea5e9"/>
+<text x="270" y="151" font-size="22" font-weight="700" fill="#ffffff" text-anchor="end">31%</text>
+<text x="30" y="210" font-size="19" font-weight="600" fill="#2b2e7c" text-anchor="start">Expect it within 4 years</text>
+<rect x="30" y="224" width="820" height="38" rx="8" fill="#f4f5fb"/><rect x="30" y="224" width="607" height="38" rx="8" fill="#2b2e7c"/>
+<text x="623" y="251" font-size="22" font-weight="700" fill="#ffffff" text-anchor="end">74%</text>
+<text x="30" y="310" font-size="19" font-weight="600" fill="#2b2e7c" text-anchor="start">Say their processes are highly prepared today</text>
+<rect x="30" y="324" width="820" height="38" rx="8" fill="#f4f5fb"/><rect x="30" y="324" width="41" height="38" rx="8" fill="#f59e0b"/>
+<text x="83" y="351" font-size="22" font-weight="700" fill="#2b2e7c" text-anchor="start">5%</text>
+<text x="30" y="395" font-size="17" font-weight="400" fill="#6b7194" text-anchor="start">What leaders expect is a forecast. The 5% is where they stand now.</text>
+  </g>
+</svg>
