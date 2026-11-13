@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img" aria-label="The AI agent loop: a goal comes in, the agent plans the steps, uses tools such as the CRM or email, takes an action, then checks the result. If it is not finished it goes round again; when done the task is closed and logged; if it is unsure or the stakes are high it asks a person.">
+  <rect width="880" height="450" fill="#ffffff" />
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7194"/></marker></defs>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">How an AI agent works</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">It runs a loop until the job is done, or until it should ask a person</text>
+<rect x="30" y="140" width="148" height="110" rx="12" fill="#eef0fb" stroke="#2b2e7c" stroke-width="2"/>
+<text x="104" y="178" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="middle">Goal</text>
+<text x="104" y="208" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Resolve this</text>
+<text x="104" y="230" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">ticket</text>
+<path d="M180,195 H195" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="198" y="140" width="148" height="110" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="272" y="178" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="middle">Plan</text>
+<text x="272" y="208" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Decide the</text>
+<text x="272" y="230" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">steps</text>
+<path d="M348,195 H363" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="366" y="140" width="148" height="110" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="440" y="178" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="middle">Use tools</text>
+<text x="440" y="208" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">CRM, email,</text>
+<text x="440" y="230" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">database</text>
+<path d="M516,195 H531" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="534" y="140" width="148" height="110" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="608" y="178" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="middle">Act</text>
+<text x="608" y="208" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Reply, update,</text>
+<text x="608" y="230" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">book</text>
+<path d="M684,195 H699" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="702" y="140" width="148" height="110" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/>
+<text x="776" y="178" font-size="21" font-weight="700" fill="#2b2e7c" text-anchor="middle">Check</text>
+<text x="776" y="208" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Did it work?</text>
+<text x="776" y="230" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Is it sure?</text>
+<path d="M776,140 V118 H272 V136" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="374" y="104" width="300" height="26" fill="#ffffff"/>
+<text x="524" y="124" font-size="17" font-weight="600" fill="#6b7194" text-anchor="middle">Not finished yet: go round again</text>
+<rect x="300" y="320" width="260" height="100" rx="12" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+<text x="430" y="360" font-size="21" font-weight="700" fill="#047857" text-anchor="middle">Done</text>
+<text x="430" y="390" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Task closed and logged</text>
+<rect x="590" y="320" width="260" height="100" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+<text x="720" y="354" font-size="21" font-weight="700" fill="#b45309" text-anchor="middle">Ask a person</text>
+<text x="720" y="382" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">Unsure or high-stakes,</text>
+<text x="720" y="404" font-size="17" font-weight="400" fill="#6b7194" text-anchor="middle">with full context attached</text>
+<path d="M756,252 L440,316" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+<path d="M776,252 L726,316" fill="none" stroke="#6b7194" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  </g>
+</svg>
