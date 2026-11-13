@@ -1,0 +1,202 @@
+---
+title: "India's New AI Security Guidelines: What Businesses Need to Know in 2026"
+description: "Explore India's new AI security guidelines, CERT-In audit framework, AI governance principles and cybersecurity practices businesses need to know in 2026."
+date: "2026-11-13"
+author: "Vidyayatan Engineering"
+tag: "AI & Business"
+image: "/images/blog/india-ai-security-guidelines-businesses.svg"
+---
+
+Ask most companies how many AI tools their staff use and you'll get a guess. That guess is the real security problem. On 4 November 2026, CERT-In, India's national cyber agency, published its first dedicated **AI security guidelines for India**, and they start from exactly that point: you can't secure what you haven't listed.
+
+If you run a business that builds, buys or simply uses AI, this guide covers what the guidelines say, which rules are actually law, and what to do about it. Facts are as at 13 November 2026.
+
+## What are India's AI security guidelines?
+
+There isn't one. India has no single AI Act, and the government has said it isn't planning one. What exists is three layers, and mixing them up is how companies either panic or relax too much.
+
+![India's AI rulebook split in two. Binding law: the DPDP Act 2023, the IT Act 2000 and the CERT-In 2022 directions. Guidance and standards: MeitY AI Governance Guidelines from November 2025, CERT-In AI audit guidelines from November 2026, and ISO/IEC 42001 and NIST AI RMF.](/images/blog/india-ai-security-law-vs-guidance.svg)
+
+1. **Law.** Rules with penalties attached. They cover AI because AI handles personal data and runs on networks, not because they mention AI by name.
+2. **Government guidance.** Frameworks that say what good looks like but don't punish anyone directly.
+3. **International standards.** Voluntary, but increasingly what customers ask for in a vendor questionnaire.
+
+The rest of this post takes them in that order.
+
+## Which Indian laws already apply to your AI systems?
+
+### Digital Personal Data Protection Act, 2023
+
+If your AI touches personal data (customer chats, résumés, student records), the DPDP Act applies. The Rules were notified in November 2025 and the core duties become enforceable on **13 May 2027**. Failing to take reasonable security safeguards can cost up to ₹250 crore. We cover the engineering side in our [DPDP guide for schools and EdTech](/blog/dpdp-act-schools-edtech-compliance), and most of it applies to any AI product.
+
+### CERT-In directions, April 2022
+
+These are the ones people forget. Under them, companies must report certain cyber incidents to CERT-In **within six hours** and keep logs for 180 days. They're binding today, and an AI system is just another system that can be breached.
+
+### Information Technology Act, 2000
+
+The base law for cyber offences, and the source of CERT-In's powers. Older, broader, still in force.
+
+## What is voluntary: MeitY and international standards
+
+In November 2025, the IT ministry (MeitY) released the India AI Governance Guidelines. They're built on seven principles, including trust, fairness, accountability and "understandable by design", and they're [voluntary](https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=2186639&lang=2&reg=3). Think of them as the government's view on how AI should be run, not a rule you can be fined under.
+
+Two international standards sit beside them. **ISO/IEC 42001** is a management-system standard for AI. The **NIST AI Risk Management Framework** is a free playbook from the US. Neither is Indian law. Both are useful when a bank or enterprise customer asks how you manage AI risk.
+
+## What the new CERT-In AI security audit guidelines say
+
+This is the part to read slowly. The guidelines run to about 107 pages and apply to AI systems that organisations in India develop, buy, deploy or operate, including systems that handle Indian data or serve Indian users. Coverage so far comes from [MediaNama](https://www.medianama.com/2026/11/223-lowdown-cert-in-ai-security-auditing-guidelines/) and [Walled AI](https://walled.ai/blog/cert-in-ai-security-audit-guidelines).
+
+**An honest caveat first.** The write-ups we read disagree on whether and how far the guidelines bind ordinary businesses. One reports they aren't generally binding, only on CERT-In-empanelled auditors, and that the document doesn't spell out penalties. Treat them as the standard an auditor, a regulator or a large customer will measure you against, and read the primary document before you commit to anything.
+
+### Four risk tiers decide how deep the audit goes
+
+Every AI system gets classified as Low, Moderate, High or Critical. The factors include how much harm a mistake does, how sensitive the data is, how much the AI decides on its own, and whether the damage can be undone.
+
+![CERT-In's four AI risk tiers. Low: basic internal checks. Moderate: independent audit. High: independent audits and closer monitoring. Critical: independent audits and continuous monitoring. The riskier the system, the deeper the audit.](/images/blog/india-ai-security-risk-tiers.svg)
+
+A meeting-notes tool and an AI agent that approves payments shouldn't get the same scrutiny, and under this framework they won't. Low-risk systems get basic internal checks. The top tier gets independent audits plus continuous monitoring. Reported audit frequencies for the middle tiers differ between sources, so check the document for exact numbers.
+
+### Nine domains an audit covers
+
+![The nine CERT-In AI audit domains: governance and accountability; data lifecycle and privacy; model risk management; ethics, bias and fairness; explainability and transparency; security and incident reporting; monitoring and validation; human oversight; third-party and supply chain.](/images/blog/india-ai-security-nine-domains.svg)
+
+Read the nine as one question each. Who owns this AI? Where does its data come from? What happens if the model is wrong? Does it treat people fairly? Can you explain a decision? Can it be attacked? Is it still working? Can a person overrule it? Do your vendors meet your standard? If you can answer all nine in writing, you're most of the way to audit-ready.
+
+### Extra rules for generative and agentic AI
+
+Chatbots and agents get their own attention, because they behave differently from a normal app. The framework expects auditors to look at:
+
+- **Prompt injection.** Text hidden in an email or web page that tricks the AI into ignoring its instructions.
+- **Leaking confidential information** in answers.
+- **Data and model poisoning.** Bad data fed in so the AI learns the wrong thing.
+- **RAG systems.** The document search that feeds an AI its answers, including the vector database and who can read what it holds.
+- **Agent permissions.** Least privilege, meaning an agent gets only the access its job needs. This is the "excessive agency" problem we describe in our post on [agentic AI workflows](/blog/agentic-ai-business-autonomous-workflows).
+
+### Logs, audits and the six-hour clock
+
+Expect to keep AI activity logs for 180 days, with synchronised timestamps so you can reconstruct what happened. Keep documentation on training data, configuration, prompts and changes. And remember that reportable incidents go to CERT-In within six hours.
+
+That six-hour rule isn't new. It comes from the 2022 directions, and the AI framework points back to it. The practical point: if your AI leaks customer data on a Friday night, the clock is already running. Decide now who makes the call.
+
+## Core AI security principles every Indian business should know
+
+Strip away the legal language and the guidance keeps returning to four ideas.
+
+- **Protect the data.** Know what personal data your AI sees, where it's stored, and who can reach it.
+- **Be able to explain it.** Someone must be accountable for each AI decision, and a human must be able to step in on the important ones.
+- **Assess risk before launch.** Test for weaknesses, vet outside AI tools, and watch for odd behaviour afterwards.
+- **Build it responsibly.** Check for bias, and don't trust an answer just because it sounds confident.
+
+## Six AI security threats to prepare for
+
+![Six AI security threats: prompt injection, data leakage through public chatbots, AI phishing and deepfakes, model manipulation, shadow AI, and third-party vendor risk.](/images/blog/india-ai-security-threats.svg)
+
+Most of these don't need a clever hacker. In 2023, [Samsung restricted staff use of ChatGPT](https://techcrunch.com/2023/05/02/samsung-bans-use-of-generative-ai-tools-like-chatgpt-after-april-internal-data-leak/) after engineers pasted internal source code into it. No attack, just a helpful employee. In 2024, engineering firm Arup [lost about $25 million](https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-video/index.html) after an employee joined a video call where the senior colleagues were deepfakes.
+
+Shadow AI, the tools nobody approved, is the quiet one. It's the reason step one of any plan is simply making a list. For a real-world look at how an unpatched component becomes a data leak, see our write-up of the [PHP2Shell vulnerability](/blog/php2shell-vulnerability-2026-php-data-security).
+
+## How AI governance reduces security risk
+
+Governance sounds like paperwork. In practice it's six small habits:
+
+- A **one-page AI use policy** that says which tools are approved and what data may go into them.
+- **Named owners** for each AI system.
+- **Access controls**, so an AI sees only the data it needs.
+- **Regular security reviews**, not a one-off check at launch.
+- **Human approval** for anything involving money, legal commitments or people's futures.
+- An **incident plan**, written before you need it.
+
+Governance and security overlap but aren't the same. Governance decides *who is allowed to do what with AI*. Security makes sure nobody does it who shouldn't.
+
+## A practical AI security checklist for Indian businesses
+
+![AI security checklist in three moves. Know: list every AI tool, note its data, give each a risk tier. Control: write an AI use policy, apply least-privilege access, vet vendors. Prove: keep logs, test and audit, rehearse incident response, review quarterly.](/images/blog/india-ai-security-checklist.svg)
+
+1. List every AI tool in use, including the unofficial ones.
+2. Classify each by risk, using the four tiers above.
+3. Write a company-wide AI use policy.
+4. Protect sensitive business and customer data.
+5. Use role-based access, with least privilege for AI agents.
+6. Run regular vulnerability assessments.
+7. Audit your AI vendors: where they host data, and whether they train on yours.
+8. Keep activity and security logs.
+9. Require human approval for high-impact decisions.
+10. Prepare and rehearse an AI incident response plan.
+11. Review all of this every quarter.
+
+<ArticleCta
+  title="Not sure which of your AI systems is high-risk?"
+  description="Tell us what you run and what data it touches. We'll help you classify it and tell you honestly where the gaps are."
+  label="Book a 30-minute call"
+/>
+
+## How different industries should apply AI security
+
+| Industry | What to protect | What to watch |
+|---|---|---|
+| **Banking and finance** | Transaction and account data | Fraud-detection models that can be fooled or drift |
+| **Healthcare** | Patient records | AI-assisted diagnosis. Keep a clinician in charge |
+| **Education and EdTech** | Student and school data, including children's | AI marking and learning tools. See our [DPDP guide](/blog/dpdp-act-schools-edtech-compliance) |
+| **E-commerce and retail** | Customer and payment data | AI-powered fraud and fake identities |
+| **IT and software** | APIs, code and dev environments | Third-party models and the AI supply chain |
+
+## What happens if you ignore AI security?
+
+Four things, in rising order of pain. A breach through an unapproved tool. Money lost to fraud or downtime. Customers who stop trusting you, which is slow to win back. And, once the DPDP duties start in May 2027, regulatory exposure.
+
+There's also a commercial angle. Big customers are already adding AI questions to security reviews. If you can't answer them, you lose the deal before anyone talks about price.
+
+## Building a future-ready AI security strategy
+
+Design security in from the start, because bolting it on later costs more. Monitor continuously, since AI systems drift. Get an independent audit for anything high-risk. And keep reading the regulations: this area is moving fast, and today's guidance may become tomorrow's rule.
+
+This is the work we do. If you'd like help building AI that's secure by design, see our [AI development services](/services/artificial-intelligence) or read how [businesses are using generative AI beyond chatbots](/blog/generative-ai-for-business-use-cases-beyond-chatbots).
+
+## Frequently asked questions about AI security in India
+
+### What are the new AI security guidelines in India?
+
+CERT-In published its AI Security Auditing Guidelines on 4 November 2026. They set a four-tier risk classification and nine audit domains, with extra expectations for generative and agentic AI. They sit alongside MeitY's voluntary India AI Governance Guidelines from November 2025.
+
+### What is the role of CERT-In in AI cybersecurity?
+
+CERT-In is India's national agency for cyber incidents. It issues binding directions on incident reporting and logging, and it now publishes this AI audit framework.
+
+### Are AI security guidelines mandatory for Indian businesses?
+
+Not all of them. The DPDP Act, IT Act and CERT-In's 2022 directions are binding law. MeitY's governance guidelines are voluntary. Coverage of CERT-In's new AI guidelines reports they aren't generally binding on businesses, so check the document itself.
+
+### How does AI governance help organisations manage risk?
+
+It gives every AI system an owner, a policy and a review cycle. Problems then get caught by process rather than by luck.
+
+### What are the biggest AI cybersecurity threats in 2026?
+
+Data leakage through public AI tools, prompt injection, AI-powered phishing and deepfake fraud, shadow AI, model or data poisoning, and weaknesses in third-party AI vendors.
+
+### How can businesses protect sensitive data when using AI tools?
+
+Approve specific tools, ban pasting confidential data into the rest, limit what each AI can access, and read the vendor's terms on whether they train on your data.
+
+### What is the difference between AI governance and AI security?
+
+Governance is the rules: who owns what, what's allowed, who approves. Security is the defences: access controls, testing, monitoring and incident response.
+
+### How can companies conduct an AI security audit?
+
+Start with an inventory and a risk tier for each system. Then review it against the nine domains, test for attacks like prompt injection, and check logs and incident procedures. For higher-risk systems, bring in an independent auditor.
+
+### What are the four AI risk classification levels?
+
+Low, Moderate, High and Critical. The higher the tier, the deeper the audit and the closer the monitoring.
+
+### How can businesses implement responsible AI practices?
+
+Test for bias before launch, keep a human in the loop for important decisions, be able to explain outcomes to the people affected, and review the system on a schedule.
+
+## Secure AI starts with knowing what you run
+
+AI security has moved from a good idea to something auditors and customers will ask about. The first step is the least glamorous: make a list of your AI systems, give each an owner and a risk tier, and write down what happens when one fails. Everything else in the guidelines builds on that.
+
+**Want a second pair of eyes on your AI setup?** [Talk to Vidyayatan](/contact). We'll tell you honestly what's fine, what's risky, and what's worth fixing first.
