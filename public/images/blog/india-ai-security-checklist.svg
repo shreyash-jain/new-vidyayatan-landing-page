@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 510" width="880" height="510" role="img" aria-label="AI security checklist in three moves. Know: list every AI tool, note its data, give each a risk tier. Control: write an AI use policy, apply least-privilege access, vet vendors. Prove: keep logs, test and audit, rehearse incident response, review quarterly.">
+<rect width="880" height="510" fill="#ffffff"/>
+<g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="30" y="44" font-size="30" font-weight="700" fill="#2b2e7c" text-anchor="start">An AI security checklist in three moves</text>
+<text x="30" y="74" font-size="18" font-weight="400" fill="#6b7194" text-anchor="start">Know what you run. Control it. Be able to prove it</text><rect x="30" y="100" width="260" height="380" rx="12" fill="#ecfdf5" stroke="#047857" stroke-width="2"/><circle cx="66" cy="140" r="22" fill="#047857"/><text x="66" y="148" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">1</text><text x="102" y="140" font-size="24" font-weight="700" fill="#2b2e7c" text-anchor="start">Know</text><text x="54" y="184" font-size="15" font-weight="400" fill="#6b7194" text-anchor="start">What AI do we run?</text><text x="54" y="222" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">List every AI tool,</text>
+<text x="54" y="244" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">including unofficial ones</text>
+<text x="54" y="266" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="54" y="288" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Note what data each</text>
+<text x="54" y="310" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">one can see</text>
+<text x="54" y="332" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="54" y="354" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Give each a risk tier</text><path d="M294 290 L311 290" stroke="#6b7194" stroke-width="2.5" fill="none"/><path d="M306 284 L314 290 L306 296" stroke="#6b7194" stroke-width="2.5" fill="none"/><rect x="315" y="100" width="260" height="380" rx="12" fill="#f0f9ff" stroke="#0ea5e9" stroke-width="2"/><circle cx="351" cy="140" r="22" fill="#0ea5e9"/><text x="351" y="148" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">2</text><text x="387" y="140" font-size="24" font-weight="700" fill="#2b2e7c" text-anchor="start">Control</text><text x="339" y="184" font-size="15" font-weight="400" fill="#6b7194" text-anchor="start">Who can do what?</text><text x="339" y="222" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Write a one-page</text>
+<text x="339" y="244" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">AI use policy</text>
+<text x="339" y="266" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="339" y="288" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Role-based access,</text>
+<text x="339" y="310" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">least privilege</text>
+<text x="339" y="332" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="339" y="354" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Vet vendors and their</text>
+<text x="339" y="376" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">data terms</text><path d="M579 290 L596 290" stroke="#6b7194" stroke-width="2.5" fill="none"/><path d="M591 284 L599 290 L591 296" stroke="#6b7194" stroke-width="2.5" fill="none"/><rect x="600" y="100" width="260" height="380" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/><circle cx="636" cy="140" r="22" fill="#f59e0b"/><text x="636" y="148" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">3</text><text x="672" y="140" font-size="24" font-weight="700" fill="#2b2e7c" text-anchor="start">Prove</text><text x="624" y="184" font-size="15" font-weight="400" fill="#6b7194" text-anchor="start">Can we show our work?</text><text x="624" y="222" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Keep activity logs</text>
+<text x="624" y="244" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">(180 days)</text>
+<text x="624" y="266" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="624" y="288" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Test and audit regularly</text>
+<text x="624" y="310" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="624" y="332" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Rehearse AI incident</text>
+<text x="624" y="354" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">response: 6-hour clock</text>
+<text x="624" y="376" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start"></text>
+<text x="624" y="398" font-size="16" font-weight="400" fill="#2b2e7c" text-anchor="start">Review every quarter</text>
+</g>
+</svg>
